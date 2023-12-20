@@ -9,9 +9,25 @@ body {
 }
 
 #mainContainer {
-  /* margin: 0 auto;overflow: auto;padding-bottom: 50px;clear: both; */
   padding: 1.5rem; 
   margin: 0 auto;
   max-width: 1310px;
-  /* outline: 1px solid; */
 }
+
+.card {
+  display: -webkit-box;
+  margin-bottom: 20px;
+}
+
+.ids-mb-2.block {
+  background-color: #f1f1f5;
+  padding: 12px;
+  display: inline-block;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.ids-mb-2.block.primary {
+  border: 1px solid #396291;
+}
+

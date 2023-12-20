@@ -1,21 +1,24 @@
+import React from "react";
 import {
   IDSHeader,
   IDSHeaderNav,
   IDSHeaderNavItem,
   IDSHeaderAvatar,
 } from "@inera/ids-react";
+import { useLocation } from "react-router-dom";
 
 function Header() {
-  let menuItems = [
-    "Start",
-    "Inkorg",
-    "Bokade tider",
-    "Journalen",
-    "Egen provhantering",
-    "Stöd och behandling",
-    "Övriga tjänster",
+  const location = useLocation();
+
+  const menuItems = [
+    ["Start", "/"],
+    ["Inkorg", "/inkorg"],
+    ["Bokade tider", "/bokadetider"],
   ];
-  let activeIndex = 0;
+
+  const activeIndex = menuItems.findIndex(
+    (item) => item[1] === location.pathname
+  );
 
   return (
     <>
@@ -24,21 +27,16 @@ function Header() {
         hideregionpicker
         type="1177"
       >
-        <IDSHeaderAvatar username="Andreas Olsson">
-          <a href="#" slot="avatar-left">
-            Link left
-          </a>
-          <a href="#" slot="avatar-right">
-            Link Right
-          </a>
-        </IDSHeaderAvatar>
+        {/* Rest of your header component */}
         <IDSHeaderNav>
           {menuItems.map((item, index) => (
             <IDSHeaderNavItem
+              link={true}
               key={index}
-              label={item}
-              active={activeIndex === index ? true : false}
-            ></IDSHeaderNavItem>
+              active={activeIndex === index}
+            >
+              <a href={item[1]}> {item[0]} </a>
+            </IDSHeaderNavItem>
           ))}
         </IDSHeaderNav>
       </IDSHeader>
