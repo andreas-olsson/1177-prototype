@@ -19,7 +19,7 @@ function BokaTid() {
         <IDSContainer gutterless={true} className="ids-content">
           <IDSRow className="ids-content">
             <IDSCol cols="8" m="12" s="12" className="ids-content">
-              <h1 className="ids-heading-1">Boka tid hos mottagning</h1>
+              <h1 className="ids-heading-1">Boka tid hos mottagning NU!!!</h1>
               <p>
                 Här väljer du den mottagning där du önskar att boka tider. De
                 mottagningar som visas erbjuder möjligheten att boka tid.
