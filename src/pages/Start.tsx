@@ -22,7 +22,7 @@ function Start() {
               <IDSCard fill={true} className="card">
                 <h3 className="ids-heading-3">Inkorg</h3>
                 <p>
-                  <b>Filled.</b> Lorem ipsum dolor sit amet.
+                  <b>Filled.</b> Testar GIT
                 </p>
                 <hr />
                 <h3 className="ids-heading-3">Journal</h3>
