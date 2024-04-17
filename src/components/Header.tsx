@@ -14,6 +14,11 @@ function Header() {
     ["Start", "/"],
     ["Inkorg", "/inkorg"],
     ["Bokade tider", "/bokadetider"],
+    ["Journalen", "/"],
+    ["Egen provhantering", "/"],
+    ["Stöd och behandling", "/"],
+    ["Intyg", "/"],
+    ["Övriga tjänster", "/"],
   ];
 
   const activeIndex = menuItems.findIndex(
@@ -27,7 +32,14 @@ function Header() {
         hideregionpicker
         type="1177"
       >
-        {/* Rest of your header component */}
+        <IDSHeaderAvatar username="Maria G:son O'Lång">
+          <a href="#" slot="avatar-left">
+            Inställningar
+          </a>
+          <a href="#" slot="avatar-right">
+            Logga ut
+          </a>
+        </IDSHeaderAvatar>
         <IDSHeaderNav>
           {menuItems.map((item, index) => (
             <IDSHeaderNavItem
