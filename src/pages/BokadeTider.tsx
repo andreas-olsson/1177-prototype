@@ -25,11 +25,11 @@ function BokadeTider() {
           srlabel="Du är här"
         >
           <IDSCrumb>
-            <a href="#">Start</a>
+            <a href="/">Start</a>
           </IDSCrumb>
 
           <IDSCrumb Mobile>
-            <a href="#">Start</a>
+            <a href="/">Start</a>
           </IDSCrumb>
         </IDSBreadcrumbs>
 
@@ -37,7 +37,7 @@ function BokadeTider() {
         <p className="ids-body ids-mt-4">Vill du boka en ny tid? </p>
         <IDSLink className="ids-mb-2">
           <IDSIconChevron></IDSIconChevron>
-          <a href="javascript:console.log('click')">Gå till Boka tid</a>
+          <a href="/bokatid">Boka tid</a>
         </IDSLink>
 
         <IDSContainer>

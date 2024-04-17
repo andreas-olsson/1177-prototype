@@ -8,6 +8,8 @@ import {
   IDSLink,
   IDSIconChevron,
   IDSIconCalendar,
+  IDSBreadcrumbs,
+  IDSCrumb,
 } from "@inera/ids-react";
 
 function BokaTid() {
@@ -16,129 +18,88 @@ function BokaTid() {
   return (
     <>
       <div className="ids">
-        <IDSContainer gutterless={true} className="ids-content">
-          <IDSRow className="ids-content">
-            <IDSCol cols="8" m="12" s="12" className="ids-content">
-              <h1 className="ids-heading-1">Boka tid hos mottagning NU!!!</h1>
-              <p>
-                Här väljer du den mottagning där du önskar att boka tider. De
-                mottagningar som visas erbjuder möjligheten att boka tid.
-              </p>
-              <IDSCard fill={true} className="card ids-block">
-                <h2 className="ids-heading-5">Regionen rekommenderar</h2>
+        <IDSBreadcrumbs
+          current="Boka tid"
+          lead="Du är här:"
+          srlabel="Du är här"
+        >
+          <IDSCrumb>
+            <a href="/">Start</a>
+          </IDSCrumb>
 
-                <IDSLink className="ids-mb-2 block primary" activeicon={true}>
-                  <IDSIconCalendar></IDSIconCalendar>
+          <IDSCrumb Mobile>
+            <a href="/">Start</a>
+          </IDSCrumb>
+        </IDSBreadcrumbs>
+
+        <h1 className="ids-heading-1 ids-mt-12">Boka tid</h1>
+        <p className="ids-body ids-mt-4">Letar du efter dina bokningar? </p>
+        <IDSLink className="ids-mb-2">
+          <IDSIconChevron></IDSIconChevron>
+          <a href="/bokadetider">Bokade tider</a>
+        </IDSLink>
+        <IDSContainer gutterless={true} className="ids-content">
+          <IDSRow gap="2rem" justify={"space-between"}>
+            <IDSCol cols="8" m="12" s="12" className="ids-content ids-mt-6">
+              <IDSCard className="ids-mb-4">
+                <h3 className="ids-heading-2">I min region</h3>
+                <p className="ids-mb-4">
+                  Här väljer du den mottagning där du önskar att boka tider. De
+                  mottagningar som visas erbjuder möjligheten att boka tid.
+                </p>
+                <IDSLink className="ids-mb-2 block">
+                  <IDSIconChevron></IDSIconChevron>
                   <a href="javascript:console.log('click')">
-                    Boka tid hos Folktandvården
+                    Boka vaccination mot Covid-19
                   </a>
                 </IDSLink>
               </IDSCard>
-              <h2 className="ids-heading-2">Boka hos mitt vårdval</h2>
-              <p>
-                Här visas den mottagning där du är listad på. Om du vill ändra
-                ditt vårdval kan du göra det på Välj/ändra vårdval.
-              </p>
-              <IDSCard fill={false} className="card ids-block">
-                <h3 className="ids-heading-5">Gimo vårdcentral, Gimo</h3>
-                <IDSLink className="ids-mb-2 block" activeicon={true}>
+              <IDSCard className="ids-mt-8" style={{ display: "block" }}>
+                <h3 className="ids-heading-2">På Gimo vårdcentral, Gimo</h3>
+                <p className="ids-mb-4">
+                  Här visas den mottagning där du är listad på. Om du vill ändra
+                  ditt vårdval kan du göra det på Välj/ändra vårdval.
+                </p>
+                <IDSLink className="ids-mb-2 block">
+                  <IDSIconChevron></IDSIconChevron>
                   <a href="javascript:console.log('click')">Boka tid</a>
                 </IDSLink>
-                <IDSLink className="ids-mb-2 block" activeicon={true}>
+              </IDSCard>
+
+              <IDSCard className="ids-mt-8" style={{ display: "block" }}>
+                <h3 className="ids-heading-2">Andra mottagningar</h3>
+                <p className="ids-mb-4">
+                  Här finns bokningsmöjligheter för andra mottagingar som du har
+                  lagt till, eller varit i kontakt med.
+                </p>
+
+                <h3 className="ids-heading-3">Alby VC</h3>
+                <IDSLink className="ids-mb-2 block">
+                  <IDSIconChevron></IDSIconChevron>
+                  <a href="javascript:console.log('click')">Boka tid</a>
+                </IDSLink>
+
+                <h3 className="ids-heading-3 ids-mt-4">
+                  Bra Liv Habo vårdcentral
+                </h3>
+                <IDSLink className="ids-mb-2 block">
+                  <IDSIconChevron></IDSIconChevron>
+                  <a href="javascript:console.log('click')">Boka tid</a>
+                </IDSLink>
+
+                <h3 className="ids-heading-3 ids-mt-4">
+                  Folktandvården Hertig Karl, Örebro
+                </h3>
+                <IDSLink className="ids-mb-2 block">
+                  <IDSIconChevron></IDSIconChevron>
+                  <a href="javascript:console.log('click')">Boka tid</a>
+                </IDSLink>
+                <IDSLink className="ids-mb-2 block">
+                  <IDSIconChevron></IDSIconChevron>
                   <a href="javascript:console.log('click')">
                     Ändra eller omboka tid
                   </a>
                 </IDSLink>
-                <IDSLink className="ids-mb-2 block" activeicon={true}>
-                  <a href="javascript:console.log('click')">Av-/omboka tid</a>
-                </IDSLink>
-              </IDSCard>
-              <h2 className="ids-heading-2">Boka via andra mottagningar</h2>
-              <div className="ids-content">
-                <p>
-                  Här visas de mottagningar som du själv har lagt till eller som
-                  kan ha lagts till åt dig efter kontakt med vården. Under varje
-                  mottagning finns respektive alternativ för tidbokning.
-                </p>
-                <p>
-                  Om du saknar en mottagning kan du gå till Hitta och lägg till
-                  mottagning.
-                </p>
-              </div>
-
-              <IDSCard fill={false} className="card ids-block ids-heading-fix">
-                <IDSExpandable
-                  borderless={true}
-                  headline="Folktandvården Östhammar"
-                  variation={2}
-                >
-                  <IDSLink className="ids-mb-2 block" activeicon={true}>
-                    <IDSIconChevron></IDSIconChevron>
-                    <a href="javascript:console.log('click')">
-                      Ändra eller omboka tid
-                    </a>
-                  </IDSLink>
-                  <IDSLink className="ids-mb-2 block" activeicon={true}>
-                    <IDSIconChevron></IDSIconChevron>
-                    <a href="javascript:console.log('click')">
-                      Ändra eller omboka tid
-                    </a>
-                  </IDSLink>
-                  <IDSLink className="ids-mb-2 block" activeicon={true}>
-                    <IDSIconChevron></IDSIconChevron>
-                    <a href="javascript:console.log('click')">
-                      Ändra eller omboka tid
-                    </a>
-                  </IDSLink>
-                </IDSExpandable>
-                <IDSExpandable
-                  borderless={true}
-                  headline="Gimo Vaccination"
-                  variation={2}
-                >
-                  <IDSLink className="ids-mb-2 block" activeicon={true}>
-                    <IDSIconChevron></IDSIconChevron>
-                    <a href="javascript:console.log('click')">
-                      Ändra eller omboka tid
-                    </a>
-                  </IDSLink>
-                  <IDSLink className="ids-mb-2 block" activeicon={true}>
-                    <IDSIconChevron></IDSIconChevron>
-                    <a href="javascript:console.log('click')">
-                      Ändra eller omboka tid
-                    </a>
-                  </IDSLink>
-                  <IDSLink className="ids-mb-2 block" activeicon={true}>
-                    <IDSIconChevron></IDSIconChevron>
-                    <a href="javascript:console.log('click')">
-                      Ändra eller omboka tid
-                    </a>
-                  </IDSLink>
-                </IDSExpandable>
-                <IDSExpandable
-                  borderless={true}
-                  headline="Folktandvården Östhammar"
-                  variation={2}
-                >
-                  <IDSLink className="ids-mb-2 block" activeicon={true}>
-                    <IDSIconChevron></IDSIconChevron>
-                    <a href="javascript:console.log('click')">
-                      Ändra eller omboka tid
-                    </a>
-                  </IDSLink>
-                  <IDSLink className="ids-mb-2 block" activeicon={true}>
-                    <IDSIconChevron></IDSIconChevron>
-                    <a href="javascript:console.log('click')">
-                      Ändra eller omboka tid
-                    </a>
-                  </IDSLink>
-                  <IDSLink className="ids-mb-2 block" activeicon={true}>
-                    <IDSIconChevron></IDSIconChevron>
-                    <a href="javascript:console.log('click')">
-                      Ändra eller omboka tid
-                    </a>
-                  </IDSLink>
-                </IDSExpandable>
               </IDSCard>
             </IDSCol>
           </IDSRow>
