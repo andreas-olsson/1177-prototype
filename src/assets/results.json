@@ -1,0 +1,39 @@
+{
+    "results": [
+      {
+        "date": "2023-04-18",
+        "title": "Covid-19: Beställ test gäller vård- och omsorgspersonal NY",
+        "answered": true,
+        "content": [
+            {
+              "heading": "Detta är en rubrik i ditt meddelande",
+              "text": "Bla bla bla bla"
+            },
+            {
+              "heading": "En annan rubrik",
+              "text": "Bla bla bla"
+            }
+          ]
+    
+      },
+      {
+        "date": "2022-03-12",
+        "title": "Covid-19 Skåne verifiering",
+        "answered": false,
+        "content": [
+            {
+              "heading": "Detta är en rubrik i ditt meddelande",
+              "text": "Bla bla bla bla"
+            },
+            {
+              "heading": "En annan rubrik",
+              "text": "Bla bla bla"
+            }
+          ]
+      }
+    ]
+  }
+
+
+
+  

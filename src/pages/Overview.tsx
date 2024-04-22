@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import messageData from "../assets/messages.json";
 import appointmentData from "../assets/appointments.json";
+import resultData from "../assets/results.json";
 
 import {
   IDSBreadcrumbs,
@@ -25,6 +26,10 @@ function Overview() {
   // Funktion för att hantera navigation på knappklick
   const handleAppointmentNavigate = (index: any) => {
     navigate(`/appointments/entity/?index=${index}`);
+  };
+
+  const handleResultNavigate = (index: any) => {
+    navigate(`/results/entity/?index=${index}`);
   };
 
   return (
@@ -128,6 +133,35 @@ function Overview() {
                       </IDSRow>
                     </IDSCard>
                   )}
+                </div>
+              ))}
+
+              <h2 className="ids-heading-2 ids-mt-4">Provsvar</h2>
+              {resultData.results.map((result, index) => (
+                <div key={index}>
+                  <IDSCard>
+                    <IDSRow>
+                      <IDSCol cols="8">
+                        <>
+                          <h3 className="ids-heading-3 ids-mt-3">
+                            {result.title}
+                          </h3>
+                        </>
+                      </IDSCol>
+                      <IDSCol cols="4">
+                        <IDSButton
+                          secondary
+                          block={true}
+                          onClick={() => handleResultNavigate(index)}
+                        >
+                          Öppna
+                        </IDSButton>
+                      </IDSCol>
+                    </IDSRow>
+                    <IDSRow className="ids-mb-2">
+                      <IDSCol cols="12"></IDSCol>
+                    </IDSRow>
+                  </IDSCard>
                 </div>
               ))}
             </IDSCol>
