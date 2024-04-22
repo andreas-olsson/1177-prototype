@@ -1,0 +1,45 @@
+{
+    "appointments": [
+      {
+        "date": "2023-04-18 08:24",
+        "location": "Sahlgrenska Sjukhuset",
+        "type": "Besöket avser tandvård",
+        "reason": "Anledningen till bokningen är ont i tänderna",
+        "content": [
+          {
+            "heading": "Inför ditt besök",
+            "text": "Glöm inte att borsta tänderna"
+          },
+          {
+            "heading": "Tänk på detta!",
+            "text": "Det finns massor som vi vill att du tänker på!"
+          }
+        ]
+      },
+      {
+        "date": "2021-04-18 12:20",
+        "location": "Nya Karolinska Sjukhuset",
+        "type": "Ortopet",
+        "reason": "Anledningen till bokningen är ett brutet ben",
+        "content": [
+          {
+            "heading": "Hitta hit",
+            "text": "Du når oss via trapphus C, portkod 1234"
+          }
+        ]
+      },
+      {
+        "date": "2020-02-12 09:30",
+        "location": "Centralsjukhuset i Karlstad",
+        "type": "Sjukgymnast",
+        "reason": "Anledningen till bokningen är stela ben",
+        "content": [
+          {
+            "heading": "Innan du kommer hit",
+            "text": "Glöm inte att strecha"
+          }
+        ]
+      }
+    ]
+  }
+  

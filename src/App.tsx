@@ -6,6 +6,13 @@ import Start from "./pages/Start";
 import Inkorg from "./pages/Inkorg";
 import BokadeTider from "./pages/BokadeTider";
 import BokaTid from "./pages/BokaTid";
+import AppointmentsList from "./pages/appointments/List";
+import AppointmentsEntity from "./pages/appointments/Entity";
+import AppointmentsCreate from "./pages/appointments/Create";
+import AppointmentsEdit from "./pages/appointments/Edit";
+import InboxList from "./pages/inbox/List";
+import InboxEntity from "./pages/inbox/Entity";
+import Overview from "./pages/Overview";
 
 function App() {
   return (
@@ -18,6 +25,23 @@ function App() {
             <Route path="/inkorg" element={<Inkorg />} />
             <Route path="/bokadetider" element={<BokadeTider />} />
             <Route path="/bokatid" element={<BokaTid />} />
+            <Route path="/appointments" element={<AppointmentsList />} />
+            <Route path="/overview" element={<Overview />} />
+            <Route
+              path="/appointments/entity"
+              element={<AppointmentsEntity />}
+            />
+
+            <Route
+              path="/appointments/entity/create"
+              element={<AppointmentsCreate />}
+            />
+            <Route
+              path="/appointments/entity/edit"
+              element={<AppointmentsEdit />}
+            />
+            <Route path="/inbox/" element={<InboxList />} />
+            <Route path="/inbox/entity" element={<InboxEntity />} />
           </Routes>
         </div>
         <Footer />

@@ -12,7 +12,7 @@ function Header() {
 
   const menuItems = [
     ["Start", "/"],
-    ["Inkorg", "/inkorg"],
+    ["Inkorg", "/inbox"],
     ["Bokade tider", "/bokadetider"],
     ["Journalen", "/"],
     ["Egen provhantering", "/"],

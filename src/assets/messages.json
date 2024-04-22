@@ -1,0 +1,63 @@
+{
+    "messages": [
+      {
+        "date": "2023-04-18 08:24",
+        "title": "Titel på första meddelandet",
+        "author": "Ärendehantering enhet 3",
+        "unread": true,
+        "archive": false,
+        "completed": true,
+        "attachment": false,
+        "content": [
+            {
+              "heading": "Detta är en rubrik i ditt meddelande",
+              "text": "Bla bla bla bla"
+            },
+            {
+              "heading": "En annan rubrik",
+              "text": "Bla bla bla"
+            }
+          ]
+    
+      },
+      {
+        "date": "2022-03-12 04:22",
+        "title": "Titel på andra meddelandet",
+        "author": "Ärendehantering enhet 3",
+        "unread": true,
+        "archive": true,
+        "completed": true,
+        "attachment": false,
+        "content": [
+            {
+              "heading": "Detta är en rubrik i ditt meddelande",
+              "text": "Bla bla bla bla"
+            },
+            {
+              "heading": "En annan rubrik",
+              "text": "Bla bla bla"
+            }
+          ]
+      },
+      {
+        "date": "2022-03-12 04:22",
+        "title": "Titel på andra meddelandet",
+        "author": "Ärendehantering enhet 3",
+        "unread": false,
+        "archive": false,
+        "completed": true,
+        "attachment": true,
+        "content": [
+            {
+              "heading": "Detta är en rubrik i ditt meddelande",
+              "text": "Bla bla bla bla"
+            },
+            {
+              "heading": "En annan rubrik",
+              "text": "Bla bla bla"
+            }
+          ]
+      }
+    ]
+  }
+  
