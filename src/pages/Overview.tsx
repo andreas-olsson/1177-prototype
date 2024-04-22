@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import messageData from "../assets/messages.json";
 import appointmentData from "../assets/appointments.json";
 import resultData from "../assets/results.json";
+import journalData from "../assets/journal.json";
 
 import {
   IDSBreadcrumbs,
@@ -30,6 +31,10 @@ function Overview() {
 
   const handleResultNavigate = (index: any) => {
     navigate(`/results/entity/?index=${index}`);
+  };
+
+  const handleJournalNavigate = (index: any) => {
+    navigate(`/journal/entity/?index=${index}`);
   };
 
   return (
@@ -94,6 +99,49 @@ function Overview() {
                       </p>
                       <p>
                         Anledning: <b>{appointment.reason}</b>
+                      </p>
+                    </IDSCol>
+                  </IDSRow>
+                </IDSCard>
+              ))}
+              <h2 className="ids-heading-2">Tidigare händelser</h2>
+              {journalData.notes.map((note, index) => (
+                <IDSCard
+                  key={index}
+                  style={{ display: "block" }}
+                  className="ids-mb-4"
+                >
+                  <IDSRow
+                    justify="end"
+                    style={{
+                      borderBottom: "1px solid #eee",
+                      paddingBottom: "1rem",
+                      marginBottom: "1rem",
+                    }}
+                  >
+                    <IDSCol>
+                      <h2 className="ids-heading-2 ids-mt-2">{note.date}</h2>
+                    </IDSCol>
+                    <IDSCol cols="3">
+                      <IDSButton
+                        block={true}
+                        secondary
+                        onClick={() => handleJournalNavigate(index)}
+                      >
+                        Visa detaljer
+                      </IDSButton>
+                    </IDSCol>
+                  </IDSRow>
+                  <IDSRow>
+                    <IDSCol>
+                      <p>
+                        Plats: <b>{note.location}</b>
+                      </p>
+                      <p>
+                        Datum: <b>{note.date}</b>
+                      </p>
+                      <p>
+                        Antecknad av: <b>{note.author}</b>
                       </p>
                     </IDSCol>
                   </IDSRow>
