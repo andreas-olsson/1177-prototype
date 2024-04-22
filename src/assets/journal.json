@@ -1,0 +1,43 @@
+{
+    "notes": [
+      {
+        "date": "2023-04-18",
+        "location": "någon mottagning",
+        "title": "En journalanteckning",
+        "author": "Namn namnsson",
+        "answered": true,
+        "content": [
+            {
+              "heading": "Detta är en rubrik i ditt första journalmeddelande",
+              "text": "Bla bla bla bla"
+            },
+            {
+              "heading": "Det här är en annan rubrik i ditt journalmeddelande",
+              "text": "Bla bla bla"
+            }
+          ]
+    
+      },
+      {
+        "date": "2022-03-12",
+        "location": "någon mottagning",
+        "title": "En annan journalanteckning",
+        "author": "Namn namnsson",
+        "answered": false,
+        "content": [
+            {
+              "heading": "Detta är en rubrik i ditt andra journal meddelande",
+              "text": "Bla bla bla bla"
+            },
+            {
+              "heading": "En annan rubrik i det andra meddelandet",
+              "text": "Bla bla bla"
+            }
+          ]
+      }
+    ]
+  }
+
+
+
+  

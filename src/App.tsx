@@ -17,6 +17,9 @@ import Overview from "./pages/Overview";
 import ResultsList from "./pages/results/List";
 import ResultsEntity from "./pages/results/Entity";
 
+import JournalList from "./pages/journal/List";
+import JournalEntity from "./pages/journal/Entity";
+
 function App() {
   return (
     <BrowserRouter>
@@ -47,6 +50,9 @@ function App() {
             <Route path="/inbox/entity" element={<InboxEntity />} />
             <Route path="/results" element={<ResultsList />} />
             <Route path="/results/entity" element={<ResultsEntity />} />
+
+            <Route path="/journal" element={<JournalList />} />
+            <Route path="/journal/entity" element={<JournalEntity />} />
           </Routes>
         </div>
         <Footer />
