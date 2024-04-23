@@ -1,0 +1,91 @@
+
+  .cta {
+    display: block;
+    background: #f1f1f5;
+    border: 1px solid #C6D2DF;
+    padding: 12px 12px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    text-decoration: none;
+    overflow: hidden;
+  }
+
+  .cta-icon {
+    float: left;
+    background: #fff;
+    border: 1px solid #C6D2DF;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 10px;
+  }
+
+  .cta-title {
+    color: #3B4266;
+    font-size: 1rem;
+    font-weight: 700;
+    display: block;
+  }
+
+  .cta-desc {
+    color: #396291;
+  }
+
+  .cta-icon > * {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    opacity: 0.6;
+  }
+
+  .cta:hover .cta-icon,
+  .cta:hover {
+    border: 1px solid #396291;
+    
+  }
+
+  
+  .cta:hover .cta-icon > * {
+    opacity: 1;
+    
+  }
+
+  
+  @media (min-width: 640px) {
+    .ctac-m-left {
+        padding-right: 0.5rem;
+      }
+        
+      .ctac-m-right {
+        padding-left: 0.5rem;
+      }
+  }
+  
+
+  @media (min-width: 1024px) {
+
+    .ctac-m-left {
+        padding-right: 0;
+      }
+        
+      .ctac-m-right {
+        padding-left: 0;
+      }
+
+    .ctac-l-left {
+        padding-right: 0.5rem;
+      }
+    
+      .ctac-l-middle {
+        padding: 0 0.5rem;
+      }
+    
+      .ctac-l-right {
+        padding-left: 0.5rem;
+      }
+  }
+  

@@ -14,6 +14,7 @@ import {
   IDSButton,
   IDSIconDocument,
   IDSCard,
+  IDSLink,
 } from "@inera/ids-react";
 
 function Overview() {
@@ -46,11 +47,11 @@ function Overview() {
           srlabel="Du är här"
         >
           <IDSCrumb>
-            <a href="/">Start</a>
+            <a href="/services">Start</a>
           </IDSCrumb>
 
           <IDSCrumb mobile>
-            <a href="/">Start</a>
+            <a href="/services">Start</a>
           </IDSCrumb>
         </IDSBreadcrumbs>
 
@@ -58,8 +59,15 @@ function Overview() {
 
         <IDSContainer>
           <IDSRow className="ids-mt-8">
-            <IDSCol cols="8" m="12">
-              <h2 className="ids-heading-2">Bokade tider</h2>
+            <IDSCol cols="8" m="12" className="col-padding-right">
+              <div style={{ overflow: "hidden" }} className="ids-mb-4">
+                <h2 className="ids-heading-5" style={{ float: "left" }}>
+                  Bokade tider
+                </h2>
+                <IDSLink style={{ float: "right" }}>
+                  <a href="appointments/">Fler tider</a>
+                </IDSLink>
+              </div>
               {appointmentData.appointments.map((appointment, index) => (
                 <IDSCard
                   key={index}
@@ -104,7 +112,17 @@ function Overview() {
                   </IDSRow>
                 </IDSCard>
               ))}
-              <h2 className="ids-heading-2">Tidigare händelser</h2>
+              <div
+                style={{ overflow: "hidden" }}
+                className="ids-mb-4 ids-mt-12"
+              >
+                <h2 className="ids-heading-5" style={{ float: "left" }}>
+                  Tidigare händelser
+                </h2>
+                <IDSLink style={{ float: "right" }}>
+                  <a href="journal/">Fler händelser</a>
+                </IDSLink>
+              </div>
               {journalData.notes.map((note, index) => (
                 <IDSCard
                   key={index}
@@ -149,11 +167,18 @@ function Overview() {
               ))}
             </IDSCol>
             <IDSCol>
-              <h2 className="ids-heading-2">Meddelanden</h2>
+              <div style={{ overflow: "hidden" }} className="ids-mb-4">
+                <h2 className="ids-heading-5" style={{ float: "left" }}>
+                  Meddelanden
+                </h2>
+                <IDSLink style={{ float: "right" }}>
+                  <a href="inbox/">inkorg</a>
+                </IDSLink>
+              </div>
               {messageData.messages.map((message, index) => (
                 <div key={index}>
                   {message.unread && (
-                    <IDSCard>
+                    <IDSCard className="ids-mb-2" style={{ display: "block" }}>
                       <IDSRow>
                         <IDSCol cols="8">
                           <>
@@ -184,10 +209,20 @@ function Overview() {
                 </div>
               ))}
 
-              <h2 className="ids-heading-2 ids-mt-4">Provsvar</h2>
+              <div
+                style={{ overflow: "hidden" }}
+                className="ids-mb-4 ids-mt-12"
+              >
+                <h2 className="ids-heading-5" style={{ float: "left" }}>
+                  Provsvasr
+                </h2>
+                <IDSLink style={{ float: "right" }}>
+                  <a href="results/">Egen provhantering</a>
+                </IDSLink>
+              </div>
               {resultData.results.map((result, index) => (
                 <div key={index}>
-                  <IDSCard>
+                  <IDSCard className="ids-mb-2" style={{ display: "block" }}>
                     <IDSRow>
                       <IDSCol cols="8">
                         <>

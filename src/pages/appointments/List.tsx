@@ -31,11 +31,11 @@ function List() {
               srlabel="Du är här"
             >
               <IDSCrumb>
-                <a href="/">Start</a>
+                <a href="/services">Start</a>
               </IDSCrumb>
 
               <IDSCrumb mobile>
-                <a href="/">Start</a>
+                <a href="/services">Start</a>
               </IDSCrumb>
             </IDSBreadcrumbs>
           </IDSRow>
@@ -43,7 +43,7 @@ function List() {
             <h1 className="ids-heading-1 ids-mt-12 ids-mb-6">Bokade tider</h1>
           </IDSRow>
           <IDSRow>
-            <IDSCol cols="8" m="12">
+            <IDSCol cols="8" m="12" className="col-padding-right">
               {AppointmentsData.appointments.map((appointment, index) => (
                 <IDSCard
                   key={index}

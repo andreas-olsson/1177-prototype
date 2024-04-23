@@ -31,12 +31,7 @@ body {
   border: 1px solid #396291;
 }
 
-.blocklink li {
-  background: #f1f1f5;
-  padding: 12px 12px;
-  border-radius: 6px;
-  margin-bottom: 6px;
-}
+
 
 hr {
   background: #f1f1f5;
@@ -70,5 +65,18 @@ hr {
   background: #f1f1f5;
   padding: 12px;
   border-radius: 4px;
+
+}
+
+@media (min-width: 1024px) {
+.col-padding-right {
+  padding-right: 2rem;
+
+}
+
+.col-padding-left {
+  padding-left: 2rem;
+
+}
 
 }
