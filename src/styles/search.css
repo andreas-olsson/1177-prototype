@@ -1,0 +1,103 @@
+:root {
+    /* Primary Colors */
+    --primary-20: #58002f;
+    --primary-30: #6a0032;
+    --primary-35: #a00b36;
+    --primary-40: #c12143;
+    --primary-50: #d43755;
+    --primary-60: #e84d67;
+    --primary-70: #ec6a7e;
+    --primary-80: #f08896;
+    --primary-90: #faeef0;
+  
+    /* Secondary Colors */
+    --secondary-20: #2e5077;
+    --secondary-30: #34618a;
+    --secondary-40: #396291;
+    --secondary-50: #6f8ab3;
+    --secondary-60: #98a6c4;
+    --secondary-70: #b1bed6;
+    --secondary-80: #c4d1e4;
+    --secondary-90: #c6d2df;
+    --secondary-95: #f1f1f5;
+  
+    /* Neutral Colors */
+    --neutral-20: #353535;
+    --neutral-30: #4b4d4f;
+    --neutral-40: #636466;
+    --neutral-50: #808285;
+    --neutral-60: #9a9c9e;
+    --neutral-70: #b4b6b8;
+    --neutral-80: #cecfd1;
+    --neutral-90: #dadbdc;
+  
+    /* Success Colors */
+    --success-20: #356601;
+    --success-30: #3b7302;
+    --success-40: #419002;
+    --success-50: #67a524;
+    --success-60: #8db947;
+    --success-70: #b3cc6b;
+    --success-80: #d9e08f;
+    --success-90: #eff4c3;
+  
+    /* Attention Colors */
+    --attention-20: #cc8b00;
+    --attention-30: #e09e00;
+    --attention-40: #ffc100;
+    --attention-50: #ffd233;
+    --attention-60: #ffe066;
+    --attention-70: #ffed99;
+    --attention-80: #fff7cc;
+    --attention-90: #fffbf0;
+  
+    /* Error Colors */
+    --error-20: #8c0e29;
+    --error-30: #a8102d;
+    --error-40: #c12143;
+    --error-50: #d43755;
+    --error-60: #e84d67;
+    --error-70: #ec6a7e;
+    --error-80: #f08896;
+    --error-90: #faeef0;
+  
+    --background: #fff;
+  }
+  
+  .search-container {
+    text-align: left;
+  
+    margin-top: 20px;
+  }
+  
+  .menu-item-icon {
+    float: left;
+    margin-right: 4px;
+  }
+  
+  .search-result-item {
+    display: inline-block;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-right: 4px;
+    color: var(--secondary-30);
+    border: 1px solid var(--neutral-70);
+    margin-bottom: 4px;
+  }
+  
+  .search-result-item:hover {
+    background-color: var(--secondary-90);
+    border: 1px solid var(--secondary-40);
+  }
+  
+  .service-link {
+    background-color: var(--primary-90);
+    color: var(--primary-30);
+  }
+  
+  .service-link:hover {
+    background-color: var(--primary-90);
+    border: 1px solid var(--primary-40);
+  }
+  
