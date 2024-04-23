@@ -12,21 +12,13 @@ import {
   IDSIconChevron,
 } from "@inera/ids-react";
 
-import Shortcuts from "../components/Shortcuts.tsx";
-
 function Services() {
   const location = useLocation();
-
-  const queryParams = new URLSearchParams(location.search);
-  const hideShortcuts = queryParams.get("shortcuts") === "false";
 
   return (
     <>
       <div className="ids">
         <IDSContainer gutterless={true} className="ids-content ids-mt-6">
-          <div className="ids-mt-6 ids-mb-12">
-            {!hideShortcuts && <Shortcuts />}
-          </div>
           <IDSRow justify="start" gap="2rem">
             <IDSCol m="12" s="12">
               <h2 className="ids-heading-2">Inkorg</h2>

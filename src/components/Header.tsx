@@ -1,14 +1,30 @@
+import "../styles/header.css";
 import React from "react";
+import { useLocalStorage } from "@uidotdev/usehooks";
+
 import {
   IDSHeader,
   IDSHeaderNav,
   IDSHeaderNavItem,
   IDSHeaderAvatar,
+  IDSIconUser,
 } from "@inera/ids-react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function Header() {
   const location = useLocation();
+
+  const navigate = useNavigate(); // Access the navigate function
+  const [loggedin, setLoggedin] = useLocalStorage("loggedin", false);
+
+  const handleLogOut = () => {
+    setLoggedin(false); // Set loggedin to true
+    navigate("/"); // Navigate to the generated link
+  };
+
+  const handleLogIn = () => {
+    navigate("/login"); // Navigate to the generated link
+  };
 
   const menuItems = [
     ["Start", "/"],
@@ -32,14 +48,27 @@ function Header() {
         hideregionpicker
         type="1177"
       >
-        <IDSHeaderAvatar username="Maria G:son O'Lång">
-          <a href="#" slot="avatar-left">
-            Inställningar
-          </a>
-          <a href="#" slot="avatar-right">
-            Logga ut
-          </a>
-        </IDSHeaderAvatar>
+        {loggedin ? (
+          <IDSHeaderAvatar username="Tolvan Tolvansson">
+            <a href="#" onClick={handleLogOut} slot="avatar-left">
+              Logga ut
+            </a>
+            <a href="#" slot="avatar-right">
+              Inställningar
+            </a>
+          </IDSHeaderAvatar>
+        ) : (
+          <div>
+            <a href="/login" className="login-button">
+              <IDSIconUser color="#c12143" color2="#6a0032" />
+              <span>Logga in</span>
+            </a>
+            {/* <IDSButton secondary onClick={handleLogIn}>
+              <IDSIcon name="user"></IDSIcon>
+              Logga in
+            </IDSButton> */}
+          </div>
+        )}
         <IDSHeaderNav>
           {menuItems.map((item, index) => (
             <IDSHeaderNavItem

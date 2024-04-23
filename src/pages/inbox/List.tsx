@@ -35,11 +35,11 @@ function List() {
               srlabel="Du är här"
             >
               <IDSCrumb>
-                <a href="/services">Start</a>
+                <a href="/">Start</a>
               </IDSCrumb>
 
               <IDSCrumb mobile>
-                <a href="/services">Start</a>
+                <a href="/">Start</a>
               </IDSCrumb>
             </IDSBreadcrumbs>
           </IDSRow>

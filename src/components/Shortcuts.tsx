@@ -6,8 +6,7 @@ import {
   IDSIconLog,
   IDSIconCalendar,
   IDSIconClipboardCross,
-  IDSIconUser,
-  IDSLink,
+  IDSIconAlarmClockNeutral,
   IDSCol,
   IDSRow,
 } from "@inera/ids-react";
@@ -17,7 +16,7 @@ function Shortcuts() {
     <>
       <IDSRow justify="space-between">
         <IDSCol cols="4" m="6" s="12" className="ctac-l-left ctac-m-left">
-          <a className="cta" href="/inbox">
+          <a className="cta" href="/login?location=inbox">
             <div className="cta-icon">
               <IDSIconEmail />
             </div>
@@ -35,7 +34,7 @@ function Shortcuts() {
           </a>
         </IDSCol>
         <IDSCol cols="4" m="6" s="12" className="ctac-l-right ctac-m-left">
-          <a className="cta" href="#">
+          <a className="cta" href="/login?location=journal">
             <div className="cta-icon">
               <IDSIconLog />
             </div>
@@ -62,9 +61,9 @@ function Shortcuts() {
           </a>
         </IDSCol>
         <IDSCol cols="4" m="6" s="12" className="ctac-l-right ctac-m-right">
-          <a className="cta" href="/overview">
+          <a className="cta" href="/login?location=overview">
             <div className="cta-icon">
-              <IDSIconUser />
+              <IDSIconAlarmClockNeutral />
             </div>
             <span className="cta-title">Aktuellt</span>
             <span className="cta-desc">Vad ska du ha koll på?</span>

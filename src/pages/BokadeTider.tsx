@@ -25,11 +25,11 @@ function BokadeTider() {
           srlabel="Du är här"
         >
           <IDSCrumb>
-            <a href="/services?shortcuts=false">Start</a>
+            <a href="/services">Start</a>
           </IDSCrumb>
 
           <IDSCrumb mobile>
-            <a href="/services?shortcuts=false">Start</a>
+            <a href="/services">Start</a>
           </IDSCrumb>
         </IDSBreadcrumbs>
 

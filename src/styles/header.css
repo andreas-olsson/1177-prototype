@@ -1,0 +1,25 @@
+.login-button {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #6a0032;
+    border: 1px solid #6a003258;
+    padding: 0 1.4rem;
+    border-radius: 20px;
+    height: 42px;
+    line-height: 40px;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  .login-button:hover {
+    text-decoration: underline;
+  }
+  
+  .login-button ids-icon-user {
+    float: left;
+    width: 1.4rem;
+  }
+  
+  .login-button span {
+    margin-left: 0.6rem;
+  }

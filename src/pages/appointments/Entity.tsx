@@ -43,7 +43,7 @@ function Entity() {
               srlabel="Du är här"
             >
               <IDSCrumb>
-                <a href="/services">Start</a>
+                <a href="/">Start</a>
               </IDSCrumb>
               <IDSCrumb>
                 <a href="/appointments/">Bokade tider</a>

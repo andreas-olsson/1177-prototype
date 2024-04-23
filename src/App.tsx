@@ -2,8 +2,11 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Services from "./pages/Services";
-import Public from "./pages/Public";
+
+import Login from "./pages/Login";
+
+import Services from "./components/Services";
+import Start from "./pages/Start";
 import Inkorg from "./pages/Inkorg";
 import BokadeTider from "./pages/BokadeTider";
 import BokaTid from "./pages/BokaTid";
@@ -28,7 +31,10 @@ function App() {
         <Header />
         <div id="mainContainer">
           <Routes>
-            <Route index element={<Public />} />
+            <Route index element={<Start />} />
+
+            <Route path="/login" element={<Login />} />
+
             <Route path="/services" element={<Services />} />
             <Route path="/inkorg" element={<Inkorg />} />
             <Route path="/bokadetider" element={<BokadeTider />} />
