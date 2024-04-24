@@ -12,13 +12,6 @@ import {
 } from "@inera/ids-react";
 
 function List() {
-  const navigate = useNavigate(); // Använd useNavigate-hook
-
-  // Funktion för att hantera navigation på knappklick
-  const handleNavigate = (index: any) => {
-    navigate(`entity/?index=${index}`);
-  };
-
   return (
     <>
       <div className="ids">

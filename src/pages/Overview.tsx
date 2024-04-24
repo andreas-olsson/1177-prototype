@@ -3,9 +3,10 @@ import { useNavigate } from "react-router-dom";
 import messageData from "../assets/messages.json";
 
 import resultData from "../assets/results.json";
-
+import ListMessages from "../components/lists/ListMessages";
 import ListAppointments from "../components/lists/ListAppointments";
 import ListJournal from "../components/lists/ListJournal";
+import ListResults from "../components/lists/ListResults";
 
 import {
   IDSBreadcrumbs,
@@ -47,80 +48,20 @@ function Overview() {
         <IDSContainer>
           <IDSRow className="ids-mt-8">
             <IDSCol cols="8" m="12" className="col-padding-right">
-              <ListAppointments amount={3} heading />
-              <ListJournal amount={2} heading />
+              <div className="ids-mb-12">
+                <ListAppointments count={3} heading />
+              </div>
+              <div className="ids-mb-12">
+                <ListJournal count={2} heading />
+              </div>
             </IDSCol>
             <IDSCol>
-              <div style={{ overflow: "hidden" }} className="ids-mb-4">
-                <h2 className="ids-heading-2" style={{ float: "left" }}>
-                  Meddelanden
-                </h2>
-
-                <IDSLink style={{ float: "right" }}>
-                  <a href="inbox/">inkorg</a>
-                </IDSLink>
+              <div className="ids-mb-12">
+                <ListMessages heading filter="unread" count={3} />
               </div>
-              {messageData.messages.map((message, index) => (
-                <div key={index}>
-                  {message.unread && (
-                    <>
-                      <IDSRow>
-                        <IDSCol>
-                          <IDSList>
-                            <IDSListItem
-                              interactive={true}
-                              headline={message.title}
-                              onClick={() => handleNavigate("inbox", index)}
-                            >
-                              <a href="#" slot="interactive"></a>
-                              <p className="ids-body">
-                                Datum: <b>{message.date}</b>
-                              </p>
-                              <p className="ids-body">
-                                Avsändare: <b>{message.author}</b>
-                              </p>
-                            </IDSListItem>
-                          </IDSList>
-                        </IDSCol>
-                      </IDSRow>
-                    </>
-                  )}
-                </div>
-              ))}
-
-              <div
-                style={{ overflow: "hidden" }}
-                className="ids-mb-4 ids-mt-12"
-              >
-                <h2 className="ids-heading-2" style={{ float: "left" }}>
-                  Provsvar
-                </h2>
-                <IDSLink style={{ float: "right" }}>
-                  <a href="results/">Egen provhantering</a>
-                </IDSLink>
+              <div className="ids-mb-12">
+                <ListResults heading />
               </div>
-              {resultData.results.map((result, index) => (
-                <div key={index}>
-                  <>
-                    <IDSRow>
-                      <IDSCol>
-                        <IDSList>
-                          <IDSListItem
-                            interactive={true}
-                            headline={result.title}
-                            onClick={() => handleNavigate("inbox", index)}
-                          >
-                            <a href="#" slot="interactive"></a>
-                            <p className="ids-body">
-                              Datum: <b>{result.date}</b>
-                            </p>
-                          </IDSListItem>
-                        </IDSList>
-                      </IDSCol>
-                    </IDSRow>
-                  </>
-                </div>
-              ))}
             </IDSCol>
           </IDSRow>
         </IDSContainer>

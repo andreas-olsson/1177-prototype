@@ -12,11 +12,11 @@ import appointmentData from "../../assets/appointments.json";
 import { useNavigate } from "react-router-dom";
 
 interface ListAppointmentsProps {
-  amount?: number; // ? innebär att propen är valfri
+  count?: number; // ? innebär att propen är valfri
   heading?: boolean;
 }
 
-function ListAppointments({ amount, heading }: ListAppointmentsProps) {
+function ListAppointments({ count, heading }: ListAppointmentsProps) {
   const navigate = useNavigate(); // Använd useNavigate-hook
 
   const handleNavigate = (baseURL: string, index: any) => {
@@ -129,7 +129,7 @@ function ListAppointments({ amount, heading }: ListAppointmentsProps) {
       )}
       <IDSCard>
         {appointmentData.appointments
-          .slice(0, amount || appointmentData.appointments.length)
+          .slice(0, count || appointmentData.appointments.length)
           .map((appointment, index) => (
             <>
               <IDSRow

@@ -12,11 +12,11 @@ import journalData from "../../assets/journal.json";
 import { useNavigate } from "react-router-dom";
 
 interface ListJournalProps {
-  amount?: number; // ? innebär att propen är valfri
+  count?: number;
   heading?: boolean;
 }
 
-function ListJournal({ amount, heading }: ListJournalProps) {
+function ListJournal({ count, heading }: ListJournalProps) {
   const navigate = useNavigate(); // Använd useNavigate-hook
 
   const handleNavigate = (baseURL: string, index: any) => {
@@ -59,7 +59,7 @@ function ListJournal({ amount, heading }: ListJournalProps) {
     };
   };
 
-  const describeDate = (dateString) => {
+  const describeDate = (dateString: string) => {
     const now = new Date();
     now.setHours(0, 0, 0, 0); // Sätter dagens datum till midnatt
 
@@ -121,7 +121,7 @@ function ListJournal({ amount, heading }: ListJournalProps) {
       )}
       <IDSCard>
         {journalData.notes
-          .slice(0, amount || journalData.notes.length)
+          .slice(0, count || journalData.notes.length)
           .map((note, index, notesArray) => {
             // Förbered jämförelse av datum utan tid
             const currentDate = new Date(note.date);
