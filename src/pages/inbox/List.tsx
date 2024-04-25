@@ -1,6 +1,3 @@
-import React from "react";
-import { useNavigate } from "react-router-dom"; // Importera Link från react-router-dom
-import messageData from "../../assets/messages.json";
 import ListMessages from "../../components/lists/ListMessages";
 
 import {
@@ -16,13 +13,6 @@ import {
 } from "@inera/ids-react";
 
 function List() {
-  const navigate = useNavigate(); // Använd useNavigate-hook
-
-  // Funktion för att hantera navigation på knappklick
-  const handleNavigate = (index: any) => {
-    navigate(`entity/?index=${index}`);
-  };
-
   return (
     <>
       <div className="ids">
@@ -36,7 +26,6 @@ function List() {
               <IDSCrumb>
                 <a href="/">Start</a>
               </IDSCrumb>
-
               <IDSCrumb mobile>
                 <a href="/">Start</a>
               </IDSCrumb>
@@ -47,26 +36,32 @@ function List() {
           </IDSRow>
           <IDSRow>
             <IDSCol cols="8" m="12">
-              <IDSCard>
-                <IDSTabs>
-                  <IDSTab label="Olästa" selected={true}></IDSTab>
-                  <IDSTab label="Alla meddelanden"></IDSTab>
-                  <IDSTab label="Meddelanden med bilagor"></IDSTab>
-                  <IDSTab label="Stjärnmärkta"></IDSTab>
-                  <IDSTabPanel>
-                    <ListMessages filter="unread" />
-                  </IDSTabPanel>
-                  <IDSTabPanel>
+              <IDSTabs>
+                <IDSTab label="Olästa" selected={true}></IDSTab>
+                <IDSTab label="Alla meddelanden"></IDSTab>
+                <IDSTab label="Meddelanden med bilagor"></IDSTab>
+                <IDSTab label="Stjärnmärkta"></IDSTab>
+                <IDSTabPanel>
+                  <IDSCard>
+                    <ListMessages filter="unread" />z
+                  </IDSCard>
+                </IDSTabPanel>
+                <IDSTabPanel>
+                  <IDSCard>
                     <ListMessages />
-                  </IDSTabPanel>
-                  <IDSTabPanel>
+                  </IDSCard>
+                </IDSTabPanel>
+                <IDSTabPanel>
+                  <IDSCard>
                     <ListMessages filter="attachment" />
-                  </IDSTabPanel>
-                  <IDSTabPanel>
+                  </IDSCard>
+                </IDSTabPanel>
+                <IDSTabPanel>
+                  <IDSCard>
                     <ListMessages filter="starred" />
-                  </IDSTabPanel>
-                </IDSTabs>
-              </IDSCard>
+                  </IDSCard>
+                </IDSTabPanel>
+              </IDSTabs>
             </IDSCol>
           </IDSRow>
         </IDSContainer>

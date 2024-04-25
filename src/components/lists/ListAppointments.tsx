@@ -66,7 +66,7 @@ function ListAppointments({ count, heading }: ListAppointmentsProps) {
     const date = new Date(dateString);
     date.setHours(0, 0, 0, 0); // Sätter input-datumet till midnatt
 
-    const timeDiff = date - now; // Skillnad i millisekunder
+    const timeDiff = date.getTime() - now.getTime(); // Skillnad i millisekunder
     const daysDiff = Math.round(timeDiff / (1000 * 60 * 60 * 24)); // Omvandlar till dagar
 
     if (daysDiff < 0) {
