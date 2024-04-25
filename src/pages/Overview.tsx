@@ -1,8 +1,6 @@
 import "../styles/overview.css";
 import { useNavigate } from "react-router-dom";
-import messageData from "../assets/messages.json";
 
-import resultData from "../assets/results.json";
 import ListMessages from "../components/lists/ListMessages";
 import ListAppointments from "../components/lists/ListAppointments";
 import ListJournal from "../components/lists/ListJournal";
@@ -14,18 +12,9 @@ import {
   IDSCol,
   IDSRow,
   IDSContainer,
-  IDSLink,
-  IDSList,
-  IDSListItem,
 } from "@inera/ids-react";
 
 function Overview() {
-  const navigate = useNavigate(); // Använd useNavigate-hook
-
-  const handleNavigate = (baseURL: string, index: any) => {
-    navigate(`/${baseURL}/entity/?index=${index}`);
-  };
-
   return (
     <>
       <div className="ids">

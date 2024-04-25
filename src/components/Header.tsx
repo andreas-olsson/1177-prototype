@@ -1,3 +1,5 @@
+import "../styles/header.css";
+
 import { useLocalStorage } from "@uidotdev/usehooks";
 
 import {
@@ -57,6 +59,10 @@ function Header() {
               <IDSIconUser color="#c12143" color2="#6a0032" />
               <span>Logga in</span>
             </a>
+            {/* <IDSButton secondary onClick={handleLogIn}>
+              <IDSIcon name="user"></IDSIcon>
+              Logga in
+            </IDSButton> */}
           </div>
         )}
         <IDSHeaderNav>

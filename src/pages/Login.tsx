@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useLocalStorage } from "@uidotdev/usehooks";
 import { useLocation, useNavigate } from "react-router-dom"; // Import the useLocation and useNavigate hooks
 import {
@@ -58,28 +58,28 @@ function Login() {
               <IDSCard fill={true} className="card">
                 <ul className="blocklink">
                   <li>
-                    <IDSLink onClick={handleLinkClick} to={generateLink()}>
+                    <IDSLink onClick={handleLinkClick}>
                       <IDSIconChevron></IDSIconChevron>
-                      <a>BankID</a>
+                      <a href={generateLink()}>BankID</a>
                     </IDSLink>
                   </li>
                   <li>
-                    <IDSLink onClick={handleLinkClick} to={generateLink()}>
+                    <IDSLink onClick={handleLinkClick}>
                       <IDSIconChevron></IDSIconChevron>
-                      <a>Freja +</a>
+                      <a href={generateLink()}>Freja +</a>
                     </IDSLink>
                   </li>
                 </ul>
-                <IDSLink onClick={handleLinkClick} to={generateLink()}>
+                <IDSLink onClick={handleLinkClick}>
                   <a>Mer information om e-legitimation</a>
                   <IDSIconExternal slot="append-icon"></IDSIconExternal>
                 </IDSLink>
                 <hr className="ids-mt-4 ids-mb-6" />
                 <ul className="blocklink">
                   <li>
-                    <IDSLink onClick={handleLinkClick} to={generateLink()}>
+                    <IDSLink onClick={handleLinkClick}>
                       <IDSIconChevron></IDSIconChevron>
-                      <a>Foreign eID</a>
+                      <a href={generateLink()}>Foreign eID</a>
                     </IDSLink>
                   </li>
                 </ul>
@@ -100,7 +100,7 @@ function Login() {
                 logga in med BankID på en annan enhet.
               </p>
               <p>
-                <IDSLink onClick={handleLinkClick} to={generateLink()}>
+                <IDSLink onClick={handleLinkClick}>
                   <a>Här finns en guide till hur du loggar in på 1177.se</a>
                 </IDSLink>
                 . Det är viktigt att du loggar ut och stänger ned din webbläsare

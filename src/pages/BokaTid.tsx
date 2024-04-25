@@ -1,20 +1,15 @@
-import { useLocation } from "react-router-dom";
 import {
   IDSCol,
   IDSRow,
   IDSContainer,
   IDSCard,
-  IDSExpandable,
   IDSLink,
   IDSIconChevron,
-  IDSIconCalendar,
   IDSBreadcrumbs,
   IDSCrumb,
 } from "@inera/ids-react";
 
 function BokaTid() {
-  const location = useLocation();
-
   return (
     <>
       <div className="ids">
