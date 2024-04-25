@@ -7,6 +7,7 @@ import {
   IDSIconChevron,
   IDSBadge,
   IDSIconDocument,
+  IDSIconStarFilled,
 } from "@inera/ids-react";
 import messageData from "../../assets/messages.json";
 import { useNavigate } from "react-router-dom";
@@ -80,6 +81,19 @@ function ListMessages({ heading, filter, count }: ListMessagesProps) {
                             </IDSBadge>
                           )}
                         </div>
+                        {message.starred && (
+                          <>
+                            <div
+                              style={{
+                                position: "absolute",
+                                right: "1rem",
+                                top: "2.5rem",
+                              }}
+                            >
+                              <IDSIconStarFilled size="s" />
+                            </div>
+                          </>
+                        )}
                       </IDSListItem>
                     </>
                   )}
