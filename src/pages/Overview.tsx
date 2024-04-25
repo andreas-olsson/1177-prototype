@@ -1,5 +1,4 @@
 import "../styles/overview.css";
-import { useNavigate } from "react-router-dom";
 
 import ListMessages from "../components/lists/ListMessages";
 import ListAppointments from "../components/lists/ListAppointments";
