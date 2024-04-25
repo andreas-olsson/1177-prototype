@@ -1,4 +1,3 @@
-import React from "react";
 import { useLocation } from "react-router-dom";
 import AppointmentsData from "../../assets/appointments.json";
 
@@ -111,7 +110,7 @@ function Entity() {
                   <h3 className="ids-heading-1" slot="headline">
                     Villkor för din bokning
                   </h3>
-                  <IDSLink trigger="true">
+                  <IDSLink>
                     <IDSIconExpand />
                     <a href="javascript:void(0)">
                       Information och villkor för din bokning

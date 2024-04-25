@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom"; // Importera Link från react-router-dom
 import testData from "../../assets/results.json";
 

@@ -1,5 +1,3 @@
-import "../styles/header.css";
-import React from "react";
 import { useLocalStorage } from "@uidotdev/usehooks";
 
 import {
@@ -20,10 +18,6 @@ function Header() {
   const handleLogOut = () => {
     setLoggedin(false); // Set loggedin to true
     navigate("/"); // Navigate to the generated link
-  };
-
-  const handleLogIn = () => {
-    navigate("/login"); // Navigate to the generated link
   };
 
   const menuItems = [
@@ -63,10 +57,6 @@ function Header() {
               <IDSIconUser color="#c12143" color2="#6a0032" />
               <span>Logga in</span>
             </a>
-            {/* <IDSButton secondary onClick={handleLogIn}>
-              <IDSIcon name="user"></IDSIcon>
-              Logga in
-            </IDSButton> */}
           </div>
         )}
         <IDSHeaderNav>

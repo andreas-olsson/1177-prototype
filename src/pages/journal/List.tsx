@@ -1,5 +1,3 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
 import ListJournal from "../../components/lists/ListJournal";
 
 import {

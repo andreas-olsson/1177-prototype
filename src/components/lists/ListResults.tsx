@@ -6,8 +6,6 @@ import {
   IDSListItem,
   IDSIconChevron,
   IDSBadge,
-  IDSIconTestTube,
-  IDSIconTestTubeEmpty,
 } from "@inera/ids-react";
 import resultsData from "../../assets/results.json";
 import { useNavigate } from "react-router-dom";

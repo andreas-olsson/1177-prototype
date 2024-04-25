@@ -1,6 +1,5 @@
 import {
   IDSLink,
-  IDSBadge,
   IDSCard,
   IDSRow,
   IDSCol,
@@ -57,51 +56,6 @@ function ListJournal({ count, heading }: ListJournalProps) {
       // Dag som en siffra (utan inledande nolla)
       time: `${hours}:${minutes}`, // Klockslag med fyra siffror och kolon
     };
-  };
-
-  const describeDate = (dateString: string) => {
-    const now = new Date();
-    now.setHours(0, 0, 0, 0); // Sätter dagens datum till midnatt
-
-    const date = new Date(dateString);
-    date.setHours(0, 0, 0, 0); // Sätter input-datumet till midnatt
-
-    const timeDiff = date - now; // Skillnad i millisekunder
-    const daysDiff = Math.round(timeDiff / (1000 * 60 * 60 * 24)); // Omvandlar till dagar
-
-    console.log(
-      `Now: ${now.toISOString()}, Date: ${date.toISOString()}, TimeDiff: ${timeDiff}, DaysDiff: ${daysDiff}`
-    );
-
-    if (daysDiff < 0) {
-      return null; // Datumet har passerat
-    } else if (daysDiff === 0) {
-      return (
-        <>
-          <IDSBadge className="ids-ml-2" type="info">
-            Idag
-          </IDSBadge>
-        </>
-      );
-    } else if (daysDiff === 1) {
-      return (
-        <>
-          <IDSBadge className="ids-ml-2" type="info">
-            Idag
-          </IDSBadge>
-        </>
-      );
-    } else if (daysDiff <= 7) {
-      return (
-        <>
-          <IDSBadge className="ids-ml-2" type="info">
-            om {daysDiff} dagar
-          </IDSBadge>
-        </>
-      );
-    } else {
-      return null; // Datumet är mer än 7 dagar bort
-    }
   };
 
   return (
