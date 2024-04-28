@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, SetStateAction } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import privateMenu from "../assets/menu/private.json";
 import professionMenu from "../assets/menu/profession.json";
 import "../styles/header.css";
@@ -18,40 +18,51 @@ import {
   IDSIconClose,
 } from "@inera/ids-react";
 import { useNavigate } from "react-router-dom";
-
 import Search from "./Search";
 
-function Header({ user = "" }) {
-  let menu = privateMenu;
-  let primaryColor = "#c12143";
-  let secondaryColor = "#6a0032";
+// Defining the types for menu items
+interface IMenuItem {
+  name: string;
+  sub?: IMenuItem[];
+  url?: string;
+}
 
-  if (user === "profession") {
-    menu = professionMenu;
-    primaryColor = "#007bff";
-    secondaryColor = "#001f3f";
-  }
+interface IMenu {
+  content: IMenuItem[];
+}
+
+// Header props
+interface HeaderProps {
+  user?: string;
+}
+
+function Header({ user = "" }: HeaderProps) {
+  const menu: IMenu = user === "profession" ? professionMenu : privateMenu;
+  const primaryColor = user === "profession" ? "#007bff" : "#c12143";
+  const secondaryColor = user === "profession" ? "#001f3f" : "#6a0032";
 
   const navigate = useNavigate();
   const [loggedin, setLoggedin] = useLocalStorage("loggedin", false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [currentMenu, setCurrentMenu] = useState(menu.content);
+  const [currentMenu, setCurrentMenu] = useState<IMenuItem[]>(menu.content);
   const [menuTitle, setMenuTitle] = useState("Meny");
-  const [menuStack, setMenuStack] = useState([]);
-  const menuRef = useRef(null);
-  const [serviceNames, setServiceNames] = useState([]);
+  const [menuStack, setMenuStack] = useState<
+    { menu: IMenuItem[]; title: string }[]
+  >([]);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const [serviceNames, setServiceNames] = useState<string[]>([]);
 
   useEffect(() => {
     const topLevelItem = menu.content.find((item) => item.name);
     if (topLevelItem) {
-      const names: SetStateAction<never[]> = [];
+      const names: string[] = [];
       recursivelyExtractNames(topLevelItem, names);
       setServiceNames(names);
       console.log("Top level names extracted:", names);
     }
-  }, []);
+  }, [menu.content]);
 
-  const recursivelyExtractNames = (item, names) => {
+  const recursivelyExtractNames = (item: IMenuItem, names: string[]) => {
     if (item.name) {
       names.push(item.name);
     }
@@ -71,7 +82,7 @@ function Header({ user = "" }) {
     setMenuOpen(!menuOpen);
   };
 
-  const handleMenuItemClick = (item) => {
+  const handleMenuItemClick = (item: IMenuItem) => {
     if (item.url) {
       navigate(item.url);
       setMenuOpen(false);
@@ -86,10 +97,10 @@ function Header({ user = "" }) {
   };
 
   const handleBackClick = () => {
-    if (menuStack.length > 0) {
-      const { menu: prevMenu, title: prevTitle } = menuStack.pop();
-      setCurrentMenu(prevMenu);
-      setMenuTitle(prevTitle);
+    const lastItem = menuStack.pop();
+    if (lastItem) {
+      setCurrentMenu(lastItem.menu);
+      setMenuTitle(lastItem.title);
       setMenuStack([...menuStack]);
     } else {
       setCurrentMenu(menu.content);
@@ -97,19 +108,19 @@ function Header({ user = "" }) {
     }
   };
 
-  const handleCloseMenu = (event) => {
+  const handleCloseMenu = (event: React.MouseEvent) => {
     setMenuOpen(false);
     event.stopPropagation();
   };
 
-  const handleClickOutside = (event) => {
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
       setMenuOpen(false);
     }
   };
 
   useEffect(() => {
-    const handleKeyPress = (event) => {
+    const handleKeyPress = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setMenuOpen(false);
       }
@@ -124,7 +135,7 @@ function Header({ user = "" }) {
     };
   }, []);
 
-  const renderMenuItems = (items) => {
+  const renderMenuItems = (items: IMenuItem[]) => {
     return items.map((item, index) => (
       <a
         key={index}
@@ -144,7 +155,6 @@ function Header({ user = "" }) {
             />
           </span>
         )}
-
         {item.sub && <i className="chevron-icon">&#8594;</i>}
       </a>
     ));
@@ -182,7 +192,7 @@ function Header({ user = "" }) {
             </a>
           </IDSHeaderAvatar>
         ) : (
-          <IDSHeaderItem Mobile>
+          <IDSHeaderItem mobile={true}>
             <IDSIconUser></IDSIconUser>
             <a href="/login">Logga in</a>
           </IDSHeaderItem>
@@ -193,7 +203,6 @@ function Header({ user = "" }) {
         </IDSIconStockholm>
 
         <IDSHeaderNav>
-          {/* Menu button */}
           <a
             href="#"
             onClick={handleMenuClick}
@@ -202,7 +211,6 @@ function Header({ user = "" }) {
             Meny
           </a>
           <div className="desktop-only">
-            {/* Top level menu links */}
             {menu.content.map((item, index) => (
               <a
                 key={index}
@@ -210,7 +218,7 @@ function Header({ user = "" }) {
                 onClick={() => {
                   setCurrentMenu(item.sub || []);
                   setMenuStack([]);
-                  setMenuTitle(item.name); // Set menu title to the clicked item name
+                  setMenuTitle(item.name);
                   setMenuOpen(true);
                 }}
                 className="header-nav-item"
@@ -221,7 +229,6 @@ function Header({ user = "" }) {
           </div>
         </IDSHeaderNav>
 
-        {/* Menu overlay */}
         {menuOpen && (
           <div className="menu-overlay">
             <div className="menu-close-button" onClick={handleCloseMenu}>
@@ -269,7 +276,6 @@ function Header({ user = "" }) {
                       </a>
                     </div>
                   )}
-                  {/* Back button */}
                   {(menuStack.length > 0 || currentMenu !== menu.content) && (
                     <a
                       className="menu-back-button"
@@ -282,16 +288,12 @@ function Header({ user = "" }) {
                         : "Meny"}
                     </a>
                   )}
-
-                  {/* Menu title */}
                 </div>
                 <h1 className="ids-heading-1 menu-title">{menuTitle}</h1>
               </div>
               <div className="menu-container">
-                {/* Render menu items */}
                 {renderMenuItems(currentMenu)}
                 <div className="search-module">
-                  {" "}
                   <Search serviceNames={serviceNames} />
                 </div>
               </div>
