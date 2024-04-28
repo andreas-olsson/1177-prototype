@@ -13,7 +13,7 @@ import Articles from "../components/Articles.tsx";
 import Services from "../components/Services.tsx";
 
 function Start() {
-  const [loggedin, setLoggedin] = useLocalStorage("loggedin", false);
+  const [loggedin] = useLocalStorage("loggedin", false);
 
   return (
     <>

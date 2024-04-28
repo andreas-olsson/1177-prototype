@@ -1,4 +1,3 @@
-import React from "react";
 import { useLocation } from "react-router-dom";
 import journalData from "../../assets/journal.json";
 
@@ -9,7 +8,6 @@ import {
   IDSBreadcrumbs,
   IDSCrumb,
   IDSCard,
-  IDSBadge,
 } from "@inera/ids-react";
 
 function Entity() {

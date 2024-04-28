@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, SetStateAction } from "react";
 import privateMenu from "../assets/menu/private.json";
 import professionMenu from "../assets/menu/profession.json";
-
 import "../styles/header.css";
 import { useLocalStorage } from "@uidotdev/usehooks";
 import {
@@ -45,7 +44,7 @@ function Header({ user = "" }) {
   useEffect(() => {
     const topLevelItem = menu.content.find((item) => item.name);
     if (topLevelItem) {
-      const names = [];
+      const names: SetStateAction<never[]> = [];
       recursivelyExtractNames(topLevelItem, names);
       setServiceNames(names);
       console.log("Top level names extracted:", names);

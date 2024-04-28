@@ -1,8 +1,4 @@
-import { useLocation } from "react-router-dom";
-
 function Create() {
-  const location = useLocation();
-
   return (
     <>
       <div className="ids">

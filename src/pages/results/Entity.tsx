@@ -1,4 +1,3 @@
-import React from "react";
 import { useLocation } from "react-router-dom";
 import resultData from "../../assets/results.json";
 
@@ -10,10 +9,6 @@ import {
   IDSCrumb,
   IDSCard,
   IDSBadge,
-  IDSButton,
-  IDSDialog,
-  IDSLink,
-  IDSIconExpand,
 } from "@inera/ids-react";
 
 function Entity() {

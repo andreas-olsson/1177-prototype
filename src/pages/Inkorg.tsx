@@ -1,8 +1,4 @@
-import { useLocation } from "react-router-dom";
-
 function Inkorg() {
-  const location = useLocation();
-
   return (
     <>
       <div className="ids">

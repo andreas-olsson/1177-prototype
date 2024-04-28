@@ -1,5 +1,5 @@
 import "../styles/services.css";
-import { useLocation } from "react-router-dom";
+
 import {
   IDSLink,
   IDSNotificationBadge,
@@ -13,8 +13,6 @@ import {
 } from "@inera/ids-react";
 
 function Services() {
-  const location = useLocation();
-
   return (
     <>
       <div className="ids">
@@ -28,7 +26,7 @@ function Services() {
                     <IDSLink>
                       <IDSIconChevron></IDSIconChevron>
                       <a>Se inkorg</a>
-                      <IDSNotificationBadge className="ids-ml-2" size="s">
+                      <IDSNotificationBadge className="ids-ml-2">
                         2
                       </IDSNotificationBadge>
                     </IDSLink>
@@ -69,7 +67,7 @@ function Services() {
                   <li>
                     <IDSLink>
                       <a>Ellen Persson</a>
-                      <IDSNotificationBadge className="ids-ml-2" size="s">
+                      <IDSNotificationBadge className="ids-ml-2">
                         2
                       </IDSNotificationBadge>
                     </IDSLink>

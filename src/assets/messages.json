@@ -4,10 +4,11 @@
         "date": "2023-04-18 08:24",
         "title": "Titel på första meddelandet",
         "author": "Ärendehantering enhet 3",
+        "status": "Information",
         "unread": true,
-        "archive": false,
-        "completed": true,
-        "attachment": false,
+        "archived": false,
+        "starred": false,
+        "attachment": true,
         "content": [
             {
               "heading": "Detta är en rubrik i ditt meddelande",
@@ -24,9 +25,10 @@
         "date": "2022-03-12 04:22",
         "title": "Titel på andra meddelandet",
         "author": "Ärendehantering enhet 3",
+        "status": "Ärendet avslutat",
         "unread": true,
-        "archive": true,
-        "completed": true,
+        "archived": false,
+        "starred": true,
         "attachment": false,
         "content": [
             {
@@ -43,9 +45,10 @@
         "date": "2022-03-12 04:22",
         "title": "Titel på andra meddelandet",
         "author": "Ärendehantering enhet 3",
+        "status": "Information",
         "unread": false,
-        "archive": false,
-        "completed": true,
+        "archived": false,
+        "starred": true,
         "attachment": true,
         "content": [
             {

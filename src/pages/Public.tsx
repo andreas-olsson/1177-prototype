@@ -2,7 +2,6 @@ import {
   IDSCol,
   IDSRow,
   IDSContainer,
-  IDSCard,
   IDSList,
   IDSListItem,
 } from "@inera/ids-react";

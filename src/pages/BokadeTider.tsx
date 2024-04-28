@@ -1,4 +1,3 @@
-import { useLocation } from "react-router-dom";
 import {
   IDSBreadcrumbs,
   IDSCrumb,
@@ -14,8 +13,6 @@ import {
 } from "@inera/ids-react";
 
 function BokadeTider() {
-  const location = useLocation();
-
   return (
     <>
       <div className="ids">
