@@ -2,39 +2,49 @@
     "content": [
       {
         "name": "E-tjänster",
+        "login": true,
         "image": "img-liv-halsa.svg",
         "description": "Här hittar du e-tjänster",
         "sub": [
           {
             "name": "Tidbok",
+            "login": true,
             "sub": [
               {
-                "name": "Boka tid via mottagning"
+                "name": "Boka tid via mottagning",
+                "login": true
+                
               },
               {
-                "name": "Visa bokade tider"
+                "name": "Visa bokade tider",
+                "login": true
               }
             ]
           },
           {
             "name": "Journal",
             "url": "/journal",
+            "login": true,
             "sub": null
           },
           {
             "name": "Listning",
+            "login": true,
             "sub": null
           },
           {
             "name": "Ärenden",
+            "login": true,
             "sub": null
           },
           {
             "name": "Dina recept",
+            "login": false,
             "sub": null
           },
           {
             "name": "Vaccin",
+            "login": true,
             "sub": null
           }
         ]

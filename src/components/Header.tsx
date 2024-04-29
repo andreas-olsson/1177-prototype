@@ -25,6 +25,7 @@ interface IMenuItem {
   name: string;
   sub?: IMenuItem[];
   url?: string;
+  login?: boolean;
 }
 
 interface IMenu {
@@ -50,27 +51,26 @@ function Header({ user = "" }: HeaderProps) {
     { menu: IMenuItem[]; title: string }[]
   >([]);
   const menuRef = useRef<HTMLDivElement>(null);
-  const [serviceNames, setServiceNames] = useState<string[]>([]);
 
   useEffect(() => {
     const topLevelItem = menu.content.find((item) => item.name);
     if (topLevelItem) {
-      const names: string[] = [];
-      recursivelyExtractNames(topLevelItem, names);
-      setServiceNames(names);
-      console.log("Top level names extracted:", names);
+      console.log(
+        "Top level names extracted:",
+        recursivelyExtractNames(topLevelItem)
+      );
     }
   }, [menu.content]);
 
-  const recursivelyExtractNames = (item: IMenuItem, names: string[]) => {
-    if (item.name) {
-      names.push(item.name);
-    }
+  const recursivelyExtractNames = (item: IMenuItem): string[] => {
+    const names: string[] = [];
+    names.push(item.name);
     if (item.sub) {
       item.sub.forEach((subItem) => {
-        recursivelyExtractNames(subItem, names);
+        names.push(...recursivelyExtractNames(subItem));
       });
     }
+    return names;
   };
 
   const handleLogOut = () => {
@@ -139,14 +139,12 @@ function Header({ user = "" }: HeaderProps) {
     return items.map((item, index) => (
       <a
         key={index}
-        className={`menu-item${
-          serviceNames.includes(item.name) ? " service-menu-item" : ""
-        }`}
+        className={`menu-item${item.login ? " service-menu-item" : ""}`}
         onClick={() => handleMenuItemClick(item)}
         href="#"
       >
         <span>{item.name}</span>
-        {serviceNames.includes(item.name) && (
+        {item.login && (
           <span className="service-menu-item-icon">
             <IDSIconUser
               color={primaryColor}
@@ -294,7 +292,7 @@ function Header({ user = "" }: HeaderProps) {
               <div className="menu-container">
                 {renderMenuItems(currentMenu)}
                 <div className="search-module">
-                  <Search serviceNames={serviceNames} />
+                  <Search />
                 </div>
               </div>
 

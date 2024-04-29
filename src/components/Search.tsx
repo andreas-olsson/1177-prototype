@@ -1,12 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { IDSIconUser, IDSInput, IDSButton } from "@inera/ids-react";
-
+import { useState } from "react";
+import { IDSIconUser, IDSInput } from "@inera/ids-react";
 import menu from "../assets/menu/private.json";
 import "../styles/search.css";
 
-function Search({ serviceNames = [] }: SearchProps) {
+interface MenuItem {
+  name: string;
+  url?: string;
+  login?: boolean;
+  sub?: MenuItem[];
+}
+
+function Search() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
+  const [searchResults, setSearchResults] = useState<MenuItem[]>([]);
 
   const handleInputChange = (event: { target: { value: string } }) => {
     const query = event.target.value.trim().toLowerCase();
@@ -18,18 +24,23 @@ function Search({ serviceNames = [] }: SearchProps) {
     if (query === "") {
       setSearchResults([]);
     } else {
-      const results: never[] = [];
-      searchMenu(menu.content, query, results);
+      const results: MenuItem[] = [];
+      searchMenu(menu.content as MenuItem[], query, results);
+
       setSearchResults(results.slice(0, 10));
     }
   };
 
-  const searchMenu = (items: any[], query: any, results: any[]) => {
-    items.forEach((item: { name: string; sub: any }) => {
-      if (item && item.name && item.name.toLowerCase().includes(query)) {
+  const searchMenu = (
+    items: MenuItem[],
+    query: string,
+    results: MenuItem[]
+  ) => {
+    items.forEach((item) => {
+      if (item.name.toLowerCase().includes(query)) {
         results.push(item);
       }
-      if (item && item.sub) {
+      if (item.sub) {
         searchMenu(item.sub, query, results);
       }
     });
@@ -43,16 +54,17 @@ function Search({ serviceNames = [] }: SearchProps) {
       </IDSInput>
 
       <div className="search-result-list">
-        {searchResults.length > 0 ? (
+        {searchResults.length > 0 && (
           <div>
             {searchResults.map((item, index) => (
               <a
-                className={`search-result-item${
-                  serviceNames.includes(item.name) ? " service-link" : ""
-                }`}
                 key={index}
+                className={`search-result-item${
+                  item.login ? " service-link" : ""
+                }`}
+                href={item.url}
               >
-                {serviceNames.includes(item.name) && (
+                {item.login && (
                   <IDSIconUser
                     size="s"
                     className="menu-item-icon"
@@ -63,8 +75,6 @@ function Search({ serviceNames = [] }: SearchProps) {
               </a>
             ))}
           </div>
-        ) : (
-          <></>
         )}
       </div>
     </div>
