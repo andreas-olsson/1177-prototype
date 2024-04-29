@@ -28,7 +28,9 @@ function BokaTid() {
         </IDSBreadcrumbs>
 
         <h1 className="ids-heading-1 ids-mt-12">Boka tid</h1>
-        <p className="ids-body ids-mt-4">Letar du efter dina bokningar? </p>
+        <p className="ids-body ids-mt-4">
+          Vill du visa eller hantera dina bokningar?{" "}
+        </p>
         <IDSLink className="ids-mb-2">
           <IDSIconChevron></IDSIconChevron>
           <a href="/bokadetider">Bokade tider</a>
@@ -38,10 +40,7 @@ function BokaTid() {
             <IDSCol cols="8" m="12" s="12" className="ids-content ids-mt-6">
               <IDSCard className="ids-mb-4">
                 <h3 className="ids-heading-2">I min region</h3>
-                <p className="ids-mb-4">
-                  Här väljer du den mottagning där du önskar att boka tider. De
-                  mottagningar som visas erbjuder möjligheten att boka tid.
-                </p>
+
                 <IDSLink className="ids-mb-2 block">
                   <IDSIconChevron></IDSIconChevron>
                   <a href="javascript:console.log('click')">
@@ -60,7 +59,6 @@ function BokaTid() {
                   <a href="javascript:console.log('click')">Boka tid</a>
                 </IDSLink>
               </IDSCard>
-
               <IDSCard className="ids-mt-8" style={{ display: "block" }}>
                 <h3 className="ids-heading-2">Andra mottagningar</h3>
                 <p className="ids-mb-4">
@@ -96,6 +94,13 @@ function BokaTid() {
                   </a>
                 </IDSLink>
               </IDSCard>
+              <p className="ids-body ids-mt-12">
+                För att lägga till fler mottagningar kan du gå till{" "}
+                <a style={{ color: "#43618D" }} href="#">
+                  Hitta och lägg till mottagning
+                </a>
+                .
+              </p>
             </IDSCol>
           </IDSRow>
         </IDSContainer>
