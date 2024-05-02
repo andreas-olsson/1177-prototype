@@ -41,7 +41,9 @@ const AgentButton: React.FC<AgentButtonProps> = ({
     onClick={() => handleSetAgent(agent.name)}
   >
     {selectedAgent === agent.name && (
-      <div className="selected-icon">✓</div> // Exempel på hur en ikon kan läggas till
+      <div className="selected-icon">
+        <IDSIconClose colorpreset={1} />
+      </div>
     )}
     <span className="icon left">
       <IDSIconAgent />
