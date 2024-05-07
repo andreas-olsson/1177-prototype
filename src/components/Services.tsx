@@ -9,7 +9,7 @@ import {
   IDSRow,
   IDSContainer,
   IDSCard,
-  IDSIconChevron,
+  IDSIconArrow,
 } from "@inera/ids-react";
 
 function Services() {
@@ -24,7 +24,7 @@ function Services() {
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
-                      <IDSIconChevron></IDSIconChevron>
+                      <IDSIconArrow />
                       <a>Se inkorg</a>
                       <IDSNotificationBadge className="ids-ml-2">
                         2
@@ -38,13 +38,13 @@ function Services() {
                 <ul className="blocklink">
                   <li>
                     <IDSLink className="ids-mb-2">
-                      <IDSIconChevron></IDSIconChevron>
+                      <IDSIconArrow />
                       <a href="/bokadetider">Bokade tider</a>
                     </IDSLink>
                   </li>
                   <li>
                     <IDSLink className="ids-mb-2">
-                      <IDSIconChevron></IDSIconChevron>
+                      <IDSIconArrow />
                       <a href="/bokatid">Boka tid</a>
                     </IDSLink>
                   </li>
@@ -55,7 +55,7 @@ function Services() {
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
-                      <IDSIconChevron></IDSIconChevron>
+                      <IDSIconArrow />
                       <a>Sök vård digitalt i 1177 direkt</a>
                     </IDSLink>
                   </li>
@@ -81,7 +81,7 @@ function Services() {
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
-                      <IDSIconChevron></IDSIconChevron>
+                      <IDSIconArrow />
                       <a>Vårdcentralen tornet</a>
                     </IDSLink>
                   </li>
@@ -99,19 +99,19 @@ function Services() {
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
-                      <IDSIconChevron></IDSIconChevron>
+                      <IDSIconArrow />
                       <a>Arbetsterapimottagningen Sunne</a>
                     </IDSLink>
                   </li>
                   <li>
                     <IDSLink>
-                      <IDSIconChevron></IDSIconChevron>
+                      <IDSIconArrow />
                       <a>Barn- och ungdomsmottagning Kristianstad</a>
                     </IDSLink>
                   </li>
                   <li>
                     <IDSLink>
-                      <IDSIconChevron></IDSIconChevron>
+                      <IDSIconArrow />
                       <a>Barn- och ungdomspsykiatrimottagning Lund</a>
                     </IDSLink>
                   </li>
@@ -131,7 +131,7 @@ function Services() {
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
-                      <IDSIconChevron></IDSIconChevron>
+                      <IDSIconArrow />
                       <a>Vårdkontakt direkt</a>
                     </IDSLink>
                   </li>
@@ -142,13 +142,13 @@ function Services() {
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
-                      <IDSIconChevron></IDSIconChevron>
+                      <IDSIconArrow />
                       <a>Journalen QA</a>
                     </IDSLink>
                   </li>
                   <li>
                     <IDSLink>
-                      <IDSIconChevron></IDSIconChevron>
+                      <IDSIconArrow />
                       <a>Journalen SIT</a>
                     </IDSLink>
                   </li>
@@ -159,13 +159,13 @@ function Services() {
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
-                      <IDSIconChevron></IDSIconChevron>
+                      <IDSIconArrow />
                       <a>Beställ provhantering och se svar</a>
                     </IDSLink>
                   </li>
                   <li>
                     <IDSLink>
-                      <IDSIconChevron></IDSIconChevron>
+                      <IDSIconArrow />
                       <a>Registrera prov</a>
                     </IDSLink>
                   </li>
@@ -176,7 +176,7 @@ function Services() {
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
-                      <IDSIconChevron></IDSIconChevron>
+                      <IDSIconArrow />
                       <a>Se intyg</a>
                     </IDSLink>
                   </li>
@@ -187,7 +187,7 @@ function Services() {
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
-                      <IDSIconChevron></IDSIconChevron>
+                      <IDSIconArrow />
                       <a>Se information om recept</a>
                     </IDSLink>
                   </li>
@@ -203,7 +203,7 @@ function Services() {
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
-                      <IDSIconChevron></IDSIconChevron>
+                      <IDSIconArrow />
                       <a>Lämna synpunkter och klagomål</a>
                     </IDSLink>
                   </li>
@@ -214,19 +214,19 @@ function Services() {
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
-                      <IDSIconChevron></IDSIconChevron>
+                      <IDSIconArrow />
                       <a>Att hantera ADHD - Beroendemottagningen Kviberg</a>
                     </IDSLink>
                   </li>
                   <li>
                     <IDSLink>
-                      <IDSIconChevron></IDSIconChevron>
+                      <IDSIconArrow />
                       <a>Hälsolyftet</a>
                     </IDSLink>
                   </li>
                   <li>
                     <IDSLink>
-                      <IDSIconChevron></IDSIconChevron>
+                      <IDSIconArrow />
                       <a>
                         Internetpsykiatri - KBT för depression, hälsoångest,
                         paniksyndrom, social fobi och insomni (sömnb...
@@ -235,7 +235,7 @@ function Services() {
                   </li>
                   <li>
                     <IDSLink>
-                      <IDSIconChevron></IDSIconChevron>
+                      <IDSIconArrow />
                       <a>Stöd och behandling</a>
                     </IDSLink>
                   </li>
@@ -246,7 +246,7 @@ function Services() {
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
-                      <IDSIconChevron></IDSIconChevron>
+                      <IDSIconArrow />
                       <a>Alla övriga tjänster</a>
                     </IDSLink>
                   </li>
