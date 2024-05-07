@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import "../styles/header.css";
 import { useLocalStorage } from "@uidotdev/usehooks";
 import {
@@ -8,9 +8,6 @@ import {
   IDSIconUser,
   IDSIconExpand,
   IDSIconClose,
-  IDSIconAgent,
-  IDSIconChevron,
-  IDSLink,
   IDSAgent,
   IDSHeaderItem,
   IDSIconEarHearing,
@@ -19,79 +16,32 @@ import {
   IDSHeaderMobileItem,
   IDSIconStockholm,
 } from "@inera/ids-react";
-import { useLocation, useNavigate } from "react-router-dom";
-
-interface AgentButtonProps {
-  agent: {
-    name: string;
-  };
-  selectedAgent: string;
-  handleSetAgent: (name: string) => void;
-}
-
-const AgentButton: React.FC<AgentButtonProps> = ({
-  agent,
-  selectedAgent,
-  handleSetAgent,
-}) => (
-  <div
-    className={`login-button agent ${
-      selectedAgent === agent.name ? "selected" : ""
-    }`}
-    onClick={() => handleSetAgent(agent.name)}
-  >
-    {selectedAgent === agent.name && (
-      <div className="selected-icon">
-        <IDSIconClose colorpreset={1} />
-      </div>
-    )}
-    <span className="icon left">
-      <IDSIconAgent />
-    </span>
-    <span className="label agent">
-      {selectedAgent === agent.name && (
-        <span className="label-pre">Ombud för</span>
-      )}
-      {agent.name}
-    </span>
-  </div>
-);
+import { useLocation } from "react-router-dom";
 
 function Header() {
   const location = useLocation();
-  const navigate = useNavigate();
-  const [loggedin, setLoggedin] = useLocalStorage("loggedin", false);
+
+  const [loggedin] = useLocalStorage("loggedin", false);
   const [isAgent, setAgent] = useLocalStorage("isAgent", false);
+  const [selectedAgent, setSelectedAgent] = useState("");
   const [agentName, setAgentName] = useState("");
-  const [selectedAgent, setSelectedAgent] = useLocalStorage(
-    "selectedAgent",
-    ""
-  );
+
   const [isOverlayVisible, setOverlayVisible] = useState(false);
   const overlayRef = useRef<HTMLDivElement>(null);
 
-  const handleLogOut = () => {
-    setLoggedin(false);
-    setAgent(false);
-    navigate("/");
-  };
-
-  const handleSetAgent = (name: string) => {
-    if (selectedAgent === name) {
-      setSelectedAgent("");
-      setAgent(false);
-      setAgentName("");
-    } else {
-      setSelectedAgent(name);
+  useEffect(() => {
+    const storedSelectedAgent = localStorage.getItem("selectedAgent");
+    if (storedSelectedAgent) {
+      setSelectedAgent(storedSelectedAgent);
+      setAgentName(storedSelectedAgent.toString()); // Se till att det sparade värdet är en sträng
       setAgent(true);
-      setAgentName(name);
     }
-  };
+  }, [selectedAgent]);
 
   const handleKillAgent = () => {
+    localStorage.removeItem("isAgent");
+    localStorage.removeItem("selectedAgent");
     setAgent(false);
-    setAgentName("");
-    setSelectedAgent("");
   };
 
   const handleAvatarClick = () => {
@@ -114,10 +64,9 @@ function Header() {
     };
   }, []);
 
-  const agents = [{ name: "Elsa Andersson" }, { name: "Elton Andersson" }];
-
   const menuItems = [
     ["Start", "/"],
+    ["E-tjänster", "/login"],
     ["Inkorg", "/inbox"],
     ["Bokade tider", "/bokadetider"],
     ["Journalen", "/"],
@@ -144,18 +93,18 @@ function Header() {
             <span
               className={`login-button ${isOverlayVisible ? "active" : ""}`}
             >
-              <span className="icon left">
-                {isAgent && (
-                  <div className="agent-icon">
-                    <IDSIconAgent colorpreset={3} />
-                  </div>
-                )}
-                <IDSIconUser colorpreset={2} />
+              <span
+                className="icon left"
+                style={{
+                  width: "40px",
+                  height: "40px",
+                  borderRadius: "20px",
+                  background: "#ddd",
+                }}
+              >
+                AO
               </span>
-              <div className="label">
-                <span className="label-pre">Inloggad som</span>
-                Andreas Olsson
-              </div>
+              <div className="label">Inloggad</div>
               <span className="icon right">
                 {isOverlayVisible ? (
                   <IDSIconClose colorpreset={2} />
@@ -167,26 +116,11 @@ function Header() {
             {isOverlayVisible && (
               <>
                 <div className="overlay-menu">
-                  <IDSLink block className="ids-mb-2" onClick={handleLogOut}>
-                    <IDSIconChevron></IDSIconChevron>
-                    <a href="javascript:void(0)">Inställningar</a>
-                  </IDSLink>
-                  <IDSLink block className="ids-mb-2" onClick={handleLogOut}>
-                    <IDSIconChevron></IDSIconChevron>
-                    <a href="javascript:void(0)">Logga ut</a>
-                  </IDSLink>
-                  <hr className="ids-mt-6" />
-                  <h3 className="ids-heading-3 ids-mb-2 ids-mt-6">
-                    Agera ombud
-                  </h3>
-                  {agents.map((agent) => (
-                    <AgentButton
-                      key={agent.name}
-                      agent={agent}
-                      selectedAgent={selectedAgent}
-                      handleSetAgent={handleSetAgent}
-                    />
-                  ))}
+                  <iframe
+                    src="http://andreas.uxd.nu/user-menu.html"
+                    title="meny"
+                    className="overlay-iframe"
+                  />
                 </div>
               </>
             )}

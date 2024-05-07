@@ -1,5 +1,11 @@
 import "../styles/services.css";
 
+import Shortcuts from "../components/Shortcuts.tsx";
+
+import { useEffect } from "react";
+import { useLocalStorage } from "@uidotdev/usehooks";
+import { useNavigate } from "react-router-dom";
+
 import {
   IDSLink,
   IDSNotificationBadge,
@@ -13,11 +19,27 @@ import {
 } from "@inera/ids-react";
 
 function Services() {
+  const [loggedin] = useLocalStorage("loggedin", false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!loggedin) {
+      navigate("/login");
+    }
+  }, [loggedin, navigate]);
+
   return (
     <>
       <div className="ids">
-        <IDSContainer gutterless={true} className="ids-content ids-mt-6">
+        <IDSContainer className="ids-content ids-mt-6">
           <IDSRow justify="start" gap="2rem">
+            <IDSCol cols="12" m="12" s="12">
+              <h1 className="ids-heading-2">Genvägar</h1>
+            </IDSCol>
+          </IDSRow>
+
+          <Shortcuts />
+          <IDSRow justify="start" gap="2rem" className="ids-mt-12">
             <IDSCol m="12" s="12">
               {/* <h2 className="ids-heading-2">Inkorg</h2>
               <IDSCard fill={false} className="card">
@@ -50,7 +72,7 @@ function Services() {
                   </li>
                 </ul>
               </IDSCard> */}
-              <h2 className="ids-heading-2">Genvägar</h2>
+              <h2 className="ids-heading-2">Favoriter</h2>
               <IDSCard fill={false} className="card">
                 <ul className="blocklink">
                   <li>

@@ -3,6 +3,9 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 import Login from "./pages/Login";
+import Logout from "./pages/Logout";
+import Settings from "./pages/Settings";
+import SetAgent from "./components/SetAgent";
 
 import Services from "./components/Services";
 import Start from "./pages/Start";
@@ -33,6 +36,9 @@ function App() {
             <Route index element={<Start />} />
 
             <Route path="/login" element={<Login />} />
+            <Route path="/logout" element={<Logout />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/agent" element={<SetAgent />} />
 
             <Route path="/services" element={<Services />} />
             <Route path="/inkorg" element={<Inkorg />} />

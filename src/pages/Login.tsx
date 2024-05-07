@@ -27,7 +27,7 @@ function Login() {
     if (locationString) {
       return `/${locationString}`;
     } else {
-      return "/";
+      return "/services";
     }
   };
 

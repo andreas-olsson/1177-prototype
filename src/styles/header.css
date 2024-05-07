@@ -88,11 +88,18 @@
   right: 0;
   top: -4px;
   background: #fff;
-  padding: 80px 10px 0px 10px;
+  padding: 60px 0px 0px 0px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   border-radius: 12px;
   z-index: 1; 
   text-align: left;
+}
+
+.overlay-iframe {
+  border: none;
+  width: 170px;
+  height: 300px;
+  overflow: none;
 }
 
 .agent-icon {
