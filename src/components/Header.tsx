@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import "../styles/header.css";
 import { useLocalStorage } from "@uidotdev/usehooks";
 import {
@@ -19,7 +20,6 @@ import {
   IDSHeaderMobileItem,
   IDSIconStockholm,
 } from "@inera/ids-react";
-import { useLocation, useNavigate } from "react-router-dom";
 
 interface AgentButtonProps {
   agent: {

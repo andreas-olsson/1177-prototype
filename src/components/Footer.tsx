@@ -11,8 +11,6 @@ function Footer() {
   return (
     <>
       <div>
-        {/** Note that this code example shows every theme variation.
-  Friendly reminder: Don't forget to delete the className="ids-show-THEME" */}
         <IDSFooter
           className="ids-hide ids-hide ids-show-1177"
           headline="1177"
