@@ -4,7 +4,7 @@ import {
   IDSCol,
   IDSList,
   IDSListItem,
-  IDSIconChevron,
+  IDSIconArrow,
   IDSBadge,
 } from "@inera/ids-react";
 import resultsData from "../../assets/results.json";
@@ -25,11 +25,11 @@ function ListResults({ heading }: ListResultsProps) {
       <IDSRow>
         {heading && (
           <IDSCol cols="12" className="ids-mb-4">
-            <h3 className="ids-heading-3" style={{ float: "left" }}>
+            <h3 className="ids-heading-2" style={{ float: "left" }}>
               Provsvar
             </h3>
             <IDSLink style={{ float: "right" }}>
-              <IDSIconChevron />
+              <IDSIconArrow />
               <a href="/results">Egen provhantering</a>
             </IDSLink>
           </IDSCol>

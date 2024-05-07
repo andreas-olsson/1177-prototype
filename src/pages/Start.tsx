@@ -47,12 +47,6 @@ function Start() {
             </div>
           ) : (
             <>
-              <IDSRow justify="center" className="ids-mt-4">
-                <IDSButton secondary>
-                  <IDSIconUser />
-                  Fler e-tjänster
-                </IDSButton>
-              </IDSRow>
               <Articles />
             </>
           )}

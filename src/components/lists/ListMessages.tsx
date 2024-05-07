@@ -4,7 +4,7 @@ import {
   IDSCol,
   IDSList,
   IDSListItem,
-  IDSIconChevron,
+  IDSIconArrow,
   IDSBadge,
   IDSIconDocument,
   IDSIconStarFilled,
@@ -39,11 +39,11 @@ function ListMessages({ heading, filter, count }: ListMessagesProps) {
       <IDSRow>
         {heading && (
           <IDSCol cols="12" className="ids-mb-4">
-            <h3 className="ids-heading-3" style={{ float: "left" }}>
+            <h3 className="ids-heading-2" style={{ float: "left" }}>
               Olästa meddelanden
             </h3>
             <IDSLink style={{ float: "right" }}>
-              <IDSIconChevron />
+              <IDSIconArrow />
               <a href="/inbox">Inkorgen</a>
             </IDSLink>
           </IDSCol>

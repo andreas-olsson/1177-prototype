@@ -3,7 +3,10 @@ import { IDSList, IDSListItem, IDSCol, IDSRow } from "@inera/ids-react";
 function Articles() {
   return (
     <>
-      <IDSRow justify="space-around" gap="1rem" className="ids-mt-12">
+      <IDSRow justify="center" className="ids-mt-12">
+        <h2 className="ids-heading-5">Aktuellt i din region</h2>
+      </IDSRow>
+      <IDSRow justify="space-around" gap="1rem" className="ids-mt-4">
         <IDSCol m="5" s="12">
           <IDSList>
             <IDSListItem interactive={true} headline="Söka vård under resan">

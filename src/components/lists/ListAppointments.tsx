@@ -5,7 +5,7 @@ import {
   IDSRow,
   IDSCol,
   IDSButton,
-  IDSIconChevron,
+  IDSIconArrow,
   IDSIconFindCare,
 } from "@inera/ids-react";
 import appointmentData from "../../assets/appointments.json";
@@ -121,7 +121,7 @@ function ListAppointments({ count, heading }: ListAppointmentsProps) {
           </IDSCol>
           <IDSCol m="12">
             <IDSLink className="float-right-desktop">
-              <IDSIconChevron />
+              <IDSIconArrow />
               <a href="/appointments">
                 Fler tider ({appointmentData.appointments.length} st)
               </a>
@@ -153,10 +153,10 @@ function ListAppointments({ count, heading }: ListAppointmentsProps) {
                   </div>
 
                   <div className="list-content">
-                    <h2 className="ids-heading-2 ids-mt-1">
+                    <h2 className="ids-heading-3 ids-mt-1">
                       <span
                         style={{
-                          color: "#424242",
+                          opacity: "0.7",
                           fontWeight: "300",
                           marginRight: "4px",
                         }}
@@ -170,13 +170,13 @@ function ListAppointments({ count, heading }: ListAppointmentsProps) {
 
                       {describeDate(appointment.date)}
                     </h2>
-                    <p className="ids-body">
+                    <p className="ids-body ids-mt-1 ids-mb-1">
                       <IDSIconFindCare
-                        colorpreset={2}
+                        colorpreset={3}
                         size="s"
                         style={{ float: "left", margin: "2px 4px 0 0" }}
                       />
-                      <b style={{ color: "#6a0032" }}>{appointment.location}</b>
+                      <b>{appointment.location}</b>
                     </p>
                     <p className="ids-body">
                       <span style={{ opacity: "0.7" }}>Typ:</span>{" "}

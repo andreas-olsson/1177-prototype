@@ -4,7 +4,7 @@ import {
   IDSRow,
   IDSCol,
   IDSButton,
-  IDSIconChevron,
+  IDSIconArrow,
   IDSIconEdit,
 } from "@inera/ids-react";
 import journalData from "../../assets/journal.json";
@@ -67,7 +67,7 @@ function ListJournal({ count, heading }: ListJournalProps) {
           </IDSCol>
           <IDSCol m="12">
             <IDSLink className="float-right-desktop">
-              <IDSIconChevron />
+              <IDSIconArrow />
               <a href="/journal">
                 Fler händelser ({journalData.notes.length} st)
               </a>
@@ -113,10 +113,10 @@ function ListJournal({ count, heading }: ListJournalProps) {
                     )}
 
                     <div className="list-content">
-                      <h2 className="ids-heading-2 ids-mt-2">
+                      <h2 className="ids-heading-3 ids-mt-2">
                         <span
                           style={{
-                            color: "#4b4d4f",
+                            opacity: "0.7",
                             fontWeight: "300",
                             marginRight: "4px",
                           }}
@@ -130,11 +130,11 @@ function ListJournal({ count, heading }: ListJournalProps) {
                       </h2>
                       <p className="ids-body ids-mb-1 ids-mt-1">
                         <IDSIconEdit
-                          colorpreset={2}
+                          colorpreset={3}
                           size="s"
                           style={{ float: "left", margin: "2px 4px 0 0" }}
                         />
-                        <b style={{ color: "#6a0032" }}>{note.title}</b>
+                        <b>{note.title}</b>
                       </p>
                       <p className="ids-body">
                         <span style={{ opacity: "0.7" }}>Antecknad av:</span>{" "}
