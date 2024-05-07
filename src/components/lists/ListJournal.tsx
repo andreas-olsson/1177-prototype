@@ -61,17 +61,19 @@ function ListJournal({ count, heading }: ListJournalProps) {
   return (
     <>
       {heading && (
-        <div style={{ overflow: "hidden" }} className="ids-mb-4 ids-mt-12">
-          <h2 className="ids-heading-2" style={{ float: "left" }}>
-            Tidigare händelser
-          </h2>
-          <IDSLink style={{ float: "right" }}>
-            <IDSIconChevron />
-            <a href="/journal">
-              Fler händelser ({journalData.notes.length} st)
-            </a>
-          </IDSLink>
-        </div>
+        <IDSRow justify="space-between" className="ids-mb-4">
+          <IDSCol m="12">
+            <h2 className="ids-heading-2">Tidigare händelser</h2>{" "}
+          </IDSCol>
+          <IDSCol m="12">
+            <IDSLink className="float-right-desktop">
+              <IDSIconChevron />
+              <a href="/journal">
+                Fler händelser ({journalData.notes.length} st)
+              </a>
+            </IDSLink>
+          </IDSCol>
+        </IDSRow>
       )}
       <IDSCard>
         {journalData.notes
@@ -95,7 +97,7 @@ function ListJournal({ count, heading }: ListJournalProps) {
                   justify="end"
                   className={`ids-mb-8 ${index !== 0 ? "list-item" : ""}`}
                 >
-                  <IDSCol cols="9">
+                  <IDSCol cols="10" m="12">
                     {!isSameDay ? (
                       // Markup när uttrycket är sant (isSameDay är falskt)
                       <div className="calendar-icon">
@@ -144,13 +146,13 @@ function ListJournal({ count, heading }: ListJournalProps) {
                       </p>
                     </div>
                   </IDSCol>
-                  <IDSCol cols="3">
+                  <IDSCol cols="2" m="12" className="ids-mt-2">
                     <IDSButton
                       block={true}
                       secondary
                       onClick={() => handleNavigate("journal", index)}
                     >
-                      Läs mer
+                      Visa
                     </IDSButton>
                   </IDSCol>
                 </IDSRow>

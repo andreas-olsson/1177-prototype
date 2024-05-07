@@ -30,7 +30,6 @@
     position: absolute;
     left: 35px;
     top: -20px;
- 
 }
 
 @media (max-width: 1024px) {
@@ -71,4 +70,10 @@
 .list-item {
     border-top: 1px solid #CDCECF;
     padding-top: 2rem;
+}
+
+@media (min-width: 1024px){
+    .float-right-desktop {
+        float: right;
+    }
 }

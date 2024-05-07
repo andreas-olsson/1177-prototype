@@ -115,17 +115,19 @@ function ListAppointments({ count, heading }: ListAppointmentsProps) {
   return (
     <>
       {heading && (
-        <div style={{ overflow: "hidden" }} className="ids-mb-4">
-          <h2 className="ids-heading-2" style={{ float: "left" }}>
-            Bokade tider
-          </h2>{" "}
-          <IDSLink style={{ float: "right" }}>
-            <IDSIconChevron />
-            <a href="/appointments">
-              Fler tider ({appointmentData.appointments.length} st)
-            </a>
-          </IDSLink>
-        </div>
+        <IDSRow justify="space-between" className="ids-mb-4">
+          <IDSCol m="12">
+            <h2 className="ids-heading-2">Bokade tider</h2>{" "}
+          </IDSCol>
+          <IDSCol m="12">
+            <IDSLink className="float-right-desktop">
+              <IDSIconChevron />
+              <a href="/appointments">
+                Fler tider ({appointmentData.appointments.length} st)
+              </a>
+            </IDSLink>
+          </IDSCol>
+        </IDSRow>
       )}
       <IDSCard>
         {appointmentData.appointments
@@ -137,7 +139,7 @@ function ListAppointments({ count, heading }: ListAppointmentsProps) {
                 justify="end"
                 className={`ids-mb-8 ${index !== 0 ? "list-item" : ""}`}
               >
-                <IDSCol cols="9">
+                <IDSCol cols="10" m="12" className="ids-mb-4">
                   <div className="calendar-icon">
                     <div className="day">
                       {formatDate(appointment.date).day}
@@ -168,7 +170,7 @@ function ListAppointments({ count, heading }: ListAppointmentsProps) {
 
                       {describeDate(appointment.date)}
                     </h2>
-                    <p className="ids-body ids-mb-1 ids-mt-1">
+                    <p className="ids-body">
                       <IDSIconFindCare
                         colorpreset={2}
                         size="s"
@@ -187,13 +189,13 @@ function ListAppointments({ count, heading }: ListAppointmentsProps) {
                     <div></div>
                   </div>
                 </IDSCol>
-                <IDSCol cols="3">
+                <IDSCol cols="2" m="12">
                   <IDSButton
                     block={true}
                     secondary
                     onClick={() => handleNavigate("appointments", index)}
                   >
-                    Visa bokning
+                    Visa
                   </IDSButton>
                 </IDSCol>
               </IDSRow>
