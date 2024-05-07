@@ -15,8 +15,8 @@ function Footer() {
   Friendly reminder: Don't forget to delete the className="ids-show-THEME" */}
         <IDSFooter
           className="ids-hide ids-hide ids-show-1177"
-          headline="Headline"
-          subheadline=" - subheadline"
+          headline="1177"
+          subheadline=" - tryggt om din hälsa och vård"
           type="1177"
         >
           <p>
@@ -30,49 +30,41 @@ function Footer() {
           </p>
           <IDSLink slot="link-col-1">
             <IDSIconChevronBold color="var(--footer-link_color)"></IDSIconChevronBold>
-            <a href="javascript:console.log('click: Link 1')">Link 1</a>
+            <a href="javascript:console.log('click: Link 1')">
+              Other Languages
+            </a>
           </IDSLink>
           <IDSLink slot="link-col-1">
             <IDSIconChevronBold color="var(--footer-link_color)"></IDSIconChevronBold>
-            <a href="javascript:console.log('click: Link 2')">Link 1</a>
+            <a href="javascript:console.log('click: Link 2')">Lätt svenska</a>
           </IDSLink>
-          <IDSLink slot="link-col-1">
+
+          <IDSLink slot="link-col-2">
             <IDSIconChevronBold color="var(--footer-link_color)"></IDSIconChevronBold>
-            <a href="javascript:console.log('click: Link 3')">Link 3</a>
+            <a href="javascript:console.log('click: Link 4')">Om 1177</a>
           </IDSLink>
           <IDSLink slot="link-col-2">
             <IDSIconChevronBold color="var(--footer-link_color)"></IDSIconChevronBold>
-            <a href="javascript:console.log('click: Link 4')">Link 4</a>
+            <a href="javascript:console.log('click: Link 5')">E-tjänster</a>
           </IDSLink>
           <IDSLink slot="link-col-2">
             <IDSIconChevronBold color="var(--footer-link_color)"></IDSIconChevronBold>
-            <a href="javascript:console.log('click: Link 5')">Link 5</a>
-          </IDSLink>
-          <IDSLink slot="link-col-2">
-            <IDSIconChevronBold color="var(--footer-link_color)"></IDSIconChevronBold>
-            <a href="javascript:console.log('click: Link 6')">Link 6</a>
+            <a href="javascript:console.log('click: Link 6')">Aktuellt</a>
           </IDSLink>
           <IDSLink slot="link-col-3">
             <IDSIconChevronBold color="var(--footer-link_color)"></IDSIconChevronBold>
-            <a href="javascript:console.log('click: Link 7')">Link 7</a>
+            <a href="javascript:console.log('click: Link 7')">Kontakt</a>
           </IDSLink>
           <IDSLink slot="link-col-3">
             <IDSIconChevronBold color="var(--footer-link_color)"></IDSIconChevronBold>
-            <a href="javascript:console.log('click: Link 8')">Link 8</a>
+            <a href="javascript:console.log('click: Link 8')">Press</a>
           </IDSLink>
           <IDSLink slot="sub-footer-right">
-            <a href="javascript:console.log('click: Link 9')">Link 10</a>
+            <a href="javascript:console.log('click: Link 9')">
+              Digital tillgänglighet
+            </a>
           </IDSLink>
-          <IDSLink slot="sub-footer-right">
-            <a href="javascript:console.log('click: Link 10')">Link 11</a>
-          </IDSLink>
-          <IDSLink slot="sub-footer-right">
-            <a href="javascript:console.log('click: Link 11')">Link 12</a>
-          </IDSLink>
-          <p slot="sub-footer-left">
-            Plats för ev text om att Inera ägs av regioner, kommuner och SKR
-            företag.
-          </p>
+
           <IDSMobileMenu>
             <IDSMobileMenuItem headline="Headline 1">
               <IDSMobileMenuItem>

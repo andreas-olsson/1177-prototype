@@ -8,6 +8,7 @@ import {
   IDSIconClipboardCross,
   IDSIconAlarmClockNeutral,
   IDSCol,
+  IDSIconArrow,
   IDSRow,
 } from "@inera/ids-react";
 
@@ -21,7 +22,6 @@ function Shortcuts() {
               <IDSIconEmail />
             </div>
             <span className="cta-title">Inkorg</span>
-            <span className="cta-desc">Läs och skicka meddelanden</span>
           </a>
         </IDSCol>
         <IDSCol cols="4" m="6" s="12" className="ctac-l-middle ctac-m-right">
@@ -30,7 +30,6 @@ function Shortcuts() {
               <IDSIconReload />
             </div>
             <span className="cta-title">Förnya recept</span>
-            <span className="cta-desc">Förnya via dina mottagningar</span>
           </a>
         </IDSCol>
         <IDSCol cols="4" m="6" s="12" className="ctac-l-right ctac-m-left">
@@ -39,7 +38,6 @@ function Shortcuts() {
               <IDSIconLog />
             </div>
             <span className="cta-title">Journal</span>
-            <span className="cta-desc">Visa händelser i din journal</span>
           </a>
         </IDSCol>
         <IDSCol cols="4" m="6" s="12" className="ctac-l-left ctac-m-right">
@@ -48,7 +46,6 @@ function Shortcuts() {
               <IDSIconCalendar />
             </div>
             <span className="cta-title">Boka tid</span>
-            <span className="cta-desc">Boka ny tid eller ändra en bokning</span>
           </a>
         </IDSCol>
         <IDSCol cols="4" m="6" s="12" className="ctac-l-middle ctac-m-left">
@@ -57,7 +54,6 @@ function Shortcuts() {
               <IDSIconClipboardCross />
             </div>
             <span className="cta-title">Intyg</span>
-            <span className="cta-desc">Visa eller beställ intyg</span>
           </a>
         </IDSCol>
         <IDSCol cols="4" m="6" s="12" className="ctac-l-right ctac-m-right">
@@ -66,7 +62,6 @@ function Shortcuts() {
               <IDSIconAlarmClockNeutral />
             </div>
             <span className="cta-title">Aktuellt</span>
-            <span className="cta-desc">Vad ska du ha koll på?</span>
           </a>
         </IDSCol>
       </IDSRow>
