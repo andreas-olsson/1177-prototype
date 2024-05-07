@@ -62,7 +62,7 @@ function Header() {
   const navigate = useNavigate();
   const [loggedin, setLoggedin] = useLocalStorage("loggedin", false);
   const [isAgent, setAgent] = useLocalStorage("isAgent", false);
-  const [agentName, setAgentName] = useState("");
+  const [agentName, setAgentName] = useLocalStorage("agentName", "");
   const [selectedAgent, setSelectedAgent] = useLocalStorage(
     "selectedAgent",
     ""
