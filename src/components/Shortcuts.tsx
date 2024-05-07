@@ -8,7 +8,6 @@ import {
   IDSIconClipboardCross,
   IDSIconAlarmClockNeutral,
   IDSCol,
-  IDSIconArrow,
   IDSRow,
 } from "@inera/ids-react";
 
