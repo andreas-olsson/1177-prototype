@@ -53,7 +53,7 @@ function ListResults({ heading }: ListResultsProps) {
           {resultsData.results.map((result, index) => (
             <>
               <a
-                className="list-item"
+                className="list-item line"
                 href="#"
                 key={index}
                 onClick={() => handleNavigate("results", index)}

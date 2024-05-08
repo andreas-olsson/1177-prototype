@@ -69,7 +69,7 @@ function ListMessages({ heading, filter, count }: ListMessagesProps) {
                 {filterMessage(message) && (
                   <>
                     <a
-                      className="list-item"
+                      className="list-item line"
                       href="#"
                       key={index}
                       onClick={() => handleNavigate("inbox", index)}

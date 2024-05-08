@@ -92,70 +92,57 @@ function ListJournal({ count, heading }: ListJournalProps) {
 
             return (
               <>
-                <IDSRow
+                <a
+                  href="#"
                   key={index}
-                  justify="end"
-                  className={`ids-mb-8 ${index !== 0 ? "list-item" : ""}`}
+                  onClick={() => handleNavigate("journal", index)}
+                  className="list-item ids-mb-6"
                 >
-                  <IDSCol cols="10" m="12">
-                    {!isSameDay ? (
-                      // Markup när uttrycket är sant (isSameDay är falskt)
-                      <div className="calendar-icon">
-                        <div className="day">{formatDate(note.date).day}</div>
-                        <div className="month">
-                          {formatDate(note.date).month}
-                        </div>
-                        <div className="year">{formatDate(note.date).year}</div>
-                      </div>
-                    ) : (
-                      // Alternativ markup när uttrycket är falskt (isSameDay är sant)
-                      <div className="same-day-icon"></div>
-                    )}
-
-                    <div className="list-content">
-                      <h2 className="ids-heading-3 ids-mt-2">
-                        <span
-                          style={{
-                            opacity: "0.7",
-                            fontWeight: "300",
-                            marginRight: "4px",
-                          }}
-                        >
-                          {formatDate(note.date).weekday}{" "}
-                          {formatDate(note.date).day}{" "}
-                          {formatDate(note.date).month}{" "}
-                        </span>
-                        {" kl. "}
-                        {formatDate(note.date).time}
-                      </h2>
-                      <p className="ids-body ids-mb-1 ids-mt-1">
-                        <IDSIconEdit
-                          colorpreset={3}
-                          size="s"
-                          style={{ float: "left", margin: "2px 4px 0 0" }}
-                        />
-                        <b>{note.title}</b>
-                      </p>
-                      <p className="ids-body">
-                        <span style={{ opacity: "0.7" }}>Antecknad av:</span>{" "}
-                        {note.author}
-                      </p>
-                      <p className="ids-body">
-                        <span style={{ opacity: "0.7" }}>Mottagning:</span>{" "}
-                        {note.location}
-                      </p>
+                  {!isSameDay ? (
+                    // Markup när uttrycket är sant (isSameDay är falskt)
+                    <div className="calendar-icon">
+                      <div className="day">{formatDate(note.date).day}</div>
+                      <div className="month">{formatDate(note.date).month}</div>
+                      <div className="year">{formatDate(note.date).year}</div>
                     </div>
-                  </IDSCol>
-                  <IDSCol cols="2" m="12" className="ids-mt-2">
-                    <IDSButton
-                      block={true}
-                      secondary
-                      onClick={() => handleNavigate("journal", index)}
+                  ) : (
+                    <>
+                      <div className="same-day-icon"></div>
+                    </>
+                  )}
+
+                  <div className="list-content">
+                    <h2
+                      className="ids-heading-3 ids-mt-1 list-heading"
+                      style={{ color: "#34628F" }}
                     >
-                      Visa
-                    </IDSButton>
-                  </IDSCol>
-                </IDSRow>
+                      <IDSIconArrow inline size="xs" className="ids-mr-2" />
+                      <span
+                        style={{
+                          fontWeight: "300",
+                          marginRight: "4px",
+                        }}
+                      >
+                        {formatDate(note.date).weekday}{" "}
+                        {formatDate(note.date).day}{" "}
+                        {formatDate(note.date).month}{" "}
+                      </span>
+                      {" kl. "}
+                      {formatDate(note.date).time}
+                    </h2>
+                    <p className="ids-body ids-mb-1 ids-mt-1">
+                      <b>{note.title}</b>
+                    </p>
+                    <p className="ids-body">
+                      <span style={{ opacity: "0.7" }}>Antecknad av:</span>{" "}
+                      {note.author}
+                    </p>
+                    <p className="ids-body">
+                      <span style={{ opacity: "0.7" }}>Mottagning:</span>{" "}
+                      {note.location}
+                    </p>
+                  </div>
+                </a>
               </>
             );
           })}

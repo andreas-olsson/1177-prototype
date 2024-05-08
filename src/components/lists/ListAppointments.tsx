@@ -4,7 +4,6 @@ import {
   IDSCard,
   IDSRow,
   IDSCol,
-  IDSButton,
   IDSIconArrow,
   IDSIconFindCare,
 } from "@inera/ids-react";
@@ -75,9 +74,9 @@ function ListAppointments({ count, heading }: ListAppointmentsProps) {
       return (
         <>
           <IDSBadge
-            className="ids-ml-2"
+            className="ids-ml-4"
             type="attention"
-            style={{ position: "relative", top: "-3px" }}
+            style={{ float: "right" }}
           >
             Idag
           </IDSBadge>
@@ -87,9 +86,9 @@ function ListAppointments({ count, heading }: ListAppointmentsProps) {
       return (
         <>
           <IDSBadge
-            className="ids-ml-2"
+            className="ids-ml-4"
             type="attention"
-            style={{ position: "relative", top: "-3px" }}
+            style={{ float: "right" }}
           >
             Imorgon
           </IDSBadge>
@@ -101,7 +100,7 @@ function ListAppointments({ count, heading }: ListAppointmentsProps) {
           <IDSBadge
             className="ids-ml-2"
             type="secondary"
-            style={{ position: "relative", top: "-3px" }}
+            style={{ float: "right" }}
           >
             om {daysDiff} dagar
           </IDSBadge>
@@ -129,79 +128,66 @@ function ListAppointments({ count, heading }: ListAppointmentsProps) {
           </IDSCol>
         </IDSRow>
       )}
-      <IDSCard>
-        {appointmentData.appointments
-          .slice(0, count || appointmentData.appointments.length)
-          .map((appointment, index) => (
-            <>
-              <IDSRow
-                key={index}
-                justify="end"
-                className={`ids-mb-8 ${index !== 0 ? "list-item" : ""}`}
-              >
-                <IDSCol cols="10" m="12" className="ids-mb-4">
-                  <div className="calendar-icon">
-                    <div className="day">
-                      {formatDate(appointment.date).day}
-                    </div>
-                    <div className="month">
-                      {formatDate(appointment.date).month}
-                    </div>
-                    <div className="year">
-                      {formatDate(appointment.date).year}
-                    </div>
-                  </div>
 
-                  <div className="list-content">
-                    <h2 className="ids-heading-3 ids-mt-1">
-                      <span
-                        style={{
-                          opacity: "0.7",
-                          fontWeight: "300",
-                          marginRight: "4px",
-                        }}
-                      >
-                        {formatDate(appointment.date).weekday}{" "}
-                        {formatDate(appointment.date).day}{" "}
-                        {formatDate(appointment.date).month}{" "}
-                      </span>
-                      {" kl. "}
-                      {formatDate(appointment.date).time}
-
-                      {describeDate(appointment.date)}
-                    </h2>
-                    <p className="ids-body ids-mt-1 ids-mb-1">
-                      <IDSIconFindCare
-                        colorpreset={3}
-                        size="s"
-                        style={{ float: "left", margin: "2px 4px 0 0" }}
-                      />
-                      <b>{appointment.location}</b>
-                    </p>
-                    <p className="ids-body">
-                      <span style={{ opacity: "0.7" }}>Typ:</span>{" "}
-                      {appointment.type}
-                    </p>
-                    <p className="ids-body">
-                      <span style={{ opacity: "0.7" }}>Anledning:</span>{" "}
-                      {appointment.reason}
-                    </p>
-                    <div></div>
+      {appointmentData.appointments
+        .slice(0, count || appointmentData.appointments.length)
+        .map((appointment, index) => (
+          <>
+            <IDSCard className="ids-mb-4" style={{ display: "block" }}>
+              <a key={index} className="list-item ids-mb-2" href="#">
+                <div className="calendar-icon">
+                  <div className="day">{formatDate(appointment.date).day}</div>
+                  <div className="month">
+                    {formatDate(appointment.date).month}
                   </div>
-                </IDSCol>
-                <IDSCol cols="2" m="12">
-                  <IDSButton
-                    block={true}
-                    secondary
-                    onClick={() => handleNavigate("appointments", index)}
+                  <div className="year">
+                    {formatDate(appointment.date).year}
+                  </div>
+                </div>
+
+                <div className="list-content">
+                  <h2
+                    className="ids-heading-3 ids-mt-1 list-heading"
+                    style={{ color: "#34628F" }}
                   >
-                    Visa
-                  </IDSButton>
-                </IDSCol>
-              </IDSRow>
-            </>
-          ))}
-      </IDSCard>
+                    <IDSIconArrow inline size="xs" className="ids-mr-2" />
+
+                    <span
+                      style={{
+                        fontWeight: "300",
+                        marginRight: "4px",
+                      }}
+                    >
+                      {formatDate(appointment.date).weekday}{" "}
+                      {formatDate(appointment.date).day}{" "}
+                      {formatDate(appointment.date).month}{" "}
+                    </span>
+                    {" kl. "}
+                    {formatDate(appointment.date).time}
+
+                    {describeDate(appointment.date)}
+                  </h2>
+                  <p className="ids-body ids-mt-1 ids-mb-1">
+                    <IDSIconFindCare
+                      colorpreset={3}
+                      size="s"
+                      style={{ float: "left", margin: "2px 4px 0 0" }}
+                    />
+                    <b>{appointment.location}</b>
+                  </p>
+                  <p className="ids-body">
+                    <span style={{ opacity: "0.7" }}>Typ:</span>{" "}
+                    {appointment.type}
+                  </p>
+                  <p className="ids-body">
+                    <span style={{ opacity: "0.7" }}>Anledning:</span>{" "}
+                    {appointment.reason}
+                  </p>
+                </div>
+              </a>
+            </IDSCard>
+          </>
+        ))}
     </>
   );
 }

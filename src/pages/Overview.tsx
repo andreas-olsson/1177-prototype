@@ -40,7 +40,7 @@ function Overview() {
                 <ListAppointments count={3} heading />
               </div>
               <div className="ids-mb-12">
-                <ListJournal count={2} heading />
+                <ListJournal count={3} heading />
               </div>
             </IDSCol>
             <IDSCol>
