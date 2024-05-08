@@ -20,6 +20,7 @@ import Overview from "./pages/Overview";
 import ResultsList from "./pages/results/List";
 import ResultsEntity from "./pages/results/Entity";
 
+import JournalOverview from "./pages/journal/Overview";
 import JournalList from "./pages/journal/List";
 import JournalEntity from "./pages/journal/Entity";
 
@@ -58,6 +59,7 @@ function App() {
             <Route path="/results" element={<ResultsList />} />
             <Route path="/results/entity" element={<ResultsEntity />} />
 
+            <Route path="/journal/overview" element={<JournalOverview />} />
             <Route path="/journal" element={<JournalList />} />
             <Route path="/journal/entity" element={<JournalEntity />} />
           </Routes>
