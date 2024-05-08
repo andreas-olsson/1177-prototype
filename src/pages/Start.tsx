@@ -1,10 +1,4 @@
-import {
-  IDSCol,
-  IDSRow,
-  IDSContainer,
-  IDSButton,
-  IDSIconUser,
-} from "@inera/ids-react";
+import { IDSCol, IDSRow, IDSContainer } from "@inera/ids-react";
 
 import { useLocalStorage } from "@uidotdev/usehooks";
 

@@ -134,7 +134,12 @@ function ListAppointments({ count, heading }: ListAppointmentsProps) {
         .map((appointment, index) => (
           <>
             <IDSCard className="ids-mb-4" style={{ display: "block" }}>
-              <a key={index} className="list-item ids-mb-2" href="#">
+              <a
+                key={index}
+                className="list-item ids-mb-2"
+                href="#"
+                onClick={() => handleNavigate("appointments", index)}
+              >
                 <div className="calendar-icon">
                   <div className="day">{formatDate(appointment.date).day}</div>
                   <div className="month">

@@ -3,9 +3,7 @@ import {
   IDSCard,
   IDSRow,
   IDSCol,
-  IDSButton,
   IDSIconArrow,
-  IDSIconEdit,
 } from "@inera/ids-react";
 import journalData from "../../assets/journal.json";
 import { useNavigate } from "react-router-dom";

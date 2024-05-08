@@ -2,8 +2,6 @@ import {
   IDSLink,
   IDSRow,
   IDSCol,
-  IDSList,
-  IDSListItem,
   IDSIconArrow,
   IDSBadge,
 } from "@inera/ids-react";
