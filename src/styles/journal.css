@@ -1,0 +1,16 @@
+.journal-user-alert {
+    background: #fff8e0;   
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px dashed #808285;
+    font-size:1rem;
+    display: flex;
+    align-items: center;   
+    margin-bottom: 20px;
+}
+
+.journal-user-alert > a {
+    margin-left: auto;
+    color: #34628F;
+}

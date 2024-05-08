@@ -1,3 +1,6 @@
+import React, { useState, useEffect } from "react";
+import "../../styles/journal.css";
+
 import {
   IDSCol,
   IDSRow,
@@ -13,16 +16,54 @@ import {
   IDSIconArrow,
   IDSBadge,
   IDSExpandable,
+  IDSNavigationContent,
+  IDSIconAgent,
 } from "@inera/ids-react";
 
+import { useNavigate } from "react-router-dom";
+
 function Overview() {
+  const navigate = useNavigate();
+
+  // Användarnamnslista
+  const userNames = ["Andreas Olsson", "Elsa Andersson", "Elton Andersson"];
+
+  const [currentUser, setCurrentUser] = useState(() => {
+    // Försök att läsa det aktuella användarnamnet från Local Storage eller använd första namnet i listan.
+    return localStorage.getItem("currentUser") || userNames[0];
+  });
+
+  useEffect(() => {
+    // Spara den valda användaren i Local Storage varje gång den ändras.
+    localStorage.setItem("currentUser", currentUser);
+  }, [currentUser]);
+
+  // Funktion för att hantera användarväxling.
+  const switchUser = (newUser: React.SetStateAction<string>) => {
+    setCurrentUser(newUser);
+  };
+
   return (
     <>
       <div className="ids">
         <IDSContainer>
+          {currentUser !== userNames[0] && (
+            <div className="journal-user-alert">
+              <IDSIconAgent
+                className="ids-mr-4"
+                colorpreset={3}
+                style={{ float: "left" }}
+              />
+              Du ser uppgifter för <b className="ids-ml-2">{currentUser}</b>
+              <a onClick={() => switchUser(userNames[0])} href="#">
+                Växla tillbaka
+              </a>
+            </div>
+          )}
+
           <IDSRow>
             <IDSBreadcrumbs
-              current="Journal"
+              current="Journalen"
               lead="Du är här:"
               srlabel="Du är här"
             >
@@ -34,6 +75,7 @@ function Overview() {
               </IDSCrumb>
             </IDSBreadcrumbs>
           </IDSRow>
+
           <IDSRow justify="space-between">
             <IDSCol cols="8" m="12" s="12" className="ids-content">
               <IDSRow>
@@ -47,7 +89,9 @@ function Overview() {
                     dina uppgifter i journalöversikten eller en typ av uppgifter
                     i taget.
                   </p>
-                  <IDSButton>Visa Journalöversikt</IDSButton>
+                  <IDSButton onClick={() => navigate("/journal")}>
+                    Visa Journalöversikt
+                  </IDSButton>
                   <hr className="ids-mb-6 ids-mt-8" />
                 </IDSCol>
               </IDSRow>
@@ -56,7 +100,7 @@ function Overview() {
                   <div className="ids-mb-6 ids-mt-6">
                     <IDSLink className="ids-heading-2" block>
                       <IDSIconArrow />
-                      <a>Anteckningar</a>
+                      <a href="/journal">Anteckningar</a>
                     </IDSLink>
                   </div>
                   <div className="ids-mb-6">
@@ -201,62 +245,43 @@ function Overview() {
                 <h2 className="ids-heading-2">Växla journal</h2>
                 <hr />
                 <ul className="blocklink">
-                  <li>
-                    <IDSBadge type="secondary" className="ids-mr-2">
-                      Visas
-                    </IDSBadge>
-                    Andreas Olsson
-                  </li>
-                  <li>
-                    <IDSLink>
-                      <IDSIconArrow />
-                      <a>Elsa Andersson</a>
-                    </IDSLink>
-                  </li>
-                  <li>
-                    <IDSLink>
-                      <IDSIconArrow />
-                      <a>Elton Andersson</a>
-                    </IDSLink>
-                  </li>
+                  {userNames.map((name) =>
+                    currentUser === name ? (
+                      <li key={name}>
+                        <IDSBadge type="secondary" className="ids-mr-2">
+                          Visas
+                        </IDSBadge>
+                        {name}
+                      </li>
+                    ) : (
+                      <li key={name}>
+                        <IDSLink onClick={() => switchUser(name)}>
+                          <IDSIconArrow />
+                          <a>{name}</a>
+                        </IDSLink>
+                      </li>
+                    )
+                  )}
                 </ul>
               </IDSCard>
-              <IDSCard>
-                <div
-                  style={{
-                    display: "block",
-                    width: "900px",
-                    height: "4px",
-                    marginTop: "-15px",
-                    marginLeft: "-20px",
-                    marginBottom: "20px",
-                    background: "#43618D",
-                  }}
-                />
-                <h2 className="ids-heading-2" style={{ color: "black" }}>
-                  Hitta på sidan
-                </h2>
-                <hr />
+              <IDSNavigationContent headline="Hitta på sidan">
                 <IDSLink>
-                  <IDSIconArrow />
-                  <a>Vad du kan se i Journalen</a>
+                  <IDSIconArrow size="s" />
+                  <a href="#">Vad du kan se i Journalen </a>
                 </IDSLink>
-                <hr />
                 <IDSLink>
-                  <IDSIconArrow />
-                  <a>Nyheter om Journalen</a>
+                  <IDSIconArrow size="s" />
+                  <a href="#">Nyheter om Journalen </a>
                 </IDSLink>
-                <hr />
                 <IDSLink>
-                  <IDSIconArrow />
-                  <a>Inställningar för Journalen</a>
+                  <IDSIconArrow size="s" />
+                  <a href="#">Inställningar för Journalen</a>
                 </IDSLink>
-                <hr />
                 <IDSLink>
-                  <IDSIconArrow />
-                  <a>Hjälp och support Journalen</a>
+                  <IDSIconArrow size="s" />
+                  <a href="#">Hjälp och support Journalen</a>
                 </IDSLink>
-              </IDSCard>
+              </IDSNavigationContent>
             </IDSCol>
           </IDSRow>
         </IDSContainer>

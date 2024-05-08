@@ -32,7 +32,7 @@ function Shortcuts() {
           </a>
         </IDSCol>
         <IDSCol cols="4" m="6" s="12" className="ctac-l-right ctac-m-left">
-          <a className="cta" href="/login?location=journal">
+          <a className="cta" href="/login?location=journal/overview">
             <div className="cta-icon">
               <IDSIconLog />
             </div>
