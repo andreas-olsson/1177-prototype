@@ -2,14 +2,13 @@ import {
   IDSLink,
   IDSRow,
   IDSCol,
-  IDSList,
-  IDSListItem,
   IDSIconArrow,
   IDSBadge,
   IDSIconDocument,
   IDSIconStarFilled,
 } from "@inera/ids-react";
 import messageData from "../../assets/messages.json";
+import "../../styles/lists.css";
 import { useNavigate } from "react-router-dom";
 
 interface ListMessagesProps {
@@ -25,13 +24,26 @@ function ListMessages({ heading, filter, count }: ListMessagesProps) {
 
   const navigate = useNavigate(); // Använd useNavigate-hook
 
+  const formatDate = (dateString: string | number | Date) => {
+    const date = new Date(dateString);
+    const datePart = date.toLocaleString("sv-SE", {
+      day: "2-digit",
+      month: "short",
+    });
+    const timePart = date.toLocaleString("sv-SE", {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+    return { datePart, timePart };
+  };
+
   const filterMessage = (message: any) => {
-    if (!filter) return true; // Om inget filter är satt, visa alla meddelanden.
-    if (filter === "attachment") return message.attachment; // Kontrollera om meddelandet har en bifogad fil.
-    if (filter === "archived") return message.archived; // Kontrollera om meddelandet är arkiverat.
-    if (filter === "unread") return message.unread; // Kontrollera om meddelandet är oläst.
-    if (filter === "starred") return message.starred; // Kontrollera om meddelandet är markerat som favorit.
-    return message[filter]; // Dynamisk kontroll för eventuella andra filter.
+    if (!filter) return true;
+    if (filter === "attachment") return message.attachment;
+    if (filter === "archived") return message.archived;
+    if (filter === "unread") return message.unread;
+    if (filter === "starred") return message.starred;
+    return message[filter];
   };
 
   return (
@@ -50,56 +62,59 @@ function ListMessages({ heading, filter, count }: ListMessagesProps) {
         )}
 
         <IDSCol cols="12">
-          <IDSList>
-            {messageData.messages
-              .slice(0, count || messageData.messages.length)
-              .map((message, index) => (
-                <>
-                  {filterMessage(message) && (
-                    <>
-                      <IDSListItem
-                        key={index}
-                        interactive={true}
-                        headline={message.title}
-                        date={new Date(message.date)}
-                        onClick={() => handleNavigate("inbox", index)}
+          {messageData.messages
+            .slice(0, count || messageData.messages.length)
+            .map((message, index) => (
+              <>
+                {filterMessage(message) && (
+                  <>
+                    <a
+                      className="list-item"
+                      href="#"
+                      key={index}
+                      onClick={() => handleNavigate("inbox", index)}
+                    >
+                      <p className="ids-heading-6">
+                        {formatDate(message.date).datePart}{" "}
+                        <b>Kl. {formatDate(message.date).timePart}</b>
+                      </p>
+
+                      <span
+                        className="list-heading ids-heading-3"
+                        style={{ color: "#34628F" }}
                       >
-                        <a href="#" slot="interactive"></a>
-                        <p className="ids-body">{message.author}</p>
-                        <div className="ids-mt-2">
-                          <IDSBadge type="secondary" className="ids-mr-2">
-                            {message.status}
+                        <IDSIconArrow inline size="xs" className="ids-mr-2" />
+                        {message.title}
+                      </span>
+
+                      <div className="list-item-content">
+                        <p className="ids-body ids-mb-2">{message.author}</p>
+                        <IDSBadge type="secondary" className="ids-mr-2">
+                          {message.status}
+                        </IDSBadge>
+                        {message.attachment && (
+                          <IDSBadge type="info" className="ids-mt-4">
+                            Bifogad fil
+                            <IDSIconDocument
+                              size="s"
+                              className="ids-ml-2"
+                              colorpreset={3}
+                            />
                           </IDSBadge>
-                          {message.attachment && (
-                            <IDSBadge type="info" className="ids-mt-4">
-                              Bifogad fil
-                              <IDSIconDocument
-                                size="s"
-                                className="ids-ml-2"
-                                colorpreset={3}
-                              />
-                            </IDSBadge>
-                          )}
-                        </div>
-                        {message.starred && (
-                          <>
-                            <div
-                              style={{
-                                position: "absolute",
-                                right: "1rem",
-                                top: "2.5rem",
-                              }}
-                            >
-                              <IDSIconStarFilled size="s" />
-                            </div>
-                          </>
                         )}
-                      </IDSListItem>
-                    </>
-                  )}
-                </>
-              ))}
-          </IDSList>
+                      </div>
+                      {message.starred && (
+                        <>
+                          <div className="list-item-star">
+                            <IDSIconStarFilled size="s" />
+                          </div>
+                        </>
+                      )}
+                    </a>
+                  </>
+                )}
+              </>
+            ))}
         </IDSCol>
       </IDSRow>
     </>

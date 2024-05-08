@@ -20,6 +20,20 @@ function ListResults({ heading }: ListResultsProps) {
   };
 
   const navigate = useNavigate(); // Använd useNavigate-hook
+
+  const formatDate = (dateString: string | number | Date) => {
+    const date = new Date(dateString);
+    const datePart = date.toLocaleString("sv-SE", {
+      day: "2-digit",
+      month: "short",
+    });
+    const timePart = date.toLocaleString("sv-SE", {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+    return { datePart, timePart };
+  };
+
   return (
     <>
       <IDSRow>
@@ -35,28 +49,34 @@ function ListResults({ heading }: ListResultsProps) {
           </IDSCol>
         )}
 
-        <IDSCol>
-          <IDSList>
-            {resultsData.results.map((result, index) => (
-              <>
-                <IDSListItem
-                  key={index}
-                  interactive={true}
-                  headline={result.title}
-                  date={new Date(result.date)}
-                  onClick={() => handleNavigate("results", index)}
+        <IDSCol cols="12">
+          {resultsData.results.map((result, index) => (
+            <>
+              <a
+                className="list-item"
+                href="#"
+                key={index}
+                onClick={() => handleNavigate("results", index)}
+              >
+                <p className="ids-heading-6">
+                  {formatDate(result.date).datePart}{" "}
+                  <b>Kl. {formatDate(result.date).timePart}</b>
+                </p>
+                <span
+                  className="list-heading ids-heading-3"
+                  style={{ color: "#34628F" }}
                 >
-                  <a href="#" slot="interactive"></a>
-
+                  <IDSIconArrow inline size="xs" className="ids-mr-2" />
+                  {result.title}
+                </span>
+                <div className="list-item-content">
                   {result.answered && (
-                    <IDSBadge type="success" className="ids-ml-4">
-                      Besvarad
-                    </IDSBadge>
+                    <IDSBadge type="success">Besvarad</IDSBadge>
                   )}
-                </IDSListItem>
-              </>
-            ))}
-          </IDSList>
+                </div>
+              </a>
+            </>
+          ))}
         </IDSCol>
       </IDSRow>
     </>

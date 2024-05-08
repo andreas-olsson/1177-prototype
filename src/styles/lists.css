@@ -1,0 +1,25 @@
+.list-item {
+    text-decoration: none;
+    position: relative;
+    display: block;
+}
+
+.list-item:hover .list-heading {
+    text-decoration: underline;
+}
+
+.list-item b {
+    color: #353535;
+}
+
+.list-item-star {
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+}
+
+.list-item-content {
+    padding-left: 1.4.rem;
+    margin: 0.2rem 0 2rem 0;
+}
+
