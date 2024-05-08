@@ -19,7 +19,7 @@ function Services() {
         <IDSContainer gutterless={true} className="ids-content ids-mt-6">
           <IDSRow justify="start" gap="2rem">
             <IDSCol m="12" s="12">
-              {/* <h2 className="ids-heading-2">Inkorg</h2>
+              <h2 className="ids-heading-2">Inkorg</h2>
               <IDSCard fill={false} className="card">
                 <ul className="blocklink">
                   <li>
@@ -32,14 +32,14 @@ function Services() {
                     </IDSLink>
                   </li>
                 </ul>
-              </IDSCard> */}
-              {/* <h2 className="ids-heading-2">Tidbokning</h2>
+              </IDSCard>
+              <h2 className="ids-heading-2">Tidbokning</h2>
               <IDSCard fill={false} className="card">
                 <ul className="blocklink">
                   <li>
                     <IDSLink className="ids-mb-2">
                       <IDSIconArrow />
-                      <a href="/bokadetider">Bokade tider</a>
+                      <a href="/bokadetider">Se bokade tider</a>
                     </IDSLink>
                   </li>
                   <li>
@@ -49,7 +49,7 @@ function Services() {
                     </IDSLink>
                   </li>
                 </ul>
-              </IDSCard> */}
+              </IDSCard>
               <h2 className="ids-heading-2">Genvägar</h2>
               <IDSCard fill={false} className="card">
                 <ul className="blocklink">
@@ -137,7 +137,7 @@ function Services() {
                   </li>
                 </ul>
               </IDSCard>
-              {/* <h2 className="ids-heading-2">Journalen</h2>
+              <h2 className="ids-heading-2">Journalen</h2>
               <IDSCard fill={false} className="card">
                 <ul className="blocklink">
                   <li>
@@ -153,7 +153,7 @@ function Services() {
                     </IDSLink>
                   </li>
                 </ul>
-              </IDSCard> */}
+              </IDSCard>
               <h2 className="ids-heading-2">Egen provhantering</h2>
               <IDSCard fill={false} className="card">
                 <ul className="blocklink">
