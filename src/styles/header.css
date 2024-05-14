@@ -10,12 +10,16 @@
   justify-content: space-between;
   border-radius: 8px;
   padding: 2px;
-  border: 1px solid #ccc;
-  background-color: #fff;
+  
   cursor: pointer;
   text-decoration: none;
   float: right;
   margin-right: 4px;
+  color: #396291;
+}
+
+.agent-active {
+  color: #353535;
 }
 
 .login-button.agent {
@@ -24,19 +28,15 @@
   margin-bottom: 10px;
 }
 
-.login-button.active {
-  
-  border: 1px solid #c1214481;
-}
 
-.login-button:hover {
-  border: 1px solid #c1214481;
+.initials {
+  color: #396291;
+  background: #f1f2f2;
+  border-radius: 50%;
+  border: 1px solid #DADBDC;
+  width: 50px;
+  height: 50px;
 }
-
-.login-button.agent:hover {
-  border: 1px solid #396291;
-}
-
 
 .icon {
   display: flex;
@@ -44,6 +44,10 @@
   align-items: center;
   width: 32px;
   height: 32px;
+ 
+ 
+ 
+
 }
 
 .icon.right > * {
@@ -68,7 +72,7 @@
   flex: 1;
   font-size: .8rem;
   font-weight: 700;
-  color: #c12143;
+  
   line-height: 0.8rem;
 }
 
@@ -78,19 +82,21 @@
 
 .label-pre {
   font-size: 0.6rem;
-  color: #6a0032;
+  color: #3B4266;
+  opacity: 0.9;
   display: block;
   font-weight: 400;
 }
 
 .overlay-menu {
   position: absolute;
+  top: -10px;
   right: 0;
-  top: -4px;
+  height: 100vh;
   background: #fff;
-  padding: 80px 10px 0px 10px;
+  padding: 60px 10px 0px 10px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  border-radius: 12px;
+  width: 50vw;
   z-index: 1; 
   text-align: left;
 }
@@ -100,11 +106,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 32px;
-  height: 32px;
-  background: white;
-
-  /* outline: 1px solid; */
+  width: 30px;
+  height: 20px;
+  background: #F1F2F2;
+  border:none;
+  border-radius: 50%;
 }
 
 
@@ -142,6 +148,7 @@
 @media (min-width: 640px) {
   .login-button {
     padding: 4px;
+    
   }
 
   .label {
@@ -155,7 +162,13 @@
 
   }
 
-  
+  .overlay-menu {
+    height: auto;
+    width: 420px;
+    border-radius: 12px;
+    top: 0;
+    right: 6px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -163,8 +176,34 @@
     width: 24px;  
   }
   .login-button {
+    border: 1px solid #ccc;
+  background-color: #fff;
     padding: 8px;
+    width: 200px;
   }
+
+  .agent-active {
+    color: #353535;
+    background-color: #f1f2f2;
+  }
+
+  .login-button.active {
+    border: 1px solid #396291;
+  }
+  
+  .login-button:hover {
+    border: 1px solid  #396291;
+  }
+  
+  .login-button:hover .initials {
+    border: 1px solid  #396291;
+  } 
+  
+  .login-button.agent:hover {
+    border: 1px solid #396291;
+  }
+  
+  
 
   .label {
     
@@ -178,11 +217,11 @@
   }
 
   .overlay-menu {
-    left: -8px;
+    
     right: -4px;
     top: -8px;
-    
     padding: 80px 10px 0px 10px;
-    
+    border-radius: 12px;
   }
 }
+

@@ -27,9 +27,13 @@ function Entity() {
   const validIndex = isNaN(index) ? 0 : Math.min(index, journalLength - 1);
   const note = journalData.notes[validIndex];
 
+  const handleClick = () => {
+    alert("Detta är slutet av testet. Bra jobbat!");
+  };
+
   return (
     <>
-      <div className="ids">
+      <div className="ids" onClick={handleClick}>
         <IDSContainer>
           <IDSRow>
             <IDSBreadcrumbs

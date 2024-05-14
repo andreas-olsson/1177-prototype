@@ -1,26 +1,22 @@
 {
     "appointments": [
       {
-        "date": "2024-05-10T08:24", 
-        "location": "Sahlgrenska Sjukhuset",
-        "type": "Besöket avser tandvård",
-        "reason": "Anledningen till bokningen är ont i tänderna",
+        "date": "2024-05-15T08:24", 
+        "location": "Folktandvården St Per",
+        "type": "Tandhygenist",
+        "reason": "Rengöring",
         "content": [
           {
-            "heading": "Inför ditt besök",
-            "text": "Glöm inte att borsta tänderna"
-          },
-          {
-            "heading": "Tänk på detta!",
-            "text": "Det finns massor som vi vill att du tänker på!"
+            "heading": "Välkommen till Aqua Dental i Uppsala",
+            "text": "Vi ser fram emot ditt besök. Glöm inte att ta med gilig ID-handling och var på plats senast 10 minuter innan avsatt tid. Borsta gärna tänderna innan."
           }
         ]
       },
       {
-        "date": "2024-05-12T12:20",
-        "location": "Nya Karolinska Sjukhuset",
-        "type": "Ortopet",
-        "reason": "Anledningen till bokningen är ett brutet ben",
+        "date": "2024-06-01T12:20",
+        "location": "Fålhagens vårdcentral, Uppsala",
+        "type": "Sjukgymnast",
+        "reason": "Rutinkontroll, stukad fot",
         "content": [
           {
             "heading": "Hitta hit",
@@ -29,10 +25,10 @@
         ]
       },
       {
-        "date": "2024-04-29T09:30",
-        "location": "Centralsjukhuset i Karlstad",
+        "date": "2024-06-26T09:30",
+        "location": "Fålhagens vårdcentral, Uppsala",
         "type": "Sjukgymnast",
-        "reason": "Anledningen till bokningen är stela ben",
+        "reason": "Uppföljning efter stukad fot",
         "content": [
           {
             "heading": "Innan du kommer hit",
@@ -41,50 +37,14 @@
         ]
       },
       {
-        "date": "2024-05-12T09:30",
-        "location": "Centralsjukhuset i Karlstad",
-        "type": "Sjukgymnast",
-        "reason": "Anledningen till bokningen är stela ben",
+        "date": "2024-05-15T08:24", 
+        "location": "Aqua Dental Uppsala",
+        "type": "Tandläkare",
+        "reason": "Tandreglering",
         "content": [
           {
-            "heading": "Innan du kommer hit",
-            "text": "Glöm inte att strecha"
-          }
-        ]
-      },
-      {
-        "date": "2024-05-12T09:30",
-        "location": "Centralsjukhuset i Karlstad",
-        "type": "Sjukgymnast",
-        "reason": "Anledningen till bokningen är stela ben",
-        "content": [
-          {
-            "heading": "Innan du kommer hit",
-            "text": "Glöm inte att strecha"
-          }
-        ]
-      },
-      {
-        "date": "2024-05-12T09:30",
-        "location": "Centralsjukhuset i Karlstad",
-        "type": "Sjukgymnast",
-        "reason": "Anledningen till bokningen är stela ben",
-        "content": [
-          {
-            "heading": "Innan du kommer hit",
-            "text": "Glöm inte att strecha"
-          }
-        ]
-      },
-      {
-        "date": "2024-05-12T09:30",
-        "location": "Centralsjukhuset i Karlstad",
-        "type": "Sjukgymnast",
-        "reason": "Anledningen till bokningen är stela ben",
-        "content": [
-          {
-            "heading": "Innan du kommer hit",
-            "text": "Glöm inte att strecha"
+            "heading": "Välkommen till Aqua Dental i Uppsala",
+            "text": "Vi ser fram emot ditt besök. Glöm inte att ta med gilig ID-handling och var på plats senast 10 minuter innan avsatt tid. Borsta gärna tänderna innan."
           }
         ]
       }

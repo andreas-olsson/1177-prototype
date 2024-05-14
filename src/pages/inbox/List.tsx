@@ -43,7 +43,7 @@ function List() {
                 <IDSTab label="Stjärnmärkta"></IDSTab>
                 <IDSTabPanel>
                   <IDSCard>
-                    <ListMessages filter="unread" />z
+                    <ListMessages filter="unread" />
                   </IDSCard>
                 </IDSTabPanel>
                 <IDSTabPanel>

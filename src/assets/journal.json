@@ -1,74 +1,66 @@
 {
     "notes": [
       {
-        "date": "2023-02-22T12:00", 
-        "location": "någon mottagning",
-        "title": "En journalanteckning",
-        "author": "Namn namnsson",
+        "date": "2023-04-22T18:19", 
+        "location": "Akutmottagningen, Uppsala",
+        "title": "Diagnos",
+        "author": "Per Claesson (Läkare)",
         "answered": true,
         "content": [
             {
-              "heading": "Detta är en rubrik i ditt första journalmeddelande",
-              "text": "Bla bla bla bla"
-            },
-            {
-              "heading": "Det här är en annan rubrik i ditt journalmeddelande",
-              "text": "Bla bla bla"
+              "heading": "Huvuddiagnos",
+              "text": "Distorsion i fotled"
             }
           ]
     
       },
       {
-        "date": "2023-02-22T10:00", 
-        "location": "någon mottagning",
-        "title": "En journalanteckning",
-        "author": "Namn namnsson",
+        "date": "2023-04-22T17:21",
+        "location": "Akutmottagningen, Uppsala",
+        "title": "Besöksanteckning",
+        "author": "Per Claesson (Läkare)",
         "answered": true,
         "content": [
-            {
-              "heading": "Detta är en rubrik i ditt första journalmeddelande",
-              "text": "Bla bla bla bla"
-            },
-            {
-              "heading": "Det här är en annan rubrik i ditt journalmeddelande",
-              "text": "Bla bla bla"
-            }
+          {
+            "heading": "Kontaktorsak",
+            "text": "Fot- och fotledsskada"
+          },
+          {
+            "heading": "Symptom",
+            "text": "Skadat foten idag för några timmar sedan, trampade snett. Lindad men blivit rejält svullet. Har känsel, känns varmt. Gör mest ont i rörelse, värre i rörelse. Kan belasta men helst inte. Mer ont nu."
+          },
+          {
+            "heading": "Övriga sjukdomar, pågående medicinering",
+            "text": "SkTidigare frisk, inga mediciner"
+          }
           ]
     
       },
       {
-        "date": "2023-02-22T09:00", 
-        "location": "någon mottagning",
-        "title": "En journalanteckning",
-        "author": "Namn namnsson",
+        "date": "2023-04-22T16:47",
+        "location": "Akutmottagningen, Uppsala",
+        "title": "Mottagningsbesök",
+        "author": "Johanna Axelqvist (Sjuksköterska))",
         "answered": true,
         "content": [
             {
-              "heading": "Detta är en rubrik i ditt första journalmeddelande",
-              "text": "Bla bla bla bla"
-            },
-            {
-              "heading": "Det här är en annan rubrik i ditt journalmeddelande",
-              "text": "Bla bla bla"
+              "heading": "Kontaktorsak",
+              "text": "Fot- och fotledsskada"
             }
           ]
-    
       },
       {
-        "date": "2023-01-18T17:12", 
-        "location": "någon mottagning",
-        "title": "En annan journalanteckning",
-        "author": "Namn namnsson",
+        "date": "2023-04-22T16:32",
+        "location": "Medhelp AB",
+        "title": "Telefonkontakt",
+        "author": "Sjuksköterska, specialfunktion",
         "answered": false,
         "content": [
             {
-              "heading": "Detta är en rubrik i ditt andra journal meddelande",
-              "text": "Bla bla bla bla"
-            },
-            {
-              "heading": "En annan rubrik i det andra meddelandet",
-              "text": "Bla bla bla"
+              "heading": "Kontaktorsak",
+              "text": "Fot- och fotledsskada"
             }
+            
           ]
       }
     ]

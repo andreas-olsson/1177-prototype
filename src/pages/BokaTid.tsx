@@ -4,9 +4,9 @@ import {
   IDSContainer,
   IDSCard,
   IDSLink,
-  IDSIconChevron,
   IDSBreadcrumbs,
   IDSCrumb,
+  IDSIconArrow,
 } from "@inera/ids-react";
 
 function BokaTid() {
@@ -19,21 +19,21 @@ function BokaTid() {
           srlabel="Du är här"
         >
           <IDSCrumb>
-            <a href="/services">Start</a>
+            <a href="/">Start</a>
           </IDSCrumb>
 
           <IDSCrumb mobile>
-            <a href="/services">Start</a>
+            <a href="/">Start</a>
           </IDSCrumb>
         </IDSBreadcrumbs>
 
         <h1 className="ids-heading-1 ids-mt-12">Boka tid</h1>
         <p className="ids-body ids-mt-4">
-          Vill du visa eller hantera dina bokningar?{" "}
+          Vill du visa eller ändra dina bokade tider?{" "}
         </p>
         <IDSLink className="ids-mb-2">
-          <IDSIconChevron></IDSIconChevron>
-          <a href="/bokadetider">Bokade tider</a>
+          <IDSIconArrow />
+          <a href="/appointments">Bokade tider</a>
         </IDSLink>
         <IDSContainer gutterless={true} className="ids-content">
           <IDSRow gap="2rem" justify={"space-between"}>
@@ -42,56 +42,43 @@ function BokaTid() {
                 <h3 className="ids-heading-2">I min region</h3>
 
                 <IDSLink className="ids-mb-2 block">
-                  <IDSIconChevron></IDSIconChevron>
+                  <IDSIconArrow />
                   <a href="javascript:console.log('click')">
                     Boka vaccination mot Covid-19
                   </a>
                 </IDSLink>
               </IDSCard>
               <IDSCard className="ids-mt-8" style={{ display: "block" }}>
-                <h3 className="ids-heading-2">På Gimo vårdcentral, Gimo</h3>
+                <h3 className="ids-heading-2">Där du är listad</h3>
                 <p className="ids-mb-4">
                   Här visas den mottagning där du är listad på. Om du vill ändra
                   ditt vårdval kan du göra det på Välj/ändra vårdval.
                 </p>
+                <h4 className="ids-heading-3">Kungsängskliniken, Uppsala</h4>
                 <IDSLink className="ids-mb-2 block">
-                  <IDSIconChevron></IDSIconChevron>
+                  <IDSIconArrow />
                   <a href="javascript:console.log('click')">Boka tid</a>
                 </IDSLink>
               </IDSCard>
               <IDSCard className="ids-mt-8" style={{ display: "block" }}>
                 <h3 className="ids-heading-2">Andra mottagningar</h3>
                 <p className="ids-mb-4">
-                  Här finns bokningsmöjligheter för andra mottagingar som du har
-                  lagt till, eller varit i kontakt med.
+                  Här kan du se mottagningar som du själv har lagt till eller
+                  som kan ha lagts till åt dig efter kontakt med vården.
                 </p>
 
-                <h3 className="ids-heading-3">Alby VC</h3>
+                <h3 className="ids-heading-3 ids-mt-4">Aqua Dental Uppsala</h3>
                 <IDSLink className="ids-mb-2 block">
-                  <IDSIconChevron></IDSIconChevron>
+                  <IDSIconArrow />
                   <a href="javascript:console.log('click')">Boka tid</a>
                 </IDSLink>
 
                 <h3 className="ids-heading-3 ids-mt-4">
-                  Bra Liv Habo vårdcentral
+                  Kungsängskliniken, Uppsala
                 </h3>
                 <IDSLink className="ids-mb-2 block">
-                  <IDSIconChevron></IDSIconChevron>
+                  <IDSIconArrow />
                   <a href="javascript:console.log('click')">Boka tid</a>
-                </IDSLink>
-
-                <h3 className="ids-heading-3 ids-mt-4">
-                  Folktandvården Hertig Karl, Örebro
-                </h3>
-                <IDSLink className="ids-mb-2 block">
-                  <IDSIconChevron></IDSIconChevron>
-                  <a href="javascript:console.log('click')">Boka tid</a>
-                </IDSLink>
-                <IDSLink className="ids-mb-2 block">
-                  <IDSIconChevron></IDSIconChevron>
-                  <a href="javascript:console.log('click')">
-                    Ändra eller omboka tid
-                  </a>
                 </IDSLink>
               </IDSCard>
               <p className="ids-body ids-mt-12">

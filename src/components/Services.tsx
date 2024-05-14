@@ -2,7 +2,6 @@ import "../styles/services.css";
 
 import {
   IDSLink,
-  IDSNotificationBadge,
   IDSIconPlus,
   IDSIconReload,
   IDSCol,
@@ -16,10 +15,52 @@ function Services() {
   return (
     <>
       <div className="ids">
-        <IDSContainer gutterless={true} className="ids-content ids-mt-6">
-          <IDSRow justify="start" gap="2rem">
+        <IDSContainer gutterless={true} className="ids-content">
+          <IDSRow justify="start" gap="2rem" className="ids-mt-12">
             <IDSCol m="12" s="12">
-              <h2 className="ids-heading-2">Inkorg</h2>
+              <h2 className="ids-heading-2">Hälso- och vårdval</h2>
+              <IDSCard fill={false} className="card">
+                <ul className="blocklink">
+                  <li>
+                    <IDSLink>
+                      <IDSIconArrow />
+                      <a>Fålhagens vårdcentral, Uppsala</a>
+                    </IDSLink>
+                  </li>
+                </ul>
+                <hr />
+                <IDSLink className="ids-mb-2">
+                  <IDSIconReload></IDSIconReload>
+                  <a href="javascript:console.log('click')">
+                    Ändra hälso- och vårdval
+                  </a>
+                </IDSLink>
+              </IDSCard>
+              <h2 className="ids-heading-2">Mottagningar</h2>
+              <IDSCard fill={false} className="card">
+                <ul className="blocklink">
+                  <li>
+                    <IDSLink>
+                      <IDSIconArrow />
+                      <a>Aqua Dental Uppsala</a>
+                    </IDSLink>
+                  </li>
+                  <li>
+                    <IDSLink>
+                      <IDSIconArrow />
+                      <a>Kungsängskliniken, Uppsala</a>
+                    </IDSLink>
+                  </li>
+                </ul>
+                <hr />
+                <IDSLink className="ids-mb-2">
+                  <IDSIconPlus></IDSIconPlus>
+                  <a href="javascript:console.log('click')">
+                    Hitta och lägg till mottagning
+                  </a>
+                </IDSLink>
+              </IDSCard>
+              {/* <h2 className="ids-heading-2">Inkorg</h2>
               <IDSCard fill={false} className="card">
                 <ul className="blocklink">
                   <li>
@@ -49,7 +90,7 @@ function Services() {
                     </IDSLink>
                   </li>
                 </ul>
-              </IDSCard>
+              </IDSCard> */}
               <h2 className="ids-heading-2">Genvägar</h2>
               <IDSCard fill={false} className="card">
                 <ul className="blocklink">
@@ -61,7 +102,7 @@ function Services() {
                   </li>
                 </ul>
               </IDSCard>
-              <h2 className="ids-heading-2">Agera ombud</h2>
+              {/* <h2 className="ids-heading-2">Agera ombud</h2>
               <IDSCard fill={false} className="card">
                 <ul className="blocklink">
                   <li>
@@ -73,59 +114,26 @@ function Services() {
                     </IDSLink>
                   </li>
                 </ul>
-              </IDSCard>
+              </IDSCard> */}
             </IDSCol>
             <IDSCol m="12" s="12">
-              <h2 className="ids-heading-2">Hälso- och vårdval</h2>
+              <h2 className="ids-heading-2">Egen provhantering</h2>
               <IDSCard fill={false} className="card">
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
                       <IDSIconArrow />
-                      <a>Vårdcentralen tornet</a>
+                      <a>Beställ provhantering och se svar</a>
+                    </IDSLink>
+                  </li>
+                  <li>
+                    <IDSLink>
+                      <IDSIconArrow />
+                      <a>Registrera prov</a>
                     </IDSLink>
                   </li>
                 </ul>
-                <hr />
-                <IDSLink className="ids-mb-2">
-                  <IDSIconReload></IDSIconReload>
-                  <a href="javascript:console.log('click')">
-                    Ändra hälso- och vårdval
-                  </a>
-                </IDSLink>
               </IDSCard>
-              <h2 className="ids-heading-2">Mottagningar</h2>
-              <IDSCard fill={false} className="card">
-                <ul className="blocklink">
-                  <li>
-                    <IDSLink>
-                      <IDSIconArrow />
-                      <a>Arbetsterapimottagningen Sunne</a>
-                    </IDSLink>
-                  </li>
-                  <li>
-                    <IDSLink>
-                      <IDSIconArrow />
-                      <a>Barn- och ungdomsmottagning Kristianstad</a>
-                    </IDSLink>
-                  </li>
-                  <li>
-                    <IDSLink>
-                      <IDSIconArrow />
-                      <a>Barn- och ungdomspsykiatrimottagning Lund</a>
-                    </IDSLink>
-                  </li>
-                </ul>
-                <hr />
-                <IDSLink className="ids-mb-2">
-                  <IDSIconPlus></IDSIconPlus>
-                  <a href="javascript:console.log('click')">
-                    Hitta och lägg till mottagning
-                  </a>
-                </IDSLink>
-              </IDSCard>
-            </IDSCol>
-            <IDSCol m="12" s="12">
               <h2 className="ids-heading-2">Digital rådgivning och chatt</h2>
               <IDSCard fill={false} className="card">
                 <ul className="blocklink">
@@ -154,25 +162,10 @@ function Services() {
                   </li>
                 </ul>
               </IDSCard>
-              <h2 className="ids-heading-2">Egen provhantering</h2>
+            </IDSCol>
+            <IDSCol m="12" s="12">
+              <h2 className="ids-heading-2">Intyg</h2>
               <IDSCard fill={false} className="card">
-                <ul className="blocklink">
-                  <li>
-                    <IDSLink>
-                      <IDSIconArrow />
-                      <a>Beställ provhantering och se svar</a>
-                    </IDSLink>
-                  </li>
-                  <li>
-                    <IDSLink>
-                      <IDSIconArrow />
-                      <a>Registrera prov</a>
-                    </IDSLink>
-                  </li>
-                </ul>
-              </IDSCard>
-              <IDSCard fill={false} className="card">
-                <h2 className="ids-heading-2">Intyg</h2>
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
@@ -198,8 +191,8 @@ function Services() {
                   <a href="javascript:console.log('click')">Förnya recept</a>
                 </IDSLink>
               </IDSCard>
+              <h2 className="ids-heading-2">Synpunkter och klagomål</h2>
               <IDSCard fill={false} className="card">
-                <h2 className="ids-heading-2">Synpunkter och klagomål</h2>
                 <ul className="blocklink">
                   <li>
                     <IDSLink>

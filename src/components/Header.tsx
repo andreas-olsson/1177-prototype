@@ -11,6 +11,7 @@ import {
   IDSIconClose,
   IDSIconAgent,
   IDSIconChevron,
+  IDSIconReload,
   IDSLink,
   IDSAgent,
   IDSHeaderItem,
@@ -18,7 +19,7 @@ import {
   IDSIconFindCare,
   IDSIconSearch,
   IDSHeaderMobileItem,
-  IDSIconStockholm,
+  IDSIconUppsala,
 } from "@inera/ids-react";
 
 interface AgentButtonProps {
@@ -114,27 +115,40 @@ function Header() {
     };
   }, []);
 
-  const agents = [{ name: "Elsa Andersson" }, { name: "Elton Andersson" }];
+  const agents = [{ name: "Birgitta Johansson" }];
 
-  const menuItems = [
+  const menuItemsLoggedin = [
     ["Start", "/"],
     ["Inkorg", "/inbox"],
-    ["Bokade tider", "/bokadetider"],
-    ["Journalen", "/"],
+    ["Bokade tider", "/appointments"],
+    ["Journalen", "/journal/overview"],
     ["Egen provhantering", "/"],
     ["Stöd och behandling", "/"],
     ["Intyg", "/"],
     ["Övriga tjänster", "/"],
   ];
 
-  const activeIndex = menuItems.findIndex(
+  const activeIndexLoggedin = menuItemsLoggedin.findIndex(
+    (item) => item[1] === location.pathname
+  );
+
+  const menuItemsPublic = [
+    ["Liv & Hälsa", "/"],
+    ["Barb & Gravid", "/"],
+    ["Olyckor & Skador", "/"],
+    ["Sjukdomar & Besvär", "/"],
+    ["Undersökning & Behandling", "/"],
+    ["Så fungerar vården", "/"],
+  ];
+
+  const activeIndexPublic = menuItemsPublic.findIndex(
     (item) => item[1] === location.pathname
   );
 
   return (
     <>
-      <IDSHeader className="ids-hide ids-show-1177" type="1177">
-        <IDSIconStockholm slot="region" title="Region Stockholm logotyp" />
+      <IDSHeader logohref="/" className="ids-hide ids-show-1177" type="1177">
+        <IDSIconUppsala slot="region" title="Region Uppsala logotyp" />
         {loggedin ? (
           <div
             className="header-avatar"
@@ -142,31 +156,30 @@ function Header() {
             ref={overlayRef}
           >
             <span
-              className={`login-button ${isOverlayVisible ? "active" : ""}`}
+              className={`login-button ${isAgent ? "agent-active" : ""} ${
+                isOverlayVisible ? "active" : ""
+              }`}
             >
-              <span className="icon left">
+              <span className="icon left initials">
                 {isAgent && (
                   <div className="agent-icon">
                     <IDSIconAgent colorpreset={3} />
                   </div>
                 )}
-                <IDSIconUser colorpreset={2} />
+                KJ
               </span>
-              <div className="label">
-                <span className="label-pre">Inloggad som</span>
-                Andreas Olsson
-              </div>
+              <div className="label">Inloggad</div>
               <span className="icon right">
-                {isOverlayVisible ? (
-                  <IDSIconClose colorpreset={2} />
-                ) : (
-                  <IDSIconExpand colorpreset={2} />
-                )}
+                {isOverlayVisible ? <IDSIconClose /> : <IDSIconExpand />}
               </span>
             </span>
             {isOverlayVisible && (
               <>
                 <div className="overlay-menu">
+                  <div className="label ids-mb-6">
+                    <span className="label-pre">Inloggad som</span>
+                    Kim Johansson
+                  </div>
                   <IDSLink block className="ids-mb-2" onClick={handleLogOut}>
                     <IDSIconChevron></IDSIconChevron>
                     <a href="javascript:void(0)">Inställningar</a>
@@ -193,6 +206,10 @@ function Header() {
           </div>
         ) : (
           <>
+            <IDSHeaderItem>
+              <IDSIconReload />
+              <a href="#">För vårdpersonal</a>
+            </IDSHeaderItem>
             <IDSHeaderItem>
               <IDSIconEarHearing />
               <a href="#">Lyssna</a>
@@ -224,16 +241,25 @@ function Header() {
             <IDSIconSearch />
             <a href="#">Sök</a>
           </IDSHeaderMobileItem>
-
-          {menuItems.map((item, index) => (
-            <IDSHeaderNavItem
-              link={true}
-              key={index}
-              active={activeIndex === index}
-            >
-              <a href={item[1]}> {item[0]} </a>
-            </IDSHeaderNavItem>
-          ))}
+          {loggedin
+            ? menuItemsLoggedin.map((item, index) => (
+                <IDSHeaderNavItem
+                  link={true}
+                  key={index}
+                  active={activeIndexLoggedin === index}
+                >
+                  <a href={item[1]}> {item[0]} </a>
+                </IDSHeaderNavItem>
+              ))
+            : menuItemsPublic.map((item, index) => (
+                <IDSHeaderNavItem
+                  link={true}
+                  key={index}
+                  active={activeIndexPublic === index}
+                >
+                  <a href={item[1]}> {item[0]} </a>
+                </IDSHeaderNavItem>
+              ))}
         </IDSHeaderNav>
       </IDSHeader>
       {isAgent && (

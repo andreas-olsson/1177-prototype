@@ -26,10 +26,15 @@ function Entity() {
 
   // Hämta index från URL och kontrollera att det är ett giltigt nummer
   const index = getIndexFromLocation();
-  // Bestäm vilken uppsättning data som ska användas baserat på index
+
   const appointmentsLength = AppointmentsData.appointments.length;
   const validIndex = isNaN(index) ? 0 : Math.min(index, appointmentsLength - 1);
   const appointment = AppointmentsData.appointments[validIndex];
+
+  // Funktion för att visa en alert
+  const handleRescheduleClick = () => {
+    alert("Vi antar att du bokar om en tid. Låt oss gå vidare ...");
+  };
 
   return (
     <>
@@ -55,7 +60,7 @@ function Entity() {
           <IDSRow>
             <h1 className="ids-heading-1 ids-mt-12 ids-mb-6">Din bokning</h1>
           </IDSRow>
-          <IDSRow justify="space-between">
+          <IDSRow justify="space-between" gap="2rem">
             <IDSCol cols="8" m="12">
               <IDSCard
                 className="ids-content ids-mb-4"
@@ -71,6 +76,7 @@ function Entity() {
                   <p className="ids-mb-2">
                     Datum och tid: <b>{appointment.date}</b>
                   </p>
+
                   <p className="ids-mb-2">
                     Plats: <b>{appointment.location}</b>
                   </p>
@@ -95,9 +101,13 @@ function Entity() {
             </IDSCol>
             <IDSCol>
               <IDSCard>
-                <h2 className="ids-heading-2">Hantera din bokning</h2>
-                <IDSButton className="ids-mt-4" block={true}>
-                  Boka om tiden
+                <h2 className="ids-heading-2 ids-mb-6">Hantera din bokning</h2>
+                <IDSButton
+                  className="ids-mt-4 ids-mb-4"
+                  block={true}
+                  onClick={handleRescheduleClick}
+                >
+                  Boka om
                 </IDSButton>
                 <IDSButton
                   className="ids-mt-4 ids-mb-8"

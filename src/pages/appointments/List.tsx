@@ -6,6 +6,8 @@ import {
   IDSContainer,
   IDSBreadcrumbs,
   IDSCrumb,
+  IDSLink,
+  IDSIconArrow,
 } from "@inera/ids-react";
 
 function List() {
@@ -29,7 +31,14 @@ function List() {
             </IDSBreadcrumbs>
           </IDSRow>
           <IDSRow>
-            <h1 className="ids-heading-1 ids-mt-12 ids-mb-6">Bokade tider</h1>
+            <IDSCol cols="8">
+              <h1 className="ids-heading-1 ids-mt-12 ids-mb-6">Bokade tider</h1>
+              <p className="ids-body ids-mt-4">Vill du boka en ny tid? </p>
+              <IDSLink className="ids-mb-6" style={{ display: "block" }}>
+                <IDSIconArrow />
+                <a href="/bokatid">Boka tid</a>
+              </IDSLink>
+            </IDSCol>
           </IDSRow>
           <IDSRow>
             <IDSCol cols="8">

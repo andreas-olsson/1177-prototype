@@ -40,7 +40,7 @@ function Shortcuts() {
           </a>
         </IDSCol>
         <IDSCol cols="4" m="6" s="12" className="ctac-l-left ctac-m-right">
-          <a className="cta" href="#">
+          <a className="cta" href="/login?location=bokatid">
             <div className="cta-icon">
               <IDSIconCalendar />
             </div>

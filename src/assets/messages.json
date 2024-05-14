@@ -1,8 +1,8 @@
 {
     "messages": [
       {
-        "date": "2023-04-18 08:24",
-        "title": "Titel på första meddelandet",
+        "date": "2023-05-18 08:24",
+        "title": "Remiss",
         "author": "Ärendehantering enhet 3",
         "status": "Information",
         "unread": true,
@@ -22,13 +22,13 @@
     
       },
       {
-        "date": "2022-03-12 04:22",
-        "title": "Titel på andra meddelandet",
-        "author": "Ärendehantering enhet 3",
+        "date": "2022-05-12 14:02",
+        "title": "Tidbokning",
+        "author": "Folktandvården St Per",
         "status": "Ärendet avslutat",
         "unread": true,
         "archived": false,
-        "starred": true,
+        "starred": false,
         "attachment": false,
         "content": [
             {

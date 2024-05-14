@@ -52,7 +52,7 @@ function Login() {
               <h1 className="ids-heading-1">Logga in</h1>
             </IDSCol>
           </IDSRow>
-          <IDSRow className="ids-mt-6" gap="2rem">
+          <IDSRow className="ids-mt-6" gap="3rem">
             <IDSCol cols="5" m="12" s="12" className="ids-content">
               <h2 className="ids-heading-2">Välj hur du vill logga in</h2>
               <IDSCard fill={true} className="card">
@@ -86,7 +86,7 @@ function Login() {
                 <p>No services at 1177 currently support Foreign eID.</p>
               </IDSCard>
             </IDSCol>
-            <IDSCol cols="5" m="12" s="12" className="ids-content">
+            <IDSCol cols="4" m="12" s="12" className="ids-content">
               <h2 className="ids-heading-2">Välj hur du vill logga in</h2>
               <p className="ids-preamble">
                 Använd QR-kod vid inloggning med BankID på annan enhet

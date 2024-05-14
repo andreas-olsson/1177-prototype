@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocalStorage } from "@uidotdev/usehooks";
 import "../../styles/journal.css";
 
 import {
@@ -26,22 +27,31 @@ function Overview() {
   const navigate = useNavigate();
 
   // Användarnamnslista
-  const userNames = ["Andreas Olsson", "Elsa Andersson", "Elton Andersson"];
+  const userNames = ["Kim Johansson", "Birgitta Johansson"];
 
   const [currentUser, setCurrentUser] = useState(() => {
     // Försök att läsa det aktuella användarnamnet från Local Storage eller använd första namnet i listan.
     return localStorage.getItem("currentUser") || userNames[0];
   });
 
-  useEffect(() => {
-    // Spara den valda användaren i Local Storage varje gång den ändras.
-    localStorage.setItem("currentUser", currentUser);
-  }, [currentUser]);
+  const [, setAgent] = useLocalStorage("isAgent", false);
+  const [, setAgentName] = useLocalStorage("agentName", "");
+  const [, setSelectedAgent] = useLocalStorage("selectedAgent", "");
 
   // Funktion för att hantera användarväxling.
   const switchUser = (newUser: React.SetStateAction<string>) => {
     setCurrentUser(newUser);
   };
+
+  useEffect(() => {
+    // Nollställ agentstatus när komponenten laddas
+    setAgent(false);
+    setAgentName("");
+    setSelectedAgent("");
+
+    // Spara den valda användaren i Local Storage varje gång den ändras
+    localStorage.setItem("currentUser", currentUser);
+  }, [currentUser, setAgent, setAgentName, setSelectedAgent]);
 
   return (
     <>
