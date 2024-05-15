@@ -20,6 +20,8 @@ import {
   IDSIconSearch,
   IDSHeaderMobileItem,
   IDSIconUppsala,
+  IDSHeaderMobileMenu,
+  IDSMobileMenuItem,
 } from "@inera/ids-react";
 
 interface AgentButtonProps {
@@ -229,18 +231,37 @@ function Header() {
           </>
         )}
         <IDSHeaderNav>
-          <IDSHeaderMobileItem>
-            <IDSIconUser />
-            <a href="#">Logga in</a>
-          </IDSHeaderMobileItem>
+          {!loggedin && (
+            <IDSHeaderMobileItem>
+              <IDSIconUser />
+              <a href="/login">Logga in</a>
+            </IDSHeaderMobileItem>
+          )}
+
           <IDSHeaderMobileItem>
             <IDSIconFindCare />
             <a href="#">Hitta vård</a>
           </IDSHeaderMobileItem>
-          <IDSHeaderMobileItem>
-            <IDSIconSearch />
-            <a href="#">Sök</a>
-          </IDSHeaderMobileItem>
+          <IDSHeaderMobileMenu>
+            Menu
+            {loggedin
+              ? menuItemsLoggedin.map((item, index) => (
+                  <IDSMobileMenuItem
+                    key={index}
+                    active={activeIndexLoggedin === index}
+                  >
+                    <a href={item[1]}> {item[0]} </a>
+                  </IDSMobileMenuItem>
+                ))
+              : menuItemsPublic.map((item, index) => (
+                  <IDSMobileMenuItem
+                    key={index}
+                    active={activeIndexPublic === index}
+                  >
+                    <a href={item[1]}> {item[0]} </a>
+                  </IDSMobileMenuItem>
+                ))}
+          </IDSHeaderMobileMenu>
           {loggedin
             ? menuItemsLoggedin.map((item, index) => (
                 <IDSHeaderNavItem
