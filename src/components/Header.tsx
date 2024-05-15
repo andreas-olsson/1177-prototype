@@ -134,7 +134,7 @@ function Header() {
 
   const menuItemsPublic = [
     ["Liv & Hälsa", "/"],
-    ["Barb & Gravid", "/"],
+    ["Barn & Gravid", "/"],
     ["Olyckor & Skador", "/"],
     ["Sjukdomar & Besvär", "/"],
     ["Undersökning & Behandling", "/"],
