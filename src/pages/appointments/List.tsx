@@ -41,7 +41,7 @@ function List() {
             </IDSCol>
           </IDSRow>
           <IDSRow>
-            <IDSCol cols="8">
+            <IDSCol cols="8" m="12">
               <ListAppointments />
             </IDSCol>
           </IDSRow>
