@@ -33,7 +33,7 @@ function Entity() {
 
   // Funktion för att visa en alert
   const handleRescheduleClick = () => {
-    alert("Vi antar att du bokar om en tid. Låt oss gå vidare ...");
+    alert("Vi antar att du bokar om en tid. Bra jobbat! Mvh /Inera & 1177");
   };
 
   return (
@@ -103,7 +103,7 @@ function Entity() {
               <IDSCard>
                 <h2 className="ids-heading-2 ids-mb-6">Hantera din bokning</h2>
                 <IDSButton
-                  className="ids-mt-4 ids-mb-4"
+                  className="ids-mt-4 ids-mb-4 bokaom-trigger"
                   block={true}
                   onClick={handleRescheduleClick}
                 >
