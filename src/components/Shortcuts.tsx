@@ -20,7 +20,7 @@ function Shortcuts() {
             <div className="cta-icon">
               <IDSIconEmail />
             </div>
-            <span className="cta-title">Inkorg</span>
+            <span className="cta-title">Visa inkorg</span>
           </a>
         </IDSCol>
         <IDSCol cols="4" m="6" s="12" className="ctac-l-middle ctac-m-right">
@@ -36,7 +36,7 @@ function Shortcuts() {
             <div className="cta-icon">
               <IDSIconLog />
             </div>
-            <span className="cta-title">Journal</span>
+            <span className="cta-title">Läsa journal</span>
           </a>
         </IDSCol>
         <IDSCol cols="4" m="6" s="12" className="ctac-l-left ctac-m-right">
@@ -52,7 +52,7 @@ function Shortcuts() {
             <div className="cta-icon">
               <IDSIconClipboardCross />
             </div>
-            <span className="cta-title">Intyg</span>
+            <span className="cta-title">Visa intyg</span>
           </a>
         </IDSCol>
         <IDSCol cols="4" m="6" s="12" className="ctac-l-right ctac-m-right">
@@ -60,7 +60,7 @@ function Shortcuts() {
             <div className="cta-icon">
               <IDSIconAlarmClockNeutral />
             </div>
-            <span className="cta-title">Aktuellt</span>
+            <span className="cta-title">Visa händelser</span>
           </a>
         </IDSCol>
       </IDSRow>

@@ -18,7 +18,7 @@ function Overview() {
     <>
       <div className="ids">
         <IDSBreadcrumbs
-          current="Aktuellt"
+          current="Händelser"
           lead="Du är här:"
           srlabel="Du är här"
         >
@@ -31,7 +31,7 @@ function Overview() {
           </IDSCrumb>
         </IDSBreadcrumbs>
 
-        <h1 className="ids-heading-1 ids-mt-12">Aktuellt</h1>
+        <h1 className="ids-heading-1 ids-mt-12">Händelser</h1>
 
         <IDSContainer>
           <IDSRow className="ids-mt-8">
