@@ -48,7 +48,7 @@ function BokaTid() {
                 </IDSLink>
               </IDSCard>
               <IDSCard className="ids-mt-8" style={{ display: "block" }}>
-                <h3 className="ids-heading-2">Där du är listad</h3>
+                <h3 className="ids-heading-2">Vårdval/hälsoval</h3>
                 <h4 className="ids-heading-3">Gimo vårdcentral, Gimo</h4>
 
                 <IDSLink className="ids-mb-2 block">
@@ -66,7 +66,7 @@ function BokaTid() {
                 </IDSLink>
               </IDSCard>
               <IDSCard className="ids-mt-8" style={{ display: "block" }}>
-                <h3 className="ids-heading-2">Hos andra mottagningar</h3>
+                <h3 className="ids-heading-2">Mottagningar</h3>
                 {/* <p className="ids-mb-4">
                   Här kan du se mottagningar som du själv har lagt till eller
                   som kan ha lagts till åt dig efter kontakt med vården.
