@@ -1,8 +1,529 @@
 {
-    "content": [
-      {
-        "name": "Info för vårdpersonal"
-      }
-    ]
+  "content": [
+  {
+      "name": "Kunskapsstöd",
+      "sub": [
+        {
+          "name": "Akuta tillstånd",
+          "sub":[
+            {
+              "name": "Kliniska kunskapsstöd", 
+              "sub": [
+                {"name": "ABCDE, initialt omhändertagande"},
+                {"name": "Akut hjärtarytmi"},
+                {"name": "Anafylaxi"},
+                {"name": "Astma hos barn, akut anfall"},
+                {"name": "Buksymtom hos barn, akut"},
+                {"name": "Diabetesketoacidos"},
+                {"name": "Hjärtstopp"},
+                {"name": "Hyperglykemi hos barn"},
+                {"name": "Hypoglykemi hos barn med diabetes"},
+                {"name": "Hypoglykemi vid diabetes"},
+                {"name": "KOL-exacerbation"},
+                {"name": "Kranskärlssjukdom, akut"},
+                {"name": "Lungödem"},
+                {"name": "Näsblödning"},
+                {"name": "Penicillinallergi"},
+                {"name": "Sepsis"},
+                {"name": "Stroke och TIA, akut"},
+                {"name": "Synstörningar, akuta"},
+                {"name": "Traumatisk hjärnskada (THS) — uppföljning och rehabilitering vid lätt THS hos barn och ungdom"},
+                {"name": "Traumatisk hjärnskada (THS) — uppföljning och rehabilitering vid lätt THS hos vuxna"},
+                {"name": "Traumatisk hjärnskada (THS) — uppföljning och rehabilitering vid medelsvår och svår THS hos vuxna"}
+              ]},
+            {
+              "name": "Vårdförlopp", 
+              "sub": [
+                {"name": "Sepsis"},
+                {"name": "Stroke och TIA – tidiga insatser och vård"},
+                {"name": "Traumatisk hjärnskada (THS)"}
+              ]}
+          ]
+        },
+        {
+          "name": "Allergi och överkänslighet",
+          "sub":[
+            {
+              "name": "Kliniska kunskapsstöd", 
+              "sub": [
+                {"name": "Allergi vid bi- eller getingstick"},
+                {"name": "Allergisk rinokonjunktivit"},
+                {"name": "Anafylaxi"},
+                {"name": "Arbetsrelaterad astma, KOL och rinit"},
+                {"name": "Astma"},
+                {"name": "Astma hos barn"},
+                {"name": "Kontakteksem"},
+                {"name": "Laktosintolerans hos barn"},
+                {"name": "Matallergi hos barn"},
+                {"name": "Penicillinallergi"},
+                {"name": "Urtikaria"}
+              ]},
+            {
+              "name": "Vårdförlopp", 
+              "sub": [
+                {"name": "Matallergi, IgE-förmedlad"}
+              ]}
+          ]
+        },
+        {"name": "Andningsvägar",
+        "sub":[
+          {
+            "name": "Kliniska kunskapsstöd", 
+            "sub": [
+              {"name": "Arbetsrelaterad astma, KOL och rinit"},
+              {"name": "Astma hos barn"},
+              {"name": "Astma hos barn, akut anfall"},
+              {"name": "KOL-exacerbation"},
+              {"name": "Kroniskt obstruktiv lungsjukdom"},
+              {"name": "Lungcancer"},
+              {"name": "Lungemboli"},
+              {"name": "Lungödem"},
+              {"name": "Pneumoni"},
+              {"name": "Pneumoni hos barn"},
+              {"name": "Rinosinuit, kronisk"},
+              {"name": "Sarkoidos"},
+              {"name": "Sinuit"},
+              {"name": "Tuberkulos"},
+              {"name": "Viruskrupp hos barn"}
+            ]},
+          {
+            "name": "Vårdförlopp", 
+            "sub": [
+              {"name": "Kroniskt obstruktiv lungsjukdom (KOL)"},
+              {"name": "Obstruktiv sömnapné (OSA) hos vuxna"},
+              {"name": "Palliativ vård"}
+            ]},
+            {
+              "name": "Vårdprogram", 
+              "sub": [
+                {"name": "Obstruktiv sömnapné hos vuxna"}
+              ]}
+        ]},
+        {"name": "Arbets- och miljömedicin",
+        "sub":[
+          {
+            "name": "Kliniska kunskapsstöd",
+            "sub": [
+              {"name": "Arbetsrelaterad astma, KOL och rinit"},
+              {"name": "Kontakteksem"},
+              {"name": "Vibrationsskador i händerna"}
+            ]
+          }
+        ]
+      
+      },
+        {"name": "Barn- och ungdomshälsa","sub": [
+          {"name": "Kliniska kunskapsstöd", "sub": [
+            {"name": "Adenoidhypertrofi"},
+            {"name": "Akne"},
+            {"name": "Allergisk rinokonjunktivit"},
+            {"name": "Anafylaxi"},
+            {"name": "Anemi hos barn"},
+            {"name": "Astma hos barn"},
+            {"name": "Astma hos barn, akut anfall"},
+            {"name": "Atopisk dermatit"},
+            {"name": "Barn som far illa"},
+            {"name": "Bettskador"},
+            {"name": "Blåsljud hos barn"},
+            {"name": "Bröstsmärta och hjärtklappning hos barn"},
+            {"name": "Buksymtom hos barn, akut"},
+            {"name": "Celiaki hos barn"},
+            {"name": "Enures hos barn"},
+            {"name": "Fetma hos barn"},
+            {"name": "Fimosis hos barn"},
+            {"name": "Funktionell buksmärta hos barn"},
+            {"name": "Funktionell diarré hos barn"},
+            {"name": "Funktionella kräkningar hos barn"},
+            {"name": "Förstoppning hos barn"},
+            {"name": "Gastroenterit hos barn"},
+            {"name": "Gynekomasti"},
+            {"name": "Hjärtstopp"},
+            {"name": "Huvudvärk hos barn"},
+            {"name": "Hyperglykemi hos barn"},
+            {"name": "Hypoglykemi hos barn med diabetes"},
+            {"name": "Hälta hos barn"},
+            {"name": "Impetigo"},
+            {"name": "Laktosintolerans hos barn"},
+            {"name": "Matallergi hos barn"},
+            {"name": "Migrän hos barn"},
+            {"name": "Mässling"},
+            {"name": "Obstruktiv sömnapné hos barn"},
+            {"name": "Penicillinallergi"},
+            {"name": "Pneumoni hos barn"},
+            {"name": "Primär immunbrist hos barn"},
+            {"name": "Purpura hos barn"},
+            {"name": "Påssjuka"},
+            {"name": "Röda hund"},
+            {"name": "Seborroiskt eksem"},
+            {"name": "Skelning hos barn"},
+            {"name": "Sköldkörtelrubbning hos barn"},
+            {"name": "Smärta i höft och knä hos barn"},
+            {"name": "Spänningshuvudvärk hos barn"},
+            {"name": "Stjärtfluss hos barn"},
+            {"name": "Tillväxtrubbningar hos barn"},
+            {"name": "Traumatisk hjärnskada (THS) — uppföljning och rehabilitering vid lätt THS hos barn och ungdom"},
+            {"name": "Traumatisk hjärnskada (THS) — uppföljning och rehabilitering vid lätt THS hos vuxna"},
+            {"name": "Traumatisk hjärnskada (THS) — uppföljning och rehabilitering vid medelsvår och svår THS hos vuxna"},
+            {"name": "Tuberkulos"},
+            {"name": "Urinvägsinfektion hos barn"},
+            {"name": "Vattkoppor"},
+            {"name": "Viruskrupp hos barn"},
+            {"name": "Virusvårtor"},
+            {"name": "Våld i nära relationer"}
+          ]},
+          {"name": "Vårdförlopp", "sub":[{
+            "name": "Palliativ vård"
+          }]},
+          {"name": "Vårdprogram", "sub":[
+            {"name": "Obesitas hos barn och ungdomar"},
+            {"name": "Smärta, långvarig hos barn"}
+          ]}
+
+        ]},
+        {"name": "Blod och koagulation", "sub": [
+          {"name": "Kliniska kunskapsstöd", "sub": [
+            {"name": "Akut leukemi"},
+            {"name": "Anemi"},
+            {"name": "Anemi hos barn"},
+            {"name": "Brist på vitamin B12 och folat"},
+            {"name": "Djup ventrombos"},
+            {"name": "Lungemboli"},
+            {"name": "M-komponent"},
+            {"name": "Maligna lymfom och kronisk lymfatisk leukemi"},
+            {"name": "Myelom"},
+            {"name": "Myeloproliferativ neoplasi"},
+            {"name": "Polycytemi"},
+            {"name": "Purpura hos barn"},
+            {"name": "Trombocytopeni"}
+          ]}  
+        ]},
+        {"name": "Cancersjukdomar", "sub": [
+          {"name": "Kliniska kunskapsstöd", "sub": [
+            {"name": "Akut leukemi"},
+            {"name": "Allvarliga ospecifika symtom som kan bero på cancer"},
+            {"name": "Analcancer"},
+            {"name": "Basaliom"},
+            {"name": "Bröstcancer"},
+            {"name": "Buksarkom"},
+            {"name": "Bukspottkörtelcancer"},
+            {"name": "Cancer utan känd primärtumör"},
+            {"name": "Gallblåse- och gallvägscancer"},
+            {"name": "Hjärntumör"},
+            {"name": "Hudlymfom"},
+            {"name": "Hudmelanom"},
+            {"name": "Huvud- och halscancer"},
+            {"name": "Levercancer"},
+            {"name": "Livmoderhalscancer"},
+            {"name": "Livmoderkroppscancer"},
+            {"name": "Lungcancer"},
+            {"name": "Maligna lymfom och kronisk lymfatisk leukemi"},
+            {"name": "Matstrups- och magsäckscancer"},
+            {"name": "Myeloproliferativ neoplasi"},
+            {"name": "Neuroendokrina buktumörer"},
+            {"name": "Njurcancer"},
+            {"name": "Peniscancer"},
+            {"name": "Prostatacancer"},
+            {"name": "Skelett- och mjukdelssarkom"},
+            {"name": "Skivepitelcancer i huden"},
+            {"name": "Sköldkörtelcancer"},
+            {"name": "Testikelcancer"},
+            {"name": "Tjock- och ändtarmscancer"},
+            {"name": "Urinblåse- och urinvägscancer"},
+            {"name": "Vulvacancer"}
+          ]},
+          {"name": "Vårdförlopp", "sub": [
+            {"name": "Palliativ vård"}
+            
+          ]}
+        ]},
+
+        {"name": "Endokrina organ", "sub": [
+          {"name": "Kliniska kunskapsstöd", "sub": [
+            {"name": "Akromegali"},
+            {"name": "Binjurebarkssvikt"},
+            {"name": "Binjureincidentalom"},
+            {"name": "Cushings syndrom"},
+            {"name": "Diabetes typ 2, uppföljning"},
+            {"name": "Diabetes – glukossänkande läkemedelsbehandling vid typ 2-diabetes"},
+            {"name": "Diabetes, fotkomplikationer"},
+            {"name": "Diabetes, utredning"},
+            {"name": "Diabetesketoacidos"},
+            {"name": "Diabetesretinopati"},
+            {"name": "Endokrin oftalmopati"},
+            {"name": "Fetma"},
+            {"name": "Gynekomasti"},
+            {"name": "Hyperkalcemi"},
+            {"name": "Hyperlipidemi"},
+            {"name": "Hyperprolaktinemi"},
+            {"name": "Hypertoni"},
+            {"name": "Hypertyreos"},
+            {"name": "Hypofysinsufficiens"},
+            {"name": "Hypoglykemi vid diabetes"},
+            {"name": "Hypogonadism hos män"},
+            {"name": "Hypokalcemi"},
+            {"name": "Hypokalemi"},
+            {"name": "Hyponatremi"},
+            {"name": "Hypotyreos"},
+            {"name": "Osteoporos"},
+            {"name": "Sköldkörtelcancer"},
+            {"name": "Sköldkörtelrubbning hos barn"},
+            {"name": "Svårläkta sår"},
+            {"name": "Vitamin D-brist"}
+            
+          ]},
+          {"name": "Vårdförlopp", "sub": [
+            {"name": "Diabetes med hög risk för fotsår"},
+            {"name": "Osteoporos - sekundärprevention efter fraktur"}
+            
+          ]},
+          {"name": "Vårdprogram", "sub": [
+            {"name": "Hypertyreos"},
+            {"name": "Primär hyperparatyreoidism"}
+            
+          ]}
+        ]},
+        {"name": "Habilitering", "sub": [
+          {"name": "Kliniska kunskapsstöd", "sub": [
+            {"name": "Cerebral pares"},
+            {"name": "Autism med intellektuell funktionsnedsättning"},
+            {"name": "Flerfunktionsnedsättning"},
+            {"name": "Intellektuell funktionsnedsättning"},
+            {"name": "Ryggmärgsbråck"}
+            
+            
+          ]}
+        ]},
+        
+        {"name": "Hjärta och kärl", "sub": [
+          {"name": "Kliniska kunskapsstöd", "sub": [
+            {"name": "Akut hjärtarytmi"},
+            {"name": "Aortainsufficiens"},
+            {"name": "Aortastenos"},
+            {"name": "Benartärsjukdom"},
+            {"name": "Benartärsjukdom, sekundärprevention"},
+            {"name": "Blåsljud hos barn"},
+            {"name": "Bröstsmärta och hjärtklappning hos barn"},
+            {"name": "Bukaortaaneurysm"},
+            {"name": "Djup ventrombos"},
+            {"name": "Endokardit"},
+            {"name": "Förmaksflimmer"},
+            {"name": "Hjärtarytmi"},
+            {"name": "Hjärtstopp"},
+            {"name": "Hjärtsvikt"},
+            {"name": "Hyperlipidemi"},
+            {"name": "Hypertoni"},
+            {"name": "Kranskärlssjukdom, akut"},
+            {"name": "Kranskärlssjukdom, kronisk"},
+            {"name": "Lungödem"},
+            {"name": "Mitralisinsufficiens"},
+            {"name": "Mitralisstenos"},
+            {"name": "Raynauds fenomen"},
+            {"name": "Stroke och TIA, akut"},
+            {"name": "Stroke och TIA, uppföljning"},
+            {"name": "Svårläkta sår"},
+            {"name": "Trikuspidalisinsufficiens"},
+            {"name": "Venös insufficiens och varicer"}          
+          ]},
+          {"name": "Vårdförlopp", "sub": [
+            {"name": "Diabetes med hög risk för fotsår"},
+            {"name": "Hjärtsvikt - nydebuterad"},
+            {"name": "Höftledsartros - primärvård"},
+            {"name": "Jättecellsarterit (GCA)"},
+            {"name": "Kritisk benischemi"},
+            {"name": "Palliativ vård"},
+            {"name": "Stroke och TIA - fortsatt vård och rehabilitering"},
+            {"name": "Stroke och TIA – tidiga insatser och vård"}
+          ]},
+          {"name": "Vårdprogram", "sub": [
+            {"name": "HyperVenös sjukdom i benentyreos"}            
+          ]}
+        ]},
+
+        {"name": "Hud och kön", "sub": [
+          {"name": "Kliniska kunskapsstöd", "sub": [
+
+            {"name": "Akne"},
+            {"name": "Aktinisk keratos"},
+            {"name": "Atopisk dermatit"},
+            {"name": "Bakteriell vaginos"},
+            {"name": "Basaliom"},
+            {"name": "Borrelia"},
+            {"name": "Bältros"},
+            {"name": "Candidainfektion, oral och intertriginös"},
+            {"name": "Erysipelas"},
+            {"name": "Follikulit"},
+            {"name": "Furunkel och karbunkel"},
+            {"name": "Gonorré"},
+            {"name": "Handeksem"},
+            {"name": "Herpes simplex"},
+            {"name": "Hidradenitis suppurativa"},
+            {"name": "Hiv-infektion"},
+            {"name": "Hudlymfom"},
+            {"name": "Hudmelanom"},
+            {"name": "Hyperhidros"},
+            {"name": "Håravfall"},
+            {"name": "Höstblåsor"},
+            {"name": "Impetigo"},
+            {"name": "Klamydia"},
+            {"name": "Klåda"},
+            {"name": "Kondylom"},
+            {"name": "Kontakteksem"},
+            {"name": "Liktorn, klavus"},
+            {"name": "Lus- och loppbett"},
+            {"name": "Lymfogranulom, veneriskt"},
+            {"name": "Melanocytärt nevus"},
+            {"name": "Mollusker"},
+            {"name": "Mycoplasma genitalium"},
+            {"name": "Perioral dermatit"},
+            {"name": "Pityriasis rosea"},
+            {"name": "Pityriasis versicolor"},
+            {"name": "Psoriasis"},
+            {"name": "Psoriasisartrit"},
+            {"name": "Purpura hos barn"},
+            {"name": "Pustulosis palmoplantaris"},
+            {"name": "Rosacea"},
+            {"name": "Seborroiskt eksem"},
+            {"name": "Skabb"},
+            {"name": "Skivepitelcancer i huden"},
+            {"name": "Svampinfektion i hud och naglar"},
+            {"name": "Svampinfektion i hårbotten"},
+            {"name": "Svårläkta sår"},
+            {"name": "Syfilis"},
+            {"name": "Urtikaria"},
+            {"name": "Virusvårtor"},
+            {"name": "Vitiligo"}
+
+            
+          ]},
+          {"name": "Vårdförlopp", "sub": [
+            {"name": "Diabetes med hög risk för fotsår"},
+            {"name": "Kritisk benischemi"},
+            {"name": "Svårläkta sår"}
+            
+          ]},
+          {"name": "Vårdprogram", "sub": [
+            {"name": "Svårläkta sår"}            
+          ]}
+        ]},
+
+        {"name": "Infektion och smittskydd", "sub": [
+          {"name": "Kliniska kunskapsstöd", "sub": [
+
+            {"name": "Bakteriell prostatit"},
+            {"name": "Bettskador"},
+            {"name": "Borrelia"},
+            {"name": "Bältros"},
+            {"name": "Clostridioides difficile"},
+            {"name": "Endokardit"},
+            {"name": "Erysipelas"},
+            {"name": "Follikulit"},
+            {"name": "Furunkel och karbunkel"},
+            {"name": "Gastroenterit"},
+            {"name": "Gastroenterit hos barn"},
+            {"name": "Hepatit A"},
+            {"name": "Hepatit B"},
+            {"name": "Hepatit C"},
+            {"name": "Herpes simplex"},
+            {"name": "Herpes zoster oftalmicus"},
+            {"name": "Hiv-infektion"},
+            {"name": "Höstblåsor"},
+            {"name": "Impetigo"},
+            {"name": "Influensa"},
+            {"name": "Kikhosta"},
+            {"name": "Mässling"},
+            {"name": "Penicillinallergi"},
+            {"name": "Pneumoni"},
+            {"name": "Pneumoni hos barn"},
+            {"name": "Primär immunbrist"},
+            {"name": "Påssjuka"},
+            {"name": "Röda hund"},
+            {"name": "Sepsis"},
+            {"name": "Septisk artrit"},
+            {"name": "Sinuit"},
+            {"name": "Stelkramp"},
+            {"name": "Stjärtfluss hos barn"},
+            {"name": "TBE, fästingburen hjärninflammation"},
+            {"name": "Tonsillit"},
+            {"name": "Tuberkulos"},
+            {"name": "Urinvägsinfektion hos barn"},
+            {"name": "Urinvägsinfektion hos kvinnor"},
+            {"name": "Urinvägsinfektion hos män"},
+            {"name": "Urinvägsinfektion hos äldre"},
+            {"name": "Urinvägsinfektion under graviditet"},
+            {"name": "Urinvägsinfektion, kateterassocierad"},
+            {"name": "Vattkoppor"}
+
+            
+
+            
+          ]},
+          {"name": "Vårdförlopp", "sub": [
+            {"name": "Diabetes med hög risk för fotsår"},
+            {"name": "Kritisk benischemi"},
+            {"name": "Svårläkta sår"}
+            
+          ]},
+          {"name": "Vårdprogram", "sub": [
+            {"name": "Svårläkta sår"}            
+          ]}
+        ]},
+
+
+        
+
+        
+        
+        {"name": "Infektion och smittskydd"},
+        {"name": "Kvinnohälsa"},
+        {"name": "Levnadsvanor"},
+        {"name": "Mage och tarm"},
+        {"name": "Mäns hälsa"},
+        {"name": "Nervsystem och smärta"},
+        {"name": "Njurar och urogenitala organ"},
+        {"name": "Palliativ vård"},
+        {"name": "Psykisk hälsa"},
+        {"name": "Rehabilitering"},
+        {"name": "Reumatiska sjukdomar"},
+        {"name": "Rörelseorganen"},
+        {"name": "Symtom"},
+        {"name": "Sällsynta hälsotillstånd"},
+        {"name": "Äldres hälsa"},
+        {"name": "Ögon"},
+        {"name": "Öron, näsa och hals"}
+      ]
+  }, 
+  {
+      "name": "Om Nationellt kliniskt kunskapsstöd",
+      
+      "sub": [
+        {"name": "Om Nationellt kliniskt kunskapsstöd"},
+        {"name": "Om våra kunskapsstöd"},
+        {"name": "Så här arbetar vi"},
+        {"name": "Om webbplatsen"},
+        {"name": "Anslutning via API"},
+        {"name": "Kontakt"},
+        {"name": "Remiss och synpunktsinhämtning"},
+        {"name": "Nya och reviderade kunskapsstöd"},
+        {"name": "1177 för vårdpersonal – frågor och svar"},
+        {"name": "Hantering av kakor"},
+        {"name": "Behandling av personuppgifter"},
+        {"name": "Tillgänglighetsredogörelse"}      
+      ]
+  },
+  { 
+      "name": "För författare",
+      
+      "sub": [
+        {"name": "Arbetsprocessen med redaktionen och viktiga datum"},
+        {"name": "Stödmaterial"},
+        {"name": "Kunskapsstödens målgrupper och förhållande till varandra"},
+        {"name": "Att tänka på under framtagande av kunskapsstöd"},
+        {"name": "Behörighet och inloggning"},
+        {"name": "Introduktion för författare"},
+        {"name": "Nätverk för regionala redaktörer"},
+        {"name": "Opublicerade versioner av kunskapsstöd tillgängliga för regionala tillägg"}
+      ]
   }
   
+  ]
+}

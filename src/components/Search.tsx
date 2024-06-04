@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { IDSIconUser, IDSInput } from "@inera/ids-react";
-import menu from "../assets/menu/private.json";
 import "../styles/search.css";
 
 interface MenuItem {
@@ -10,9 +9,29 @@ interface MenuItem {
   sub?: MenuItem[];
 }
 
-function Search() {
+interface SearchProps {
+  menu: MenuItem[];
+}
+
+function Search({ menu }: SearchProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<MenuItem[]>([]);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [isFocused, setIsFocused] = useState(false);
+
+  useEffect(() => {
+    const handleKeyPress = (event: KeyboardEvent) => {
+      if (!isFocused && (event.key === "S" || event.key === "s")) {
+        event.preventDefault();
+        inputRef.current?.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyPress);
+    return () => {
+      document.removeEventListener("keydown", handleKeyPress);
+    };
+  }, [isFocused]);
 
   const handleInputChange = (event: { target: { value: string } }) => {
     const query = event.target.value.trim().toLowerCase();
@@ -25,8 +44,7 @@ function Search() {
       setSearchResults([]);
     } else {
       const results: MenuItem[] = [];
-      searchMenu(menu.content as MenuItem[], query, results);
-
+      searchMenu(menu, query, results);
       setSearchResults(results.slice(0, 10));
     }
   };
@@ -46,11 +64,23 @@ function Search() {
     });
   };
 
+  const handleFocus = () => setIsFocused(true);
+  const handleBlur = () => setIsFocused(false);
+
   return (
     <div className="search-container">
       <IDSInput>
-        <label>Hitta på 1177</label>
-        <input value={searchQuery} onChange={handleInputChange} type="search" />
+        <label>
+          Sök innehåll (<b>S</b>){" "}
+        </label>
+        <input
+          ref={inputRef}
+          value={searchQuery}
+          onChange={handleInputChange}
+          type="search"
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+        />
       </IDSInput>
 
       <div className="search-result-list">
@@ -62,7 +92,7 @@ function Search() {
                 className={`search-result-item${
                   item.login ? " service-link" : ""
                 }`}
-                href={item.url}
+                href={item.url ? item.url : "#"}
               >
                 {item.login && (
                   <IDSIconUser

@@ -1,0 +1,63 @@
+{
+    "content": [
+    {
+        "name": "Tjänster",
+        "sub": [
+            {"name": "Alla tjänster A-Ö"},
+            {"name": "1177"},
+            {"name": "Arkitektur och infrastruktur"},
+            {"name": "Tjänster för kommuner"},
+            {"name": "Stöd i teknisk anslutning"},
+            {"name": "Priser för Ineras tjänster"},
+            {"name": "Statistik för Ineras tjänster"},
+            {"name": "Nyttokalkyler"}
+        ]
+    }, 
+    {
+        "name": "Utveckling",
+        "sub": [
+            {"name": "Gemensam färdplan och status aktuella initiativ"},
+            {"name": "Rapporter och resultat"}
+            
+        ]
+    },
+    { 
+        "name": "Aktuellt",
+        "sub": [
+            {"name": "Evenemang"},
+            {"name": "Nyheter"},
+            {"name": "Ineras nyhetsbrev"}
+            
+       ]
+    },
+    {
+        "name": "Kontakta oss",
+        "sub": [
+            {"name": "Anmäl fel"},
+            {"name": "Få användarstöd"},
+            {"name": "Rapportera avvikelse"},
+            {"name": "Lämna förbättringsförslag"},
+            {"name": "Fakturor och betalning"},
+            {"name": "Avtal, beställning, anslutning"},
+            {"name": "Ineras kundportal"},
+            {"name": "Adress och kontaktuppgifter"},
+            {"name": "Frågor om Inera"}
+       ]
+    },
+    { 
+        "name": "Om Inera",
+        "sub": [
+            {"name": "Ineras uppdrag"},
+            {"name": "Så styrs Inera"},
+            {"name": "Beredningsforum"},
+            {"name": "Expertgrupper"},
+            {"name": "Användarforum och branschforum"},
+            {"name": "För media"},
+            {"name": "Upphandling"},
+            {"name": "Jobba hos oss"}
+            
+       ]
+    }
+    ]
+  }
+  

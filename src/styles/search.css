@@ -74,6 +74,10 @@
     float: left;
     margin-right: 4px;
   }
+
+  .search-result-list {
+    margin-top: 20px;
+  }
   
   .search-result-item {
     display: inline-block;
@@ -81,23 +85,23 @@
     padding: 6px 12px;
     border-radius: 4px;
     margin-right: 4px;
-    color: var(--secondary-30);
+    color: var(--primary-30);
     border: 1px solid var(--neutral-70);
     margin-bottom: 4px;
+    text-decoration: none;
   }
   
   .search-result-item:hover {
-    background-color: var(--secondary-90);
-    border: 1px solid var(--secondary-40);
-  }
-  
-  .service-link {
-    background-color: var(--primary-90);
-    color: var(--primary-30);
-  }
-  
-  .service-link:hover {
     background-color: var(--primary-90);
     border: 1px solid var(--primary-40);
   }
   
+  .service-link {
+    /* background-color: var(--primary-90); */
+    /* color: var(--primary-30); */
+  }
+  
+  .service-link:hover {
+    /* background-color: var(--primary-90); */
+    /* border: 1px solid var(--primary-40); */
+  }

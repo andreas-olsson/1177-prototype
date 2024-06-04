@@ -1,0 +1,390 @@
+{
+    "content": [
+      {
+        "name": "E-tjänster",
+        "login": true,
+        "image": "img-liv-halsa.svg",
+        "description": "Här hittar du e-tjänster",
+        "sub": [
+            {
+              "name": "Inkorg",
+              "login": true
+            },
+            {
+              "name": "Tidbok",
+              "login": true,
+              "sub": [
+                {
+                  "name": "Boka tid",
+                  "login": true
+                  
+                },
+                {
+                  "name": "Visa bokade tider",
+                  "login": true
+                }
+              ]
+            },
+            {
+              "name": "Journalen",
+              "url": "/journal",
+              "login": true
+            },
+            {
+              "name": "Listning",
+              "login": true
+            },
+            {
+              "name": "Egen provhantering",
+              "login": true
+            },
+            {
+              "name": "Stöd och behandling",
+              "login": true
+            },
+            {
+              "name": "Intyg",
+              "login": true
+            },
+            {
+              "name": "Övriga tjänster",
+              "login": true
+            }
+          ]
+        },
+      {"name": "Stöd & rådgivning", "sub": [
+        {
+            "name": "Liv & hälsa",
+            "image": "img-liv-halsa.svg",
+            "description": "Här får du veta mer om hur kroppen fungerar och råd om hur du kan leva hälsosamt. Du kan läsa om psykisk hälsa, sexuell hälsa, tandhälsa och om mat och träning. Det finns också texter om stress, övergrepp, alkohol och könsidentitet.",
+            "sub": [
+              {
+                "name": "Psykisk hälsa",
+                "description": "Beskrivning av psykisk hälsa",
+                "sub": [
+                  { "name": "Att hamna i kris", "sub": [{ "name": "Sub 3" }] },
+                  { "name": "Att må dåligt" },
+                  { "name": "Att må dåligt när en relation tar slut" },
+                  { "name": "Att söka stöd och hjälp" },
+                  { "name": "Att vara orolig" },
+                  {
+                    "name": "Råd till dig som påverkas av en allvarlig händelse"
+                  },
+                  { "name": "Avslappning genom andning" },
+                  { "name": "Nedstämdhet" },
+                  { "name": "När barn mår dåligt" },
+                  { "name": "När en vuxen i din familj inte mår bra" },
+                  { "name": "Psykoterapi och psykologisk behandling" },
+                  { "name": "Självkänsla" },
+                  { "name": "Sorg när någon har dött" },
+                  { "name": "Stresshantering och sömn" },
+                  { "name": "Psykiskt stöd för unga i Stockholms län" },
+                  { "name": "Mobbning" }
+                ]
+              },
+              { "name": "Stresshantering och sömn" },
+              { "name": "Så fungerar kroppen" },
+              { "name": "Fysisk aktivitet och träning" },
+              {
+                "name": "Reseråd och vaccinationer",
+                "sub": [
+                  { "name": "Allmänna reseråd" },
+                  { "name": "Vaccinationer" },
+                  {
+                    "name": "Större risk för antibiotikaresistens vid operationer utomlands"
+                  }
+                ]
+              },
+              { "name": "Sunda vanor" },
+              { "name": "Sexuell hälsa" },
+              { "name": "Tandhälsa" },
+              { "name": "Tobak och alkohol" },
+              { "name": "Könsidentitet och sexuell läggning" },
+              { "name": "Våld, övergrepp och sexuella trakasserier" },
+              { "name": "Trygg och söker miljö" },
+              { "name": "Sol och värme" }
+            ]
+          },
+          {
+            "name": "Barn & gravid",
+            "image": "img-barn-gravid.svg",
+            "description": "Här kan du läsa allt om graviditet, förlossning och föräldraskap. Du kan också hitta fakta och råd om barns hälsa, utveckling, rättigheter, sjukdomar och vård.",
+            "sub": [
+              {
+                "name": "Graviditet",
+                "description": "Hur går befruktningen till? När har man gått över tiden? Och vad händer egentligen i livmodern vecka för vecka? Läs mer om graviditeten här.",
+                "sub": [
+                  { "name": "Grav sub 1" },
+                  { "name": "Grav sub 2" },
+                  { "name": "Grav sub 3" }
+                ]
+              },
+              { "name": "Att vänta och föda barn i Stockholms län" },
+              { "name": "Fölossning" },
+              { "name": "Barnlöshet" },
+              { "name": "Att sköta ett nyfött barn" },
+              { "name": "Att ta hand om barn" },
+              { "name": "Att vara förälder" },
+              { "name": "Så växer och utvecklas barn" },
+              { "name": "Vanliga besvär och sjukdomar hos barn" },
+              { "name": "Vård och stöd för barn" },
+              { "name": "När familjelivet är svårt" }
+            ]
+          },
+          {
+            "name": "Olyckor & skador",
+            "image": "img-olyckor-skador.svg",
+            "description": "Här får du veta mer om olika sorters skador och olyckor och hur du bäst hjälper någon som råkat göra sig illa. Läs om allt ifrån sår och blåmärken till brutna ben och hjärnskakning. Se filmer om hur du gör hjärt-lungräddning på vuxna och barn.",
+            "sub": [
+              { "name": "Akuta råd – första hjälpen" },
+              { "name": "Brännskador och köldskador" },
+              { "name": "Bett, stick och växter" },
+              { "name": "Sår och blåmärken" },
+              { "name": "Skador på huvud och ögon" },
+              { "name": "Skador på armar och ben" },
+              { "name": "Skador på händer och fötter" },
+              { "name": "Skador på överkropp och höfter" }
+            ]
+          },
+          {
+            "name": "Sjukdomar & besvär",
+            "image": "img-sjukdomar-besvar.svg",
+            "description": "Här finns information om olika sjukdomar och besvär. Du får råd om när och var du behöver söka vård. Läs mer om bland annat allergier, infektioner, hudförändringar och cancer. Lär dig mer om psykiska sjukdomar och besvär eller hur det är att leva med diabetes.",
+            "sub": [
+              { "name": "Allergier och överkänslighet" },
+              { "name": "Cancer" },
+              { "name": "Diabetes" },
+              { "name": "Hjärna och nerver" },
+              { "name": "Hjärta, blod och lymfkörtlar" },
+              { "name": "Hormoner" },
+              { "name": "Hud, hår och naglar" },
+              { "name": "Infektioner" },
+              { "name": "Könsorgan" },
+              { "name": "Lungor och luftvägar" },
+              { "name": "Mage och tarm" },
+              { "name": "Mun och tänder" },
+              { "name": "Njurar och urinvägar" },
+              { "name": "Psykiska sjukdomar och besvär" },
+              { "name": "Skelett, leder och muskler" },
+              { "name": "Ögon, öron, näsa och hals" }
+            ]
+          },
+          {
+            "name": "Undersökning & behandling",
+            "image": "img-behandling-hjalpmedel.svg",
+            "description": "Här kan du läsa om hur olika undersökningar och behandlingar går till. Du får också veta hur du kan må efteråt. Det finns information om olika sorters läkemedel och om hur det går till att få ett hjälpmedel.",
+            "sub": [
+              { "name": "Förbered ditt vårdbesök" },
+              { "name": "Undersökningar och provtagning" },
+              { "name": "Behandling med läkemedel" },
+              { "name": "Operationer" },
+              {
+                "name": "Behandlingar vid psykiska sjukdomar och besvär"
+              },
+              { "name": "Smärtbehandlingar och rehabilitering" },
+              { "name": "Före en behandling eller undersökning" },
+              { "name": "Vaccinationer" },
+              { "name": "Tandvård" },
+              { "name": "Fler behandlingar" },
+              { "name": "Hjälpmedel" },
+              { "name": "Habilitering" },
+              { "name": "Vård i slutet av livet" }
+            ]
+          },
+          {
+            "name": "Om vården",
+            "image": "img-om-varden.svg",
+            "description": "Här kan du läsa om hur du söker vård och stöd, hur du ska bli bemött i vården och vilka avgifter du får betala. Du får veta vilka lagar och bestämmelser som gäller och hur du kan göra om du inte är nöjd med vården. Det finns också information för dig som är närstående.",
+            "sub": [
+              {
+                "name": "Att välja vårdmottagning",
+                "sub": [
+                  { "name": "Sök vård på rätt mottagning" },
+                  { "name": "Välja vårdmottagning" },
+                  { "name": "Remiss och egen vårdbegäran" },
+                  { "name": "Vilket stöd kan kommunen ge?" },
+                  { "name": "Vård i en annan region" }
+                ]
+              },
+              {
+                "name": "Vården i Stockholms län",
+                "sub": [
+                  { "name": "Börja med att ringa 1177" },
+                  { "name": "Vårdcentralen och vård i hemmet" },
+                  { "name": "Kan skadan inte vänta?" },
+                  { "name": "När det är fara för liv" },
+                  {
+                    "name": "Mottagningar som du kan kontakta utan remiss"
+                  },
+                  { "name": "Specialister som kräver remiss" }
+                ]
+              },
+              {
+                "name": "Anhörig – närstående",
+                "sub": [
+                  { "name": "Du som är närstående i vården" },
+                  {
+                    "name": "Anhörigstöd – stöd för dig som vårdar eller stödjer en närstående"
+                  },
+                  {
+                    "name": "Närstående till någon som får en allvarlig sjukdom"
+                  },
+                  {
+                    "name": "Film: Stöd till dig som är närstående till någon som är obotligt sjuk eller vårdas i slutet av livet"
+                  },
+                  {
+                    "name": "Mat och dryck i slutet av livet – till dig som är närstående"
+                  },
+                  { "name": "När någon har dött" }
+                ]
+              },
+              {
+                "name": "Olika vårdformer",
+                "sub": [
+                  { "name": "Vård för äldre" },
+                  { "name": "Personlig assistans" },
+                  { "name": "Äldreomsorg" },
+                  { "name": "Planerad vård hemma" }
+                ]
+              },
+              {
+                "name": "Kostnader och ersättningar",
+                "sub": [
+                  { "name": "Patientavgifter och högkostnadsskydd" },
+                  { "name": "Patientavgifter i Stockholms län" },
+                  {
+                    "name": "Frågor och svar om patientavgifter i Stockholms län"
+                  },
+                  { "name": "Högkostnadsskydd för öppenvård" },
+                  { "name": "Ekonomiskt stöd när du är sjuk" },
+                  { "name": "Merkostnadsersättning" },
+                  { "name": "Ersättning vid patientskada" },
+                  { "name": "Kostnader och ersättningar inom tandvård" },
+                  { "name": "Söka bidrag från stiftelser" },
+                  {
+                    "name": "Högkostnadsskydd för öppenvård i Stockholms län"
+                  },
+                  { "name": "Glasögonbidrag för barn och unga" },
+                  {
+                    "name": "Avgifter för intyg, vaccination, hälsoundersökning och provtagning"
+                  },
+                  { "name": "Vad kostar läkemedel på recept?" },
+                  { "name": "Bidrag för dialys i hemmet" },
+                  { "name": "Patientavgiftsfrågor Stockholms län" }
+                ]
+              },
+              {
+                "name": "Om du inte är nöjd",
+                "sub": [
+                  { "name": "Om du inte är nöjd med vården" },
+                  { "name": "Om du inte är nöjd med tandvården" },
+                  { "name": "Ny medicinsk bedömning" },
+                  { "name": "Ersättning vid patientskada" },
+                  {
+                    "name": "Bemötande och diskriminering i vården i Stockholms län"
+                  }
+                ]
+              },
+              {
+                "name": "Sjukresor och färdtjänst",
+                "sub": [
+                  { "name": "Sjukresor" },
+                  { "name": "Färdtjänst" },
+                  { "name": "Patientboende – patienthotell" },
+                  { "name": "Sjukresor i Stockholms län" },
+                  { "name": "Sjuktransport" }
+                ]
+              },
+              {
+                "name": "Så samarbetar vård och omsorg",
+                "sub": [
+                  { "name": "Sällsynta diagnoser" },
+                  { "name": "Samordnad individuell plan - SIP" },
+                  {
+                    "name": "Fast vårdkontakt - din hjälp i vård och omsorg"
+                  }
+                ]
+              },
+              {
+                "name": "Vård om du kommer från ett annat land",
+                "sub": [
+                  {
+                    "name": "Vård om du är asylsökande eller inte har tillstånd att vara i Sverige"
+                  },
+                  { "name": "Vård i Sverige om du är utlandssvensk" },
+                  {
+                    "name": "Vård i Sverige om du kommer från ett annat land"
+                  },
+                  { "name": "Tolkning till mitt språk" },
+                  {
+                    "name": "Tandvård i Sverige om du kommer från annat land"
+                  },
+                  { "name": "Vård när du är på besök i Stockholm" }
+                ]
+              },
+              {
+                "name": "Vård vid resa utomlands",
+                "sub": [
+                  { "name": "Vård utomlands" },
+                  { "name": "Tandvård utomlands" }
+                ]
+              },
+              {
+                "name": "Lagar och bestämmelser",
+                "sub": [
+                  { "name": "Anmälan om vårdskada – lex Maria" },
+                  {
+                    "name": "Vad innebär det att vara legitimerad inom vården?"
+                  },
+                  {
+                    "name": "Barns och vårdnadshavares rättigheter i vården"
+                  },
+                  {
+                    "name": "För dig som är barn eller ung: Filmer om dina rättigheter i vården"
+                  },
+                  {
+                    "name": "FN:s konvention om rättigheter för personer med funktionsnedsättning"
+                  },
+                  { "name": "Lagar i vården" },
+                  { "name": "Lex Sarah" },
+                  { "name": "Nationella kvalitetsregister" },
+                  { "name": "Nationella riktlinjer" },
+                  { "name": "Rättigheter inom tandvård" },
+                  { "name": "Att få vård enligt ett vårdförlopp" },
+                  { "name": "Vårdgaranti" },
+                  { "name": "God man" },
+                  {
+                    "name": "Miljöcertifiering och miljödiplomering i Region Stockholm",
+                    "sub": [
+                      {
+                        "name": "Test nivå"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Så skyddas och hanteras dina uppgifter",
+                "sub": [
+                  { "name": "Din journal" },
+                  { "name": "Personuppgifter i vården" },
+                  { "name": "Tystnadsplikt och sekretess" },
+                  { "name": "Dataskyddsombud" }
+                ]
+              },
+              {
+                "name": "Donation",
+                "sub": [
+                  { "name": "Att donera ägg eller spermier" },
+                  { "name": "Blodgivning" },
+                  { "name": "Organdonation" }
+                ]
+              }
+      ]}
+      
+        ]
+      },
+      {"name": "1177 Direkt"}
+    ]
+  }
+  

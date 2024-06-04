@@ -1,0 +1,84 @@
+{
+    "content": [
+    {
+        "name": "Mottagningar",
+        "sub": [
+            {"name": "Mottagningsinformation"},
+            {"name": "Aktivera/inaktivera"},
+            {"name": "E-postadresser"}
+        ]
+    }, 
+    {
+        "name": "Rubriker under  Övriga tjänster",
+        "sub": [
+            {"name": "Visa"},
+            {"name": "Skapa"} 
+        ]
+    },
+    { 
+        "name": "Tjänster",
+        "sub": [
+            {"name": "Tidbokningstjänst"},
+            {"name": "Uthoppstjänst"},
+            {"name": "Tjänstetyper"},
+            {"name": "Vårdtjänster"},
+            {"name": "Centralt styrda ärendetyper"},
+            {"name": "Centralt styrda invånarärenden"},
+            {"name": "Förnya recept"},
+            {"name": "Synpunkter och klagomål"}
+            
+       ]
+    },
+    {
+        "name": "Vårdpersonal",
+        "sub": [
+            {"name": "Sök vårdpersonal"},
+            {"name": "Lägg till vårdpersonal i e-tjänsterna"}
+       ]
+    },
+    { 
+        "name": "Behörighetslistor",
+        "sub": [
+            {"name": "Nationell administratör"},
+            {"name": "Regional administratör"},
+            {"name": "Supportadministratör"},
+            {"name": "Kontoadministratör"}
+       ]
+    },
+    { 
+        "name": "Invånare",
+        "sub": [
+            {"name": "Hantera inloggning"},
+            {"name": "Information"},
+            {"name": "PU Information"},
+            {"name": "Listningsinformation"},
+            {"name": "Meddelanden"}
+       ]
+    },
+    {
+        "name": "Inloggningssidor",
+        "sub": [
+            
+            {"name": "Invånare"},
+            {"name": "Vårdpersonal"}
+       ]
+    },
+    {
+        "name": "Listning",
+        "sub": [
+            {"name": "Listningsinformation"},
+            {"name": "Listningsinställningar"},
+            {"name": "Inställningar för listningstyp"}
+       ]
+    },
+    {
+        "name": "Mallar ärendetyper"
+    },
+    {
+        "name": "Mallar invånarärenden"
+    },
+    {
+        "name": "Supportstöd"
+    }  
+    ]
+  }

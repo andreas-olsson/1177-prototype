@@ -1,0 +1,131 @@
+{
+    "content": [
+    {
+        "name": "Kroppen",
+        "sub": [
+            {"name": "Kroppen är fantastisk!"},
+            {"name": "Puberteten"},
+            {"name": "Penisen och pungen"},
+            {"name": "Snippan"},
+            {"name": "Mens"},
+            {"name": "Utseende"},
+            {"name": "Träning"},
+            {"name": "Vad ska man äta?"},
+            {"name": "Vikt"},
+            {"name": "Bröst"},
+            {"name": "Sömn och trötthet"},
+            {"name": "Graviditet"},
+            {"name": "Svettas"},
+            {"name": "Rodna"}
+        ]
+    }, 
+    {
+        "name": "Kärlek & vänskap",
+        "sub": [
+            {"name": "Kärlek"},
+            {"name": "Att vara ihop"},
+            {"name": "När det tar slut"},
+            {"name": "Vänskap"},
+            {"name": "Sociala medier: Kärlek och vänskap"},
+            {"name": "Svartsjuka"},
+            {"name": "Kyssar, hångel och strul"}    
+        ]
+    },
+    { 
+        "name": "Sex",
+        "sub": [
+            {"name": "Att ha sex"},
+            {"name": "Första gången"},
+            {"name": "Porr"},
+            {"name": "Sexnoveller"},
+            {"name": "Regler och lagar om sex"},
+            {"name": "När sex inte funkar som du vill"},
+            {"name": "Könssjukdomar"},
+            {"name": "Kondomer och andra skydd mot könssjukdomar"},
+            {"name": "Skydd mot graviditet"},
+            {"name": "Att sälja sex och att köpa sex"},
+            {"name": "Undervisning om sexualitet, samtycke och relationer"}
+       ]
+    },
+    {
+        "name": "Jag",
+        "sub": [
+            {"name": "Självkänsla och blyghet"},
+            {"name": "Sexuell läggning"},
+            {"name": "Jämlikhet"},
+            {"name": "Kön och könsidentitet"},
+            {"name": "Funktionsvariation"},
+            {"name": "Att vara adopterad"},
+            {"name": "Barnkonventionen"},
+            {"name": "Skolan "}
+       ]
+    },
+    { 
+        "name": "Familj",
+        "sub": [
+            {"name": "Hur ser din familj ut?"},
+            {"name": "Om dina föräldrar ska skiljas"},
+            {"name": "Våld och orättvisor i familjen"},
+            {"name": "När vuxna inte mår bra"},
+            {"name": "Stöd om du har problem i familjen"}
+       ]
+    },
+    { 
+        "name": "Tobak, alkohol & droger",
+        "sub": [
+            {"name": "Alkohol"},
+            {"name": "Rökning"},
+            {"name": "Snusning"},
+            {"name": "Film: Lustgas"},
+            {"name": "Droger"},
+            {"name": "Dopning"},
+            {"name": "Om någon i din närhet har problem med alkohol eller droger"}
+       ]
+    },
+    {
+        "name": "Våld & kränkningar",
+        "sub": [
+            {"name": "Sexualbrott och sexuella trakasserier"},
+            {"name": "Mobbning"},
+            {"name": "Problem på nätet"},
+            {"name": "Nollning"},
+            {"name": "Diskriminering"},
+            {"name": "Hedersrelaterat våld och förtryck"},
+            {"name": "Våld från vuxna i familjen"},
+            {"name": "Brott och polisanmälan"},
+            {"name": "Stöd om du är utsatt"},
+            {"name": "Skadliga förhållanden"}
+       ]
+    },
+    {
+        "name": "Att må dåligt",
+        "sub": [
+            {"name": "Må dåligt"},
+            {"name": "Stötta någon som mår dåligt"},
+            {"name": "Tips för att må bättre"},
+            {"name": "Nedstämdhet och ångest"},
+            {"name": "Stress"},
+            {"name": "Ätstörningar"},
+            {"name": "Att skada sig själv"},
+            {"name": "Självmordstankar"},
+            {"name": "Sorg och kris"},
+            {"name": "Problem med spel om pengar – spelberoende"},
+            {"name": "Könsdysfori"}
+       ]
+    },
+    {
+        "name": "Att ta hjälp", 
+        "sub": [
+            {"name": "Stöd på telefon, chatt och mejl"},
+            {"name": "Ungdomsmottagningen"},
+            {"name": "Elevhälsan"},
+            {"name": "Andra du kan få hjälp av"},
+            {"name": "Att prata med någon"},
+            {"name": "Rättigheter och lagar"},
+            {"name": "Att logga in på 1177.se"},
+            {"name": "Köpa medicin på nätet?"}
+       ]
+    }  
+    ]
+  }
+  
