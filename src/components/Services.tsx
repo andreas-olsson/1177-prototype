@@ -20,7 +20,7 @@ function Services() {
           <IDSRow justify="start" gap="2rem">
             <IDSCol m="12" s="12">
               <h2 className="ids-heading-2">Inkorg</h2>
-              <IDSCard fill={false} className="card">
+              <IDSCard className="card">
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
@@ -34,7 +34,7 @@ function Services() {
                 </ul>
               </IDSCard>
               <h2 className="ids-heading-2">Tidbokning</h2>
-              <IDSCard fill={false} className="card">
+              <IDSCard className="card">
                 <ul className="blocklink">
                   <li>
                     <IDSLink className="ids-mb-2">
@@ -51,7 +51,7 @@ function Services() {
                 </ul>
               </IDSCard>
               <h2 className="ids-heading-2">Genvägar</h2>
-              <IDSCard fill={false} className="card">
+              <IDSCard className="card">
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
@@ -62,7 +62,7 @@ function Services() {
                 </ul>
               </IDSCard>
               <h2 className="ids-heading-2">Agera ombud</h2>
-              <IDSCard fill={false} className="card">
+              <IDSCard className="card">
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
@@ -77,7 +77,7 @@ function Services() {
             </IDSCol>
             <IDSCol m="12" s="12">
               <h2 className="ids-heading-2">Hälso- och vårdval</h2>
-              <IDSCard fill={false} className="card">
+              <IDSCard className="card">
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
@@ -95,7 +95,7 @@ function Services() {
                 </IDSLink>
               </IDSCard>
               <h2 className="ids-heading-2">Mottagningar</h2>
-              <IDSCard fill={false} className="card">
+              <IDSCard className="card">
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
@@ -127,7 +127,7 @@ function Services() {
             </IDSCol>
             <IDSCol m="12" s="12">
               <h2 className="ids-heading-2">Digital rådgivning och chatt</h2>
-              <IDSCard fill={false} className="card">
+              <IDSCard className="card">
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
@@ -138,7 +138,7 @@ function Services() {
                 </ul>
               </IDSCard>
               <h2 className="ids-heading-2">Journalen</h2>
-              <IDSCard fill={false} className="card">
+              <IDSCard className="card">
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
@@ -155,7 +155,7 @@ function Services() {
                 </ul>
               </IDSCard>
               <h2 className="ids-heading-2">Egen provhantering</h2>
-              <IDSCard fill={false} className="card">
+              <IDSCard className="card">
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
@@ -171,7 +171,7 @@ function Services() {
                   </li>
                 </ul>
               </IDSCard>
-              <IDSCard fill={false} className="card">
+              <IDSCard className="card">
                 <h2 className="ids-heading-2">Intyg</h2>
                 <ul className="blocklink">
                   <li>
@@ -183,7 +183,7 @@ function Services() {
                 </ul>
               </IDSCard>
               <h2 className="ids-heading-2">Läkemedelstjänster</h2>
-              <IDSCard fill={false} className="card">
+              <IDSCard className="card">
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
@@ -198,7 +198,7 @@ function Services() {
                   <a href="javascript:console.log('click')">Förnya recept</a>
                 </IDSLink>
               </IDSCard>
-              <IDSCard fill={false} className="card">
+              <IDSCard className="card">
                 <h2 className="ids-heading-2">Synpunkter och klagomål</h2>
                 <ul className="blocklink">
                   <li>
@@ -210,7 +210,7 @@ function Services() {
                 </ul>
               </IDSCard>
               <h2 className="ids-heading-2">Stöd och behandling</h2>
-              <IDSCard fill={false} className="card">
+              <IDSCard className="card">
                 <ul className="blocklink">
                   <li>
                     <IDSLink>
@@ -242,7 +242,7 @@ function Services() {
                 </ul>
               </IDSCard>
               <h2 className="ids-heading-2">Övriga tjänster</h2>
-              <IDSCard fill={false} className="card">
+              <IDSCard className="card">
                 <ul className="blocklink">
                   <li>
                     <IDSLink>

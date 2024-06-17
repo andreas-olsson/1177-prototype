@@ -40,7 +40,7 @@ function BokadeTider() {
         <IDSContainer>
           <IDSRow className="ids-mt-8">
             <IDSCol cols="8" m="12" s="12">
-              <IDSCard fill={true}>
+              <IDSCard fill={1}>
                 <IDSExpandable expanded={true}>
                   <h3 className="ids-heading-2" slot="headline">
                     Fredag 31 maj 2024 kl 09.15

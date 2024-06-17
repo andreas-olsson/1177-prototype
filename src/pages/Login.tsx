@@ -55,7 +55,7 @@ function Login() {
           <IDSRow className="ids-mt-6" gap="2rem">
             <IDSCol cols="5" m="12" s="12" className="ids-content">
               <h2 className="ids-heading-2">Välj hur du vill logga in</h2>
-              <IDSCard fill={true} className="card">
+              <IDSCard fill={1} className="card">
                 <ul className="blocklink">
                   <li>
                     <IDSLink onClick={handleLinkClick}>
